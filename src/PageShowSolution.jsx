@@ -439,6 +439,13 @@ class PageShowSolution extends Component {
                 alt="copy"
                 onClick={() => this.props.copySocialTXTToClipboard()}
               />
+                <img
+                src={this.props.actualCopySocialImg}
+                width="50"
+                height="auto"
+                alt="copy"
+                onClick={() => this.props.copySocialTXTToClipboard()}
+              />
             </td>
           </tr>
         </tbody>
