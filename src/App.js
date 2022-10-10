@@ -3,8 +3,10 @@ import { createRoot } from "react-dom/client";
 import Cookies from "universal-cookie";
 import Moment from "moment";
 import "./styles.css";
+import "./css/App.css";
 
 import traduction from "./traduction";
+import config from "./config";
 import idPage from "./idPage";
 
 import PageMainPage from "./PageMainPage";
@@ -22,6 +24,8 @@ import clipboardOK from "./images/ClipboardOK.png";
 import shareImg from "./images/Share.jpg";
 import shareImgOK from "./images/ShareOK.jpg";
 import { createBrowserHistory } from 'history';
+import PageMainPageOptionMenu from "./PageMainPageOptionMenu";
+import logoTM from "./images/Menu.png";
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL
 });
@@ -447,8 +451,30 @@ class App extends React.Component {
     return (
         <div className="App">
           {this.state.page === idPage["P_MAIN"] ? (
+              <div className="header">
+                <PageMainPageOptionMenu
+                    language={this.props.language}
+                    swapLanguage={() => this.swapLanguage()}
+                />
+              </div>
+          ) : (
+              <div className="header">
+                <img
+                    style={{verticalAlign: "middle"}}
+                    alt="logoTM"
+                    src={logoTM}
+                    width="auto"
+                    height="25"
+                    onClick={() => this.changePage(idPage["P_MAIN"])}
+                />
+                <div className="burgerMenu"> _<br/>_<br/>_</div>
+              </div>
+          )
+          }
+
+          {this.state.page === idPage["P_MAIN"] ? (
               <PageMainPage
-                  landscapeMode={this.state.landscapeMode}
+                  currentPage={this.state.page}
                   changePage={(newPage) => this.changePage(newPage)}
                   historicalData={this.state.historicalData}
                   language={this.state.language}
@@ -460,6 +486,7 @@ class App extends React.Component {
           ) : null}
           {this.state.page === idPage["P_ADV"] ? (
               <PageAdvancedGame
+                  currentPage={this.state.page}
                   landscapeMode={this.state.landscapeMode}
                   language={this.state.language}
                   smallSizeFont={this.state.smallSizeFont}
@@ -475,6 +502,7 @@ class App extends React.Component {
           {this.state.page === idPage["P_INGAME"] ||
           this.state.page === idPage["P_SHOWQUESTION"] ? (
               <PageInGame
+                  currentPage={this.state.page}
                   landscapeMode={this.state.landscapeMode}
                   changePage={(newPage) => this.changePage(newPage)}
                   language={this.state.language}
@@ -488,12 +516,14 @@ class App extends React.Component {
           ) : null}
           {this.state.page === idPage["P_ERROR"] ? (
               <PageError
+                  currentPage={this.state.page}
                   changePage={(newPage) => this.changePage(newPage)}
                   language={this.state.language}
               />
           ) : null}
           {this.state.page === idPage["P_HIST"] ? (
               <PageHistorical
+                  currentPage={this.state.page}
                   changePage={(newPage) => this.changePage(newPage)}
                   historicalGames={historicalGames}
                   loadHistoricalGame={(value) => this.loadHistoricalGame(value)}
@@ -501,6 +531,7 @@ class App extends React.Component {
           ) : null}
           {this.state.page === idPage["P_SOLUTION"] ? (
               <PageShowSolution
+                  currentPage={this.state.page}
                   landscapeMode={this.state.landscapeMode}
                   changePage={(newPage) => this.changePage(newPage)}
                   language={this.state.language}
@@ -518,6 +549,7 @@ class App extends React.Component {
           ) : null}
           {this.state.page === idPage["P_TESTCODE"] ? (
               <PageInputCode
+                  currentPage={this.state.page}
                   language={this.state.language}
                   changePage={(newPage) => this.changePage(newPage)}
                   wrongCode={this.state.wrongCode}
@@ -527,6 +559,7 @@ class App extends React.Component {
           ) : null}
           {this.state.page === idPage["P_ASKSOLO"] ? (
               <PageAskSolo
+                  currentPage={this.state.page}
                   language={this.state.language}
                   goCompetitive={() => this.goCompetitive()}
                   goSolo={() => this.goSolo()}
@@ -536,6 +569,7 @@ class App extends React.Component {
           this.state.page === idPage["P_ASKSOLOPAGE2"] ||
           this.state.page === idPage["P_ASKSOLOPAGE3"] ? (
               <PageSoloPlay
+                  currentPage={this.state.page}
                   page={this.state.page}
                   language={this.state.language}
                   game={this.game}

@@ -1,0 +1,59 @@
+/*
+vert:2db563
+Bleu:58b3da
+jaune:febc12
+mauve:7f66ad
+gris: efeff0
+*/
+body, *{
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+#root{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border:1px solid grey;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+@media only screen and (min-width: 600px) {
+  #root{
+    width: 600px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+input[type=button]{
+  background: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 40px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+input[type=button]:hover{
+  cursor: pointer;
+}
+
+input[type=button].green{ color: #2db563; border-color: #2db563;}
+input[type=button].green:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
+input[type=button].blue{ color: #58b3da; border-color: #58b3da;}
+input[type=button].blue:hover{ color: #ffffff; background: #58b3da; border-color: #58b3da;}
+input[type=button].yellow{ color: #febc12; border-color: #febc12;}
+input[type=button].yellow:hover{ color: #ffffff; background: #febc12; border-color: #febc12;}
+input[type=button].purple{ color: #7f66ad; border-color: #7f66ad;}
+input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-color: #7f66ad;}
+
+a{
+  color: #000000;
+  font-weight: bold;
+}

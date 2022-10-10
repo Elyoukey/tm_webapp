@@ -1,0 +1,32 @@
+.mainPageImage{
+    width: 100%;
+    max-width: 600px;
+}
+
+.solo{
+    widht:100%;
+    text-align: center;
+    color: #d53333;
+    font-size: 40px;
+    font-weight: bold;
+}
+input[type=button]{
+    display: block;
+    width: 85%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+a{
+    display: block;
+    width: 85%;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.separator{
+    width: 25%;
+    border-bottom: 1px solid #8f8f8f;
+    margin: 40px  auto;
+}

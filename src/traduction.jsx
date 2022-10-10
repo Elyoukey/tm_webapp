@@ -2,9 +2,9 @@ var traduction = {
   0: {
     LANG: "FR",
     QUICK: "JOUER",
-    DAY: "DEFI DU JOUR",
-    CUSTOM: "PARTIE PERSONNALISEE",
-    ABOUT: "A PROPOS DU JEU",
+    DAY: "Défi du jour",
+    CUSTOM: "Partie personnalisée",
+    ABOUT: "En savoir plus sur le jeu",
     LOAD: "CHARGER",
     ERROR_UNABLE: "IMPOSSIBLE DE CHARGER UNE PARTIE",
     COMPETITIVE: "COMPETITIF",
@@ -46,7 +46,7 @@ var traduction = {
     YES: "OUI",
     NO: "NON",
     CODE: "CODE",
-    SHEET: "FEUILLE DE NOTES",
+    SHEET: "Télécharger des feuilles de notes",
     SEARCH: "# Chercher une partie",
     STEP1: "MODE",
     STEP2: "DIFFICULTE",
@@ -63,14 +63,16 @@ var traduction = {
     WINSOLO1: "VICTOIRE ! MEME SCORE QUE LA MACHINE !",
     WINSOLO2: "VICTOIRE ! VOUS AVEZ BATTU LA MACHINE !!!",
     ABOUTLINK: "http://www.scorpionmasque.com/fr/turingmachine",
-    DATEFORMAT: "DD/MM/YYYY"
+    DATEFORMAT: "DD/MM/YYYY",
+    DOWNLOADRULES: "Télécharger les règles du jeu",
+    GAMEHISTORY: "Historique des parties"
   },
   1: {
     LANG: "EN",
     QUICK: "PLAY",
     DAY: "DAILY CHALLENGE",
     CUSTOM: "CUSTOM GAME",
-    ABOUT: "ABOUT THE GAME",
+    ABOUT: "About the game",
     LOAD: "LOAD",
     ERROR_UNABLE: "UNABLE TO LOAD GAME",
     COMPETITIVE: "COMPETITIVE",
@@ -112,7 +114,7 @@ var traduction = {
     YES: "YES",
     NO: "NO",
     CODE: "CODE",
-    SHEET: "NOTE SHEET",
+    SHEET: "Download notes sheets",
     SEARCH: "# Search a problem",
     STEP1: "MODE",
     STEP2: "DIFFICULTY",
@@ -129,7 +131,9 @@ var traduction = {
     WINSOLO1: "VICTORY!!! YOU TIED THE MACHINE!!!",
     WINSOLO2: "VICTORY!!! YOU BEAT THE MACHINE!!!",
     ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
-    DATEFORMAT: "MM/DD/YYYY"
+    DATEFORMAT: "MM/DD/YYYY",
+    DOWNLOADRULES: "Download rules",
+    GAMEHISTORY: "Game history"
   }
 };
 

@@ -12,19 +12,6 @@ class PageMainPageOptionMenu extends Component {
   render() {
     return (
       <div>
-        <input
-          className="smallButtonHelp"
-          type="button"
-          value={traduction[this.props.language]["ABOUT"]}
-          onClick={() =>
-            window.open(
-              traduction[this.props.language]["ABOUTLINK"],
-              "_blank",
-              "noopener,noreferrer"
-            )
-          }
-        />
-        &nbsp;
         <button
           className="smallButtonHelp"
           type="submit"
