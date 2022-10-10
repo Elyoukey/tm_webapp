@@ -59,6 +59,22 @@ input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-col
 input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: #2db563;}
 input[type=button].fullgreen:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
 
+.header{
+}
+.header .burgerMenu{
+  width: 25px;
+  height: 25px;
+  float: right;
+}
+
+.header .burgerMenu .bar{
+  width:100%;
+  height:2px;
+  display: block;
+  background: grey;
+  margin-bottom: 5px;
+}
+
 h2{
   text-align: center;
   margin-bottom: 100px;
