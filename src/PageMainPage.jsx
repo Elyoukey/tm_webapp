@@ -33,7 +33,7 @@ class PageMainPage extends Component {
                 className="green"
                 type="button"
                 value={traduction[this.props.language]["QUICK"]}
-                onClick={() => this.props.quickGame()}
+                onClick={() => this.props.changePage(idPage["P_ADV"])}
                 style={{fontSize: this.props.sizeFont}}
             />
             <input
@@ -47,7 +47,7 @@ class PageMainPage extends Component {
                 className="blue"
                 type="button"
                 value={traduction[this.props.language]["CUSTOM"]}
-                onClick={() => this.props.changePage(idPage["P_ADV"])}
+                onClick={() => this.props.quickGame()}
                 style={{
                   fontSize: this.props.sizeFont
                 }}

@@ -56,7 +56,51 @@ input[type=button].yellow:hover{ color: #ffffff; background: #febc12; border-col
 input[type=button].purple{ color: #7f66ad; border-color: #7f66ad;}
 input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-color: #7f66ad;}
 
+input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: #2db563;}
+input[type=button].fullgreen:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
+
+h2{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 a{
   color: #000000;
   font-weight: bold;
+}
+
+.label{
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.radioGroup{
+  background: #ececec;
+  width: 85%;
+  padding: 3px;
+  display: flex;
+  margin: 0 auto 30px;
+  border-radius: 25px;
+}
+
+.radioGroup input[type=button]{
+  display: inline-block;
+  margin: 3px 10px;
+}
+
+.radioGroup input[type=button].inactive{
+  background: none;
+  border: none;
+  color: #000000;
+}
+
+.backlink{
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  background: white;
+  width: 50%;
 }

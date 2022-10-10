@@ -21,7 +21,8 @@ var traduction = {
     V4: "4 vérificateurs",
     V5: "5 vérificateurs",
     V6: "6 vérificateurs",
-    PLAY: "GENERER",
+    PLAYAGAME: "Jouer une partie",
+    PLAY: "Générer une partie",
     LOADING: "CHARGEMENT...",
     CHECKCODE: "TESTER UN CODE",
     INPUTCODE: "SAISIR LE CODE",
@@ -42,15 +43,16 @@ var traduction = {
     CANCEL: "RETOUR",
     SOLUTION: "SOLUTION",
     BACK: "RETOUR",
+    BACKHOME: "Retour à l'accueil",
     SHOW_SOLUTION: "Etes-vous sûr ?",
     YES: "OUI",
     NO: "NON",
     CODE: "CODE",
     SHEET: "Télécharger des feuilles de notes",
     SEARCH: "# Chercher une partie",
-    STEP1: "MODE",
-    STEP2: "DIFFICULTE",
-    STEP3: "DUREE",
+    STEP1: "Mode",
+    STEP2: "Difficulté",
+    STEP3: "Nombre de vérificateurs",
     CRITERIA: "Cartes Critères",
     CRITERIADOUBLE: "Cartes Critères (2 par vérificateur)",
     CRITERIAMIXED: "Cartes Critères (mélangées)",
@@ -65,7 +67,8 @@ var traduction = {
     ABOUTLINK: "http://www.scorpionmasque.com/fr/turingmachine",
     DATEFORMAT: "DD/MM/YYYY",
     DOWNLOADRULES: "Télécharger les règles du jeu",
-    GAMEHISTORY: "Historique des parties"
+    GAMEHISTORY: "Historique des parties",
+    GAMETYPE: "Type de jeu"
   },
   1: {
     LANG: "English",
@@ -90,6 +93,7 @@ var traduction = {
     V5: "5 cards",
     V6: "6 cards",
     PLAY: "GENERATE",
+    PLAYAGAME: "Play a game",
     LOADING: "LOADING...",
     CHECKCODE: "TEST A CODE",
     INPUTCODE: "INPUT YOUR CODE",
@@ -110,15 +114,16 @@ var traduction = {
     CANCEL: "BACK",
     SOLUTION: "SOLUTION",
     BACK: "BACK",
+    BACKHOME: "Back to homepage",
     SHOW_SOLUTION: "Are you sure?",
     YES: "YES",
     NO: "NO",
     CODE: "CODE",
     SHEET: "Download notes sheets",
     SEARCH: "# Search a problem",
-    STEP1: "MODE",
-    STEP2: "DIFFICULTY",
-    STEP3: "DURATION",
+    STEP1: "Mode",
+    STEP2: "Difficulty",
+    STEP3: "Verificators",
     CRITERIA: "Criteria Cards",
     CRITERIADOUBLE: "Criteria Cards (2 on each verifier)",
     CRITERIAMIXED: "Criteria Cards (mixed)",
@@ -133,7 +138,9 @@ var traduction = {
     ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
     DATEFORMAT: "MM/DD/YYYY",
     DOWNLOADRULES: "Download rules",
-    GAMEHISTORY: "Game history"
+    GAMEHISTORY: "Game history",
+    GAMETYPE: "Game type"
+
   }
 };
 
