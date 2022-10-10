@@ -1,6 +1,6 @@
 var traduction = {
   0: {
-    LANG: "FR",
+    LANG: "Français",
     QUICK: "JOUER",
     DAY: "Défi du jour",
     CUSTOM: "Partie personnalisée",
@@ -68,7 +68,7 @@ var traduction = {
     GAMEHISTORY: "Historique des parties"
   },
   1: {
-    LANG: "EN",
+    LANG: "English",
     QUICK: "PLAY",
     DAY: "DAILY CHALLENGE",
     CUSTOM: "CUSTOM GAME",

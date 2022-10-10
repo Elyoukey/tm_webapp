@@ -5,7 +5,7 @@ import "./css/PageMainPage.css";
 import traduction from "./traduction";
 import idPage from "./idPage";
 
-import PageMainPageOptionMenu from "./PageMainPageOptionMenu";
+import LanguageMenu from "./LanguageMenu";
 
 import history from "./images/History.png";
 import logoTM from "./images/Menu.png";
