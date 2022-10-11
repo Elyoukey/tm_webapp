@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./styles.css";
 
+import CriteriaDisplay from "./CriteriaDisplay";
 import traduction from "./traduction";
 import idPage from "./idPage";
 
@@ -14,6 +15,12 @@ const imgSymb = [symb0, symb1, symb2, symb3];
 
 class PageInGame extends Component {
   render() {
+      let game = this.props.game;
+      let rows = [];
+      for(let i=0;i<this.props.game.n;i++){
+          rows.push(String.fromCharCode(97+i));
+      }
+
     return (
       <div className="mainTab">
 
@@ -25,21 +32,53 @@ class PageInGame extends Component {
               <input
                   type="button"
                   value="copy"
-                  className="fullblack"
+                  className="fullblack copy inline"
                   onClick={() => this.props.copyToClipboard()}
               />
           </h2>
 
-          <img
-              src={this.props.actualClipboard}
-              width="30"
-              height="auto"
-              alt="copy"
-              onClick={() => this.props.copyToClipboard()}
-          />
           {this.props.soloPlay ? (
               <span>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</span>
           ) : null}
+
+          <p
+              dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>
+          </p>
+
+          {rows.map(function(letter,index){
+              return (
+              <div className="row">
+                  <div className="spot">{letter}</div>
+
+                  <CriteriaDisplay
+                      game = {game}
+                      row = {index}
+                  >
+                  </CriteriaDisplay>
+                  <div className="crypt">{game.crypt[index]}</div>
+                  <img
+                      src={imgSymb[game.color]}
+                      alt="symbol"
+                      width="20px"
+                      height="auto"
+                  />
+              </div>
+              );
+          })}
+
+          {game.m === "2" ? (
+              <div className="mixedcriteria">
+                  <h3>{traduction[this.props.language]["CRITERIAMIXED"]}</h3>
+                  {rows.map(function(letter,index){
+                      return (
+                          <span className="square green">
+                            {game.sortedInd[index]}
+                          </span>
+                      );
+                  })}
+              </div>
+          ):null}
+
 
           <a
               id="homeBut"

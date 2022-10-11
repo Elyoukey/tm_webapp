@@ -8,6 +8,7 @@ gris: efeff0
 body, *{
   box-sizing: border-box;
   font-family: Arial;
+  font-weight: bold;
 }
 
 #root{
@@ -19,6 +20,9 @@ body, *{
   min-height: 100%;
 }
 
+p{
+  text-align: center;
+}
 .App{
   padding: 10px;
 }
@@ -60,6 +64,21 @@ input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: 
 input[type=button].fullgreen:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
 
 input[type=button].fullblack{ background: #000000; color:#ffffff; border-color: #000000;}
+
+input[type=button].inline{
+  display: inline-block;
+  width: auto;
+  line-height: 25px;
+  height: 25px;
+  font-size: 12px;
+}
+
+input[type=button].copy{
+  padding-left: 30px;
+  background-image: url("../images/ico_copy.png");
+  background-position: 7px -4px;
+  background-repeat: no-repeat;
+}
 
 .header{
 }
@@ -121,4 +140,23 @@ a{
   left: 25%;
   background: white;
   width: 50%;
+}
+
+/* shaped span for numbers */
+span.square{
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 7px;
+}
+
+
+/* colored span of texts */
+span.green{
+  background: #2db563;
+  border-radius: 5px;
+  padding:3px;
+  color: #ffffff;
 }

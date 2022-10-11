@@ -68,7 +68,8 @@ var traduction = {
     DATEFORMAT: "DD/MM/YYYY",
     DOWNLOADRULES: "Télécharger les règles du jeu",
     GAMEHISTORY: "Historique des parties",
-    GAMETYPE: "Type de jeu"
+    GAMETYPE: "Type de jeu",
+    TEXT1: "Récupérer les cartes <span class='green'>critères</span> et les cartes vérifications dans la boite"
   },
   1: {
     LANG: "English",
@@ -139,7 +140,9 @@ var traduction = {
     DATEFORMAT: "MM/DD/YYYY",
     DOWNLOADRULES: "Download rules",
     GAMEHISTORY: "Game history",
-    GAMETYPE: "Game type"
+    GAMETYPE: "Game type",
+    TEXT1: "Retrieve <span class='green'>criteria</span> cards and verificators in the box"
+
 
   }
 };
