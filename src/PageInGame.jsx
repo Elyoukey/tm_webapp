@@ -15,11 +15,41 @@ const imgSymb = [symb0, symb1, symb2, symb3];
 class PageInGame extends Component {
   render() {
     return (
-      <table className="mainTab">
-        {this.props.landscapeMode
-          ? this.renderLandscapeGame()
-          : this.renderPortraitGame()}
-      </table>
+      <div className="mainTab">
+
+          <h2>
+              {this.props.dailyText != "" ? (
+                  <span>{this.props.dailyText}&nbsp;</span>
+              ) : null}
+              {"#" + this.props.game.hash}
+              <input
+                  type="button"
+                  value="copy"
+                  className="fullblack"
+                  onClick={() => this.props.copyToClipboard()}
+              />
+          </h2>
+
+          <img
+              src={this.props.actualClipboard}
+              width="30"
+              height="auto"
+              alt="copy"
+              onClick={() => this.props.copyToClipboard()}
+          />
+          {this.props.soloPlay ? (
+              <span>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</span>
+          ) : null}
+
+          <a
+              id="homeBut"
+              className="link backlink"
+              type="submit"
+              onClick={() => this.props.changePage(idPage["P_MAIN"])}
+          >
+              {traduction[this.props.language]["BACKHOME"]}
+          </a>
+      </div>
     );
   }
 
