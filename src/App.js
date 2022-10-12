@@ -46,7 +46,7 @@ class App extends React.Component {
         historicalData: false,
         language: 1,
         hashValue: "",
-        codeValue: "",
+        codeValue: "000",
         roundValue: "0",
         questionValue: "0",
         advancedSettings: [0, 0, 1, 1],
@@ -358,7 +358,7 @@ class App extends React.Component {
             page: newPage,
             actualClipboard: clipboard,
             hashValue: "",
-            codeValue: "",
+            codeValue: "000",
             roundValue: "0",
             questionValue: "0",
             wrongCode: false,
@@ -385,6 +385,13 @@ class App extends React.Component {
     handleChangeCode(value) {
         value = value.replace(" ", "");
         this.setState({codeValue: value});
+    }
+
+    setCodeDigit( digit, value){
+        console.log(digit);
+        let result = this.state.codeValue.split("");
+        result[digit] = value;
+        this.setState({codeValue: result.join("")});
     }
 
     testCode() {
@@ -552,11 +559,13 @@ class App extends React.Component {
                 ) : null}
                 {this.state.page === idPage["P_TESTCODE"] ? (
                     <PageInputCode
+                        codeValue={this.state.codeValue}
                         currentPage={this.state.page}
                         language={this.state.language}
                         changePage={(newPage) => this.changePage(newPage)}
                         wrongCode={this.state.wrongCode}
                         handleChangeCode={(value) => this.handleChangeCode(value)}
+                        setCodeDigit={(number,digit) => this.setCodeDigit(number,digit)}
                         testCode={() => this.testCode()}
                     />
                 ) : null}

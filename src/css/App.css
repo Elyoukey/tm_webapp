@@ -264,4 +264,21 @@ span.crypt.color2::after{ background-image: url("../images/Symb2.png"); }
 span.crypt.color3{ color: #7f66ad; border-color: #7f66ad; }
 span.crypt.color3::after{ background-image: url("../images/Symb3.png"); }
 
-/* big shaped span for square button*/
+/* circle triangle and square in colors */
+span.blueTriangle,
+span.yellowSquare,
+span.purpleCircle{
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 5px;
+  background-image: url("../images/ico_bluetriangle.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+span.blueTriangle{background-image: url("../images/ico_bluetriangle.jpg");}
+span.yellowSquare{background-image: url("../images/ico_yellowsquare.jpg");}
+span.purpleCircle{background-image: url("../images/ico_purplecircle.jpg");}
