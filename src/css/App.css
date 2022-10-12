@@ -5,12 +5,36 @@ jaune:febc12
 mauve:7f66ad
 gris: efeff0
 */
+
+@font-face {
+  font-family: Benton;
+  src: url("./fonts/Benton Sans Book.otf");
+}
+@font-face {
+  font-family: Benton-black;
+  src: url("./fonts/Benton Sans Condensed Black.otf");
+}
+@font-face {
+  font-family: Benton-bold;
+  src: url("./fonts/Benton Sans Condensed Bold.otf");
+}
+@font-face {
+  font-family: Benton-medium;
+  src: url("./fonts/Benton Sans Condensed Medium.otf");
+}
+
+
+
 body, *{
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Benton;
+
   font-weight: bold;
 }
 
+.mainTab{
+  margin-bottom: 100px;
+}
 #root{
   position: absolute;
   top: 0;
@@ -18,6 +42,13 @@ body, *{
   -border:1px solid grey;
   width: 100%;
   min-height: 100%;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 37px;
+  font-family: Benton-medium;
 }
 
 p{
@@ -42,10 +73,9 @@ input[type=button]{
   height: 40px;
   line-height: 30px;
   padding: 0 10px;
-  font-weight: bold;
   color: black;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 16px;
 }
 input[type=button]:hover{
   cursor: pointer;
@@ -61,7 +91,7 @@ input[type=button].purple{ color: #7f66ad; border-color: #7f66ad;}
 input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-color: #7f66ad;}
 
 input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: #2db563;}
-input[type=button].fullgreen:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
+input[type=button].fullgreen:hover{ color:#ffffff; background: #1e8b49; border-color: #1e8b49;}
 
 input[type=button].fullblack{ background: #000000; color:#ffffff; border-color: #000000;}
 
@@ -83,6 +113,10 @@ input[type=button].copy{
 .header{
   padding: 15px;
 }
+
+.header .home{
+  cursor: pointer;
+}
 .header .burgerMenu{
   width: 25px;
   height: 25px;
@@ -93,13 +127,8 @@ input[type=button].copy{
   width:100%;
   height:2px;
   display: block;
-  background: grey;
+  background: #000000;
   margin-bottom: 5px;
-}
-
-h2{
-  text-align: center;
-  margin-bottom: 100px;
 }
 
 a{
@@ -112,7 +141,7 @@ a{
   width: 100%;
   display: block;
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: 7px;
 }
 
 .radioGroup{
@@ -122,11 +151,19 @@ a{
   display: flex;
   margin: 0 auto 30px;
   border-radius: 25px;
+
 }
 
 .radioGroup input[type=button]{
   display: inline-block;
   margin: 4px;
+  font-size: 12px;
+
+}
+.radioGroup input[type=button].active{
+  color:#ffffff;
+  background: #2db563;
+  border-color: #2db563;
 }
 
 .radioGroup input[type=button].inactive{
@@ -135,25 +172,42 @@ a{
   color: #000000;
 }
 
-.backlink{
-  position: fixed;
-  bottom: 0;
-  left: 25%;
-  background: white;
-  width: 50%;
+
+/* footer with backlink*/
+.footer{
+  margin-top: 50px;
+  width:100%;
+  text-align: center;
+}
+.footer .backlink{
+  background-image: url("../images/larrow.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: left;
+  width: auto;
+  display: inline;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+/* colored span of texts */
+span.green{
+  background: #2db563;
+  border-radius: 5px;
+  padding:5px;
+  color: #ffffff;
 }
 
 /* shaped span for numbers */
 span.square{
-  width: 40px;
-  height: 40px;
-  line-height: 36px;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
   text-align: center;
   display: inline-block;
-  border-radius: 7px;
+  border-radius: 10px;
   border: 2px solid transparent;
   margin: 5px;
-  padding: 3px;
 }
 
 span.bigSquare{
@@ -172,21 +226,15 @@ span.bigSquare{
   margin: 5px;
 }
 
-/* colored span of texts */
-span.green{
-  background: #2db563;
-  border-radius: 7px;
-  padding:3px;
-  color: #ffffff;
-}
+
 
 /* shaped span for verificators */
 span.crypt{
   border: 2px solid black;
-  border-radius: 7px;
-  width: 60px;
-  height: 40px;
-  line-height: 36px;
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  line-height: 46px;
   display: inline-block;
   text-align: center;
   margin: 3px;
@@ -199,8 +247,8 @@ span.crypt::after{
   display: block;
   background-color: white;
   position: relative;
-  left: 43px;
-  top: -50px;
+  left: 53px;
+  top: -60px;
 
   background-image: url("../images/Symb0.png");
   background-size: cover;

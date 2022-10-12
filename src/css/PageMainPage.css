@@ -3,6 +3,9 @@
     max-width: 600px;
 }
 
+h2{
+    margin-bottom: 80px;
+}
 input[type=button]{
     display: block;
     width: 85%;
@@ -20,6 +23,6 @@ a{
 
 .separator{
     width: 15%;
-    border-bottom: 1px solid #8f8f8f;
+    border-bottom: 1px solid #ececec;
     margin: 40px  auto;
 }

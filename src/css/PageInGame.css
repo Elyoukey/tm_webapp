@@ -10,9 +10,10 @@
     color: #2db563;
     text-align: center;
     display: inline-block;
-    font-size: 30px;
+    font-size: 35px;
     transform: translateY(3px);
     margin: 0 20px;
+    font-family: Benton-bold;
 }
 .row .cell{
     display: inline-block;

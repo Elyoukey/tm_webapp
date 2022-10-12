@@ -10,8 +10,8 @@ import LanguageMenu from "./LanguageMenu";
 import history from "./images/History.png";
 import logoTM from "./images/Menu.png";
 
-import boxFR from "./images/BOX_FR.jpg";
-import boxEN from "./images/BOX_EN.jpg";
+import boxFR from "./images/BOX_FR.png";
+import boxEN from "./images/BOX_EN.png";
 import home from "./images/Home.png";
 import config from "./config";
 

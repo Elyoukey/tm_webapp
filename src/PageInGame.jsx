@@ -44,6 +44,20 @@ class PageInGame extends Component {
               dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>
           </p>
 
+          {game.m === "2" ? (
+              <div className="mixedcriteria">
+                  <p>
+                      {rows.map(function(letter,index){
+                          return (
+                              <span className="square green">
+                            {game.sortedInd[index]}
+                          </span>
+                          );
+                      })}
+                  </p>
+              </div>
+          ):null}
+
           {rows.map(function(letter,index){
               return (
               <div className="row" key={index}>
@@ -63,22 +77,7 @@ class PageInGame extends Component {
               );
           })}
 
-          {game.m === "2" ? (
-              <div className="mixedcriteria">
-                  <p
-                      dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["CRITERIAMIXED"] }}>
-                  </p>
-                  <p>
-                  {rows.map(function(letter,index){
-                      return (
-                          <span className="square green">
-                            {game.sortedInd[index]}
-                          </span>
-                      );
-                  })}
-                  </p>
-              </div>
-          ):null}
+
 
 
           <div class="actions">
@@ -97,14 +96,16 @@ class PageInGame extends Component {
 
           </div>
 
-          <a
-              id="homeBut"
-              className="link backlink"
-              type="submit"
-              onClick={() => this.props.changePage(idPage["P_MAIN"])}
-          >
-              {traduction[this.props.language]["BACKHOME"]}
-          </a>
+          <div className="footer">
+              <a
+                  id="homeBut"
+                  className="backlink"
+                  type="submit"
+                  onClick={() => this.props.changePage(idPage["P_MAIN"])}
+              >
+                  {traduction[this.props.language]["BACKHOME"]}
+              </a>
+          </div>
       </div>
     );
   }

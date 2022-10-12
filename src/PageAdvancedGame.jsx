@@ -26,8 +26,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[0] === 0
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["COMPETITIVE"]}
               onClick={() => this.props.clickAdvanced(0, 0)}
@@ -35,8 +35,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[0] === 1
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["SOLO"]}
               onClick={() => this.props.clickAdvanced(0, 1)}
@@ -50,8 +50,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[1] === 0
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["CLASSIC"]}
               onClick={() => this.props.clickAdvanced(1, 0)}
@@ -59,8 +59,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[1] === 1
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["EXTREME"]}
               onClick={() => this.props.clickAdvanced(1, 1)}
@@ -68,8 +68,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[1] === 2
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["NIGHTMARE"]}
               onClick={() => this.props.clickAdvanced(1, 2)}
@@ -84,8 +84,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[2] === 0
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["EASY"]}
               onClick={() => this.props.clickAdvanced(2, 0)}
@@ -93,8 +93,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[2] === 1
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["MEDIUM"]}
               onClick={() => this.props.clickAdvanced(2, 1)}
@@ -102,8 +102,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[2] === 2
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["HARD"]}
               onClick={() => this.props.clickAdvanced(2, 2)}
@@ -117,8 +117,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[3] === 0
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["V4"]}
               onClick={() => this.props.clickAdvanced(3, 0)}
@@ -126,8 +126,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[3] === 1
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["V5"]}
               onClick={() => this.props.clickAdvanced(3, 1)}
@@ -135,8 +135,8 @@ class PageAdvancedGame extends Component {
           <input
               type="button"
               className={ this.props.advancedSettings[3] === 2
-                  ? "fullgreen active"
-                  : "fullgreen inactive"
+                  ? "active"
+                  : "inactive"
               }
               value={traduction[this.props.language]["V6"]}
               onClick={() => this.props.clickAdvanced(3, 2)}
@@ -151,14 +151,17 @@ class PageAdvancedGame extends Component {
             onClick={() => this.props.playAdvanced()}
         />
 
-        <a
-          id="homeBut"
-          className="link backlink"
-          type="submit"
-          onClick={() => this.props.changePage(idPage["P_MAIN"])}
-        >
-          {traduction[this.props.language]["BACKHOME"]}
-        </a>
+      <div className="footer">
+          <a
+              id="homeBut"
+              className="backlink"
+              type="submit"
+              onClick={() => this.props.changePage(idPage["P_MAIN"])}
+          >
+              {traduction[this.props.language]["BACKHOME"]}
+          </a>
+      </div>
+
       </div>
 
 

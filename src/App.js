@@ -459,6 +459,7 @@ class App extends React.Component {
                     <div className="header">
                         <img
                             style={{verticalAlign: "middle"}}
+                            className="home"
                             alt="logoTM"
                             src={logoTM}
                             width="auto"
