@@ -147,17 +147,56 @@ a{
 span.square{
   width: 40px;
   height: 40px;
-  line-height: 38px;
+  line-height: 36px;
   text-align: center;
   display: inline-block;
   border-radius: 7px;
+  border: 2px solid transparent;
+  margin: 5px;
+  padding: 3px;
 }
 
 
 /* colored span of texts */
 span.green{
   background: #2db563;
-  border-radius: 5px;
+  border-radius: 7px;
   padding:3px;
   color: #ffffff;
 }
+
+/* shaped span for verificators */
+span.crypt{
+  border: 2px solid black;
+  border-radius: 7px;
+  width: 60px;
+  height: 40px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  margin: 3px;
+  padding:3px;
+}
+span.crypt::after{
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: white;
+  position: relative;
+  left: 43px;
+  top: -50px;
+
+  background-image: url("../images/Symb0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+span.crypt.color0{ color: #2db563;  border-color: #2db563; }
+span.crypt.color0::after{ background-image: url("../images/Symb0.png"); }
+span.crypt.color1{ color: #febc12; border-color: #febc12; }
+span.crypt.color1::after{ background-image: url("../images/Symb1.png"); }
+span.crypt.color2{ color: #58b3da; border-color: #58b3da; }
+span.crypt.color2::after{ background-image: url("../images/Symb2.png"); }
+span.crypt.color3{ color: #7f66ad; border-color: #7f66ad; }
+span.crypt.color3::after{ background-image: url("../images/Symb3.png"); }

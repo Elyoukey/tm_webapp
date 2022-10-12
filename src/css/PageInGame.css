@@ -1,0 +1,26 @@
+.row{
+    text-align: center;
+    vertical-align: center;
+    width:100%;
+    padding: 5px;
+}
+
+.row .spot{
+    text-transform: uppercase;
+    color: #2db563;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    transform: translateY(3px);
+    margin: 0 20px;
+}
+.row .cell{
+    display: inline-block;
+}
+
+.mixedcriteria{
+    margin: 40px 0;
+}
+.actions{
+    margin: 70px 0;
+}

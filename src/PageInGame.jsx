@@ -1,7 +1,8 @@
 import { Component } from "react";
 import "./styles.css";
+import "./css/PageInGame.css";
 
-import CriteriaDisplay from "./CriteriaDisplay";
+import CriteriaDisplay from "./criteriaDisplay";
 import traduction from "./traduction";
 import idPage from "./idPage";
 
@@ -36,11 +37,9 @@ class PageInGame extends Component {
                   onClick={() => this.props.copyToClipboard()}
               />
           </h2>
-
           {this.props.soloPlay ? (
-              <span>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</span>
+              <p>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</p>
           ) : null}
-
           <p
               dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>
           </p>
@@ -48,27 +47,28 @@ class PageInGame extends Component {
           {rows.map(function(letter,index){
               return (
               <div className="row">
-                  <div className="spot">{letter}</div>
+                <div className=" cell spot">{letter}</div>
+                <div className="cell">
+                    <CriteriaDisplay
+                        game = {game}
+                        row = {index}
+                    >
+                    </CriteriaDisplay>
+                </div>
+                  <div className="cell">
+                          <span className={"crypt color"+game.color}>{game.crypt[index]}</span>
+                  </div>
 
-                  <CriteriaDisplay
-                      game = {game}
-                      row = {index}
-                  >
-                  </CriteriaDisplay>
-                  <div className="crypt">{game.crypt[index]}</div>
-                  <img
-                      src={imgSymb[game.color]}
-                      alt="symbol"
-                      width="20px"
-                      height="auto"
-                  />
               </div>
               );
           })}
 
           {game.m === "2" ? (
               <div className="mixedcriteria">
-                  <h3>{traduction[this.props.language]["CRITERIAMIXED"]}</h3>
+                  <p
+                      dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["CRITERIAMIXED"] }}>
+                  </p>
+                  <p>
                   {rows.map(function(letter,index){
                       return (
                           <span className="square green">
@@ -76,9 +76,26 @@ class PageInGame extends Component {
                           </span>
                       );
                   })}
+                  </p>
               </div>
           ):null}
 
+
+          <div class="actions">
+              <input
+                  className="fullgreen"
+                  type="button"
+                  value={traduction[this.props.language]["CHECKCODE"]}
+                  onClick={() => this.props.changePage(idPage["P_TESTCODE"])}
+              />
+              <input
+                  className=""
+                  type="button"
+                  value={traduction[this.props.language]["SOLUTION"]}
+                  onClick={() => this.props.changePage(idPage["P_AREYOUSURE"])}
+              />
+
+          </div>
 
           <a
               id="homeBut"
