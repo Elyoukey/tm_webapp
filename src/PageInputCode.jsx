@@ -1,16 +1,29 @@
 import { Component } from "react";
 import "./styles.css";
+import "./css/PageInputCode.css";
 
 import traduction from "./traduction";
 import idPage from "./idPage";
 
 class PageInputCode extends Component {
   render() {
+
+    let buttons = [];
+
+    for(let i=5;i>0;i--){
+
+      for( let j=0; j<3;j++){
+        buttons.push(<span className="bigSquare">{i}</span>);
+      }
+      buttons.push(<br/>);
+    }
+
+
     return (
-      <table className="mainTab">
-        <tbody>
-          <tr>
-            <td>
+      <div className="mainTab">
+buttons:
+        {buttons}
+
               {this.props.wrongCode ? (
                 <span>{traduction[this.props.language]["FALSECODE"]}</span>
               ) : (
@@ -33,17 +46,15 @@ class PageInputCode extends Component {
                 value={traduction[this.props.language]["TESTCODE"]}
                 onClick={() => this.props.testCode()}
               />
-              &nbsp;
+
               <input
                 className="smallButtonMain"
                 type="button"
                 value={traduction[this.props.language]["CANCEL"]}
                 onClick={() => this.props.changePage(idPage["P_INGAME"])}
               />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+      </div>
     );
   }
 }
