@@ -156,6 +156,21 @@ span.square{
   padding: 3px;
 }
 
+span.bigSquare{
+
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 27px;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background: #dddddd;
+  color: #000000;
+  margin: 5px;
+}
 
 /* colored span of texts */
 span.green{
@@ -200,3 +215,5 @@ span.crypt.color2{ color: #58b3da; border-color: #58b3da; }
 span.crypt.color2::after{ background-image: url("../images/Symb2.png"); }
 span.crypt.color3{ color: #7f66ad; border-color: #7f66ad; }
 span.crypt.color3::after{ background-image: url("../images/Symb3.png"); }
+
+/* big shaped span for square button*/
