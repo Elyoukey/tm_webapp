@@ -15,7 +15,7 @@ body, *{
   position: absolute;
   top: 0;
   left: 0;
-  border:1px solid grey;
+  -border:1px solid grey;
   width: 100%;
   min-height: 100%;
 }
@@ -81,6 +81,7 @@ input[type=button].copy{
 }
 
 .header{
+  padding: 15px;
 }
 .header .burgerMenu{
   width: 25px;
@@ -117,7 +118,7 @@ a{
 .radioGroup{
   background: #ececec;
   width: 85%;
-  padding: 3px;
+  padding: 0px;
   display: flex;
   margin: 0 auto 30px;
   border-radius: 25px;
@@ -125,7 +126,7 @@ a{
 
 .radioGroup input[type=button]{
   display: inline-block;
-  margin: 3px 10px;
+  margin: 4px;
 }
 
 .radioGroup input[type=button].inactive{

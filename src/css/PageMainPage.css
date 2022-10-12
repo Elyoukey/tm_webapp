@@ -3,13 +3,6 @@
     max-width: 600px;
 }
 
-.solo{
-    widht:100%;
-    text-align: center;
-    color: #d53333;
-    font-size: 40px;
-    font-weight: bold;
-}
 input[type=button]{
     display: block;
     width: 85%;
@@ -26,7 +19,7 @@ a{
 }
 
 .separator{
-    width: 25%;
+    width: 15%;
     border-bottom: 1px solid #8f8f8f;
     margin: 40px  auto;
 }

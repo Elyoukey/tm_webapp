@@ -25,9 +25,6 @@ class PageMainPage extends Component {
               className="mainPageImage"
               src={imgBox[this.props.language]}
           />
-          <div className="solo">
-            SOLO
-          </div>
           <div className="homePage">
             <input
                 className="green"
