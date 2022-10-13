@@ -256,6 +256,9 @@ span.bigSquare{
   margin: 5px;
 }
 
+.codeButtonColor0.active{ color: #ffffff; background: #58b3da;}
+.codeButtonColor1.active{ color: #ffffff; background: #febc12;}
+.codeButtonColor2.active{ color: #ffffff; background: #7f66ad;}
 
 
 /* shaped span for verificators */

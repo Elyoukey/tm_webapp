@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./styles.css";
+import "./css/PageShowSolution.css";
 
 import traduction from "./traduction";
 import idPage from "./idPage";
@@ -11,12 +12,20 @@ import noteBoxNO from "./images/NoteBoxNO.jpg";
 
 class PageShowSolution extends Component {
   render() {
+    let codeArr =  this.props.game.code.toString().split("");
     return (
-      <table className="mainTab">
-        {this.props.landscapeMode
-          ? this.renderLandscapeSolution()
-          : this.renderPortraitSolution()}
-      </table>
+      <div className="mainTab">
+          <h2>{traduction[this.props.language]["SOLUTION"]}</h2>
+            <div className="content">
+
+                <span className="bigSquare codeButtonColor0 active">{codeArr[0]}</span>
+                <span className="bigSquare codeButtonColor1 active">{codeArr[1]}</span>
+                <span className="bigSquare codeButtonColor2 active">{codeArr[2]}</span>
+
+            </div>
+
+
+      </div>
     );
   }
 
