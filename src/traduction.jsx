@@ -71,7 +71,8 @@ var traduction = {
     GAMEHISTORY: "Historique des parties",
     GAMETYPE: "Type de jeu",
     TEXT1: "Récupérer les cartes <span class='green'>critères</span> et les cartes vérifications dans la boite",
-    INPUTGAMECODE: "Saisir le hash de la partie"
+    INPUTGAMECODE: "Saisir le hash de la partie",
+    CHOOSETYPE: "Choix du type de jeu"
   },
   1: {
     LANG: "English",
@@ -145,7 +146,8 @@ var traduction = {
     GAMEHISTORY: "Game history",
     GAMETYPE: "Game type",
     TEXT1: "Retrieve <span class='green'>criteria</span> cards and verificators in the box",
-    INPUTGAMECODE: "Input game hash"
+    INPUTGAMECODE: "Input game hash",
+    CHOOSETYPE: "Choose game type"
 
 
   }

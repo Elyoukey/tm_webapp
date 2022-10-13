@@ -9,8 +9,11 @@ class PageAskSolo extends Component {
     render() {
         return (
             <div className="mainTab">
+                {this.props.dailyText!=="" ?
+                    (<h2>{traduction[this.props.language]["DAY"]}</h2>):
+                    (<h2>{traduction[this.props.language]["CHOOSETYPE"]}</h2>)
+                }
 
-                <h2>{traduction[this.props.language]["DAY"]}</h2>
 
                 <div class="content">
                     <p>{traduction[this.props.language]["GAMETYPE"]}</p>

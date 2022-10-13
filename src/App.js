@@ -574,6 +574,8 @@ class App extends React.Component {
                 {this.state.page === idPage["P_ASKSOLO"] ? (
                     <PageAskSolo
                         soloPlay={this.state.soloPlay}
+                        dailyText={this.state.dailyText}
+                        game={this.state.game}
                         currentPage={this.state.page}
                         language={this.state.language}
                         goCompetitive={() => this.goCompetitive()}
