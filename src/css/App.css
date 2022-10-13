@@ -178,7 +178,10 @@ a{
   display: flex;
   margin: 0 auto 30px;
   border-radius: 25px;
-
+}
+.radioGroup.small{
+  width: 40%;
+  background: none;
 }
 
 .radioGroup input[type=button]{

@@ -13,7 +13,8 @@ var idPage = {
   P_ASKSOLOPAGE1: 11,
   P_ASKSOLOPAGE2: 12,
   P_ASKSOLOPAGE3: 13,
-  P_SEARCH: 14
+  P_SEARCH: 14,
+  P_AREYOUSURE: 15
 };
 
 export default idPage;
