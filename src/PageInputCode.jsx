@@ -30,13 +30,29 @@ class PageInputCode extends Component {
 
                 <h2>{traduction[this.props.language]["CHECKCODE"]}</h2>
 
-                <p>{traduction[this.props.language]["INPUTCODE"]}</p>
-
-                {this.props.wrongCode ? (
-                    <span>{traduction[this.props.language]["FALSECODE"]}</span>
+                {this.props.codeValue === '___' ? (
+                    <div className="codeDisplayer">{traduction[this.props.language]["INPUTCODE"]}</div>
                 ) : (
-                    <span>&nbsp;</span>
+                    <div
+                        className={
+                            "codeDisplayer code "+
+                            (this.props.wrongCode ? "wrongCode" : "") +
+                            (this.props.correctCode ? "correctCode" : "")
+                            }
+                    >
+                        {this.props.codeValue}
+                    </div>
                 )}
+
+                { !this.props.wrongCode && !this.props.correctCode ? (
+                    <span className="wrongCode">&nbsp;</span>
+                ) : null}
+               {this.props.wrongCode ? (
+                    <span className="wrongCode">{traduction[this.props.language]["FALSECODE"]}</span>
+                ) : null}
+                {this.props.correctCode ? (
+                    <span className="correctCode">{traduction[this.props.language]["GOODCODE"]}</span>
+                ) : null}
 
                 <div>
                     <span className="blueTriangle"></span>

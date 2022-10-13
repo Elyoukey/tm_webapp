@@ -43,19 +43,19 @@ class PageShowSolution extends Component {
             />
           </td>
         </tr>
-        {this.props.youWin && !this.props.soloPlay ? (
+        {this.props.correctCode && !this.props.soloPlay ? (
           <tr>
             <td colSpan={this.props.game.n}>
               {traduction[this.props.language]["YOUWIN"]}
             </td>
           </tr>
         ) : null}
-        {this.props.youWin && this.props.soloPlay ? (
+        {this.props.correctCode && this.props.soloPlay ? (
           <tr>
             <td colSpan={this.props.game.n}>{this.displaySocialShare()}</td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 0 ? (
           <tr>
@@ -64,7 +64,7 @@ class PageShowSolution extends Component {
             </td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 1 ? (
           <tr>
@@ -73,7 +73,7 @@ class PageShowSolution extends Component {
             </td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 2 ? (
           <tr>
@@ -226,31 +226,31 @@ class PageShowSolution extends Component {
             />
           </td>
         </tr>
-        {this.props.youWin && !this.props.soloPlay ? (
+        {this.props.correctCode && !this.props.soloPlay ? (
           <tr>
             <td colSpan="3">{traduction[this.props.language]["YOUWIN"]}</td>
           </tr>
         ) : null}
-        {this.props.youWin && this.props.soloPlay ? (
+        {this.props.correctCode && this.props.soloPlay ? (
           <tr>
             <td colSpan="3">{this.displaySocialShare()}</td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 0 ? (
           <tr>
             <td colSpan="3">{traduction[this.props.language]["WINSOLO0"]}</td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 1 ? (
           <tr>
             <td colSpan="3">{traduction[this.props.language]["WINSOLO1"]}</td>
           </tr>
         ) : null}
-        {this.props.youWin &&
+        {this.props.correctCode &&
         this.props.soloPlay &&
         this.props.winSolo === 2 ? (
           <tr>

@@ -1,8 +1,29 @@
+h2{
+    margin-bottom: 20px;
+}
+
 .mainTab{
     text-align: center;
 }
+
+.codeDisplayer{
+    height: 40px;
+}
+
+.codeDisplayer.code{
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+
 .codeInserter{
     margin: auto;
     margin-bottom: 50px;
     display: inline-block;
+}
+
+.wrongCode{
+    color: #d01B1b;
+}
+.correctCode{
+    color: #2db563;
 }

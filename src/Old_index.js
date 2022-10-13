@@ -56,7 +56,7 @@ class App extends React.Component {
     advancedSettings: [0, 0, 1, 1],
     actualClipboard: clipboard,
     wrongCode: false,
-    youWin: false,
+    correctCode: false,
     winSolo: 0,
     soloPlay: false,
     askSolo: false,
@@ -369,7 +369,7 @@ class App extends React.Component {
       roundValue: "0",
       questionValue: "0",
       wrongCode: false,
-      youWin: false,
+      correctCode: false,
       winSolo: 0,
       actualCopySocialImg: shareImg
     });
@@ -397,7 +397,7 @@ class App extends React.Component {
   testCode() {
     if (this.state.codeValue == this.game.code) {
       this.changePage(idPage["P_SOLUTION"]);
-      this.setState({ youWin: true });
+      this.setState({ correctCode: true });
       this.setData(2);
     } else {
       this.setState({ wrongCode: true });
@@ -435,7 +435,7 @@ class App extends React.Component {
         this.state.socialTXT + traduction[this.state.language]["SOCIALLOSE"];
     }
     this.changePage(idPage["P_SOLUTION"]);
-    this.setState({ youWin: true, winSolo: win });
+    this.setState({ correctCode: true, winSolo: win });
     this.setData(win);
   }
 
@@ -1493,19 +1493,19 @@ class App extends React.Component {
               />
             </td>
           </tr>
-          {this.state.youWin && !this.state.soloPlay ? (
+          {this.state.correctCode && !this.state.soloPlay ? (
             <tr>
               <td colSpan={this.game.n}>
                 {traduction[this.state.language]["YOUWIN"]}
               </td>
             </tr>
           ) : null}
-          {this.state.youWin && this.state.soloPlay ? (
+          {this.state.correctCode && this.state.soloPlay ? (
             <tr>
               <td colSpan={this.game.n}>{this.displaySocialShare()}</td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 0 ? (
             <tr>
@@ -1514,7 +1514,7 @@ class App extends React.Component {
               </td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 1 ? (
             <tr>
@@ -1523,7 +1523,7 @@ class App extends React.Component {
               </td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 2 ? (
             <tr>
@@ -1676,31 +1676,31 @@ class App extends React.Component {
               />
             </td>
           </tr>
-          {this.state.youWin && !this.state.soloPlay ? (
+          {this.state.correctCode && !this.state.soloPlay ? (
             <tr>
               <td colSpan="3">{traduction[this.state.language]["YOUWIN"]}</td>
             </tr>
           ) : null}
-          {this.state.youWin && this.state.soloPlay ? (
+          {this.state.correctCode && this.state.soloPlay ? (
             <tr>
               <td colSpan={this.game.n}>{this.displaySocialShare()}</td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 0 ? (
             <tr>
               <td colSpan="3">{traduction[this.state.language]["WINSOLO0"]}</td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 1 ? (
             <tr>
               <td colSpan="3">{traduction[this.state.language]["WINSOLO1"]}</td>
             </tr>
           ) : null}
-          {this.state.youWin &&
+          {this.state.correctCode &&
           this.state.soloPlay &&
           this.state.winSolo === 2 ? (
             <tr>

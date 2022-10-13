@@ -46,13 +46,13 @@ class App extends React.Component {
         historicalData: false,
         language: 1,
         hashValue: "",
-        codeValue: "000",
+        codeValue: "___",
         roundValue: "0",
         questionValue: "0",
         advancedSettings: [0, 0, 1, 1],
         actualClipboard: clipboard,
         wrongCode: false,
-        youWin: false,
+        correctCode: false,
         winSolo: 0,
         soloPlay: false,
         askSolo: false,
@@ -358,11 +358,11 @@ class App extends React.Component {
             page: newPage,
             actualClipboard: clipboard,
             hashValue: "",
-            codeValue: "000",
+            codeValue: "___",
             roundValue: "0",
             questionValue: "0",
             wrongCode: false,
-            youWin: false,
+            correctCode: false,
             winSolo: 0,
             actualCopySocialImg: shareImg
         });
@@ -396,11 +396,12 @@ class App extends React.Component {
 
     testCode() {
         if (this.state.codeValue == this.game.code) {
-            this.changePage(idPage["P_SOLUTION"]);
-            this.setState({youWin: true});
+            this.setState({wrongCode: false});
+            this.setState({correctCode: true});
             this.setData(2);
         } else {
             this.setState({wrongCode: true});
+            this.setState({correctCode: false});
             this.setData(0);
         }
     }
@@ -435,7 +436,7 @@ class App extends React.Component {
                 this.state.socialTXT + traduction[this.state.language]["SOCIALLOSE"];
         }
         this.changePage(idPage["P_SOLUTION"]);
-        this.setState({youWin: true, winSolo: win});
+        this.setState({correctCode: true, winSolo: win});
         this.setData(win);
     }
 
@@ -548,7 +549,7 @@ class App extends React.Component {
                         game={this.game}
                         actualClipboard={this.state.actualClipboard}
                         copyToClipboard={() => this.copyToClipboard()}
-                        youWin={this.state.youWin}
+                        correctCode={this.state.correctCode}
                         winSolo={this.state.winSolo}
                         soloPlay={this.state.soloPlay}
                         dailyText={this.state.dailyText}
@@ -564,6 +565,7 @@ class App extends React.Component {
                         language={this.state.language}
                         changePage={(newPage) => this.changePage(newPage)}
                         wrongCode={this.state.wrongCode}
+                        correctCode={this.state.correctCode}
                         handleChangeCode={(value) => this.handleChangeCode(value)}
                         setCodeDigit={(number,digit) => this.setCodeDigit(number,digit)}
                         testCode={() => this.testCode()}
