@@ -26,8 +26,8 @@ class LanguageMenu extends Component {
                     { traduction[this.props.language]["LANG"] }
                 </a>
                 <div id="lang-list" className="lang-list" style={{display: this.state.isToggle ? 'block' : 'none'}}>
-                    <a onClick={() => this.swapLanguage(0)}>Français</a>
-                    <a onClick={() => this.swapLanguage(1)}>English</a>
+                    {this.props.language!=0?(<a onClick={() => this.swapLanguage(0)}>Français</a>):null}
+                    {this.props.language!=1?(<a onClick={() => this.swapLanguage(1)}>English</a>):null}
                 </div>
             </div>
         );
