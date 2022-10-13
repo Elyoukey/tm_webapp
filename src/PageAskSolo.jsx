@@ -8,7 +8,7 @@ import idPage from "./idPage";
 class PageAskSolo extends Component {
     render() {
         return (
-            <div className="mainTab">
+            <div className="mainTab pageAskSolo">
                 {this.props.dailyText!=="" ?
                     (<h2>{traduction[this.props.language]["DAY"]}</h2>):
                     (<h2>{traduction[this.props.language]["CHOOSETYPE"]}</h2>)

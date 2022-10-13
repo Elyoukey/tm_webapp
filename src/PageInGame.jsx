@@ -23,7 +23,7 @@ class PageInGame extends Component {
           rows.push(String.fromCharCode(97+i));
       }
     return (
-      <div className="mainTab">
+      <div className="mainTab pageInGame">
 
           <h2>
               {"#" + this.props.game.hash}

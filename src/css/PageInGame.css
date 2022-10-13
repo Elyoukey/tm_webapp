@@ -1,11 +1,11 @@
-.row{
+.pageInGame .row{
     text-align: center;
     vertical-align: center;
     width:100%;
     padding: 5px;
 }
 
-.row .spot{
+.pageInGame .row .spot{
     text-transform: uppercase;
     color: #2db563;
     text-align: center;
@@ -15,13 +15,13 @@
     margin: 0 20px;
     font-family: Benton-bold;
 }
-.row .cell{
+.pageInGame .row .cell{
     display: inline-block;
 }
 
-.mixedcriteria{
+.pageInGame .mixedcriteria{
     margin: 40px 0;
 }
-.actions{
+.pageInGame .actions{
     margin: 70px 0;
 }

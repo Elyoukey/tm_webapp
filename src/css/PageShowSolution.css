@@ -1,3 +1,44 @@
-.content{
-    padding: 120px;
+.showSolution .content{
+    padding: 80px 0;
+}
+
+.showSolution .verificatorList{
+    margin: 20px auto;
+    display: table;
+    border-top: 1px solid #cccccc;
+
+}
+
+.showSolution .verificatorList .row{
+    height: 50px;
+    text-align: center;
+    display: table-row;
+
+}
+
+.showSolution .verificatorList .row .cell.first{
+    width: 40px;
+}
+.showSolution .verificatorList .row .cell{
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    width: 150px;
+    padding:5px;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+
+.showSolution .verificatorList .row .cell .spot{
+    text-transform: uppercase;
+    color: #2db563;
+    font-size: 35px;
+    font-family: Benton-bold;
+
+}
+
+.showSolution .verificatorList .row .cell img{
+    height: 50px;
+
 }
