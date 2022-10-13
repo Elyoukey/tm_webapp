@@ -50,7 +50,7 @@ class PageInGame extends Component {
                   <p>
                       {rows.map(function(letter,index){
                           return (
-                              <span className="square green">
+                              <span key={index} className="square green">
                             {game.sortedInd[index]}
                           </span>
                           );
@@ -61,7 +61,7 @@ class PageInGame extends Component {
 
           {rows.map(function(letter,index){
               return (
-              <div className="row" key={index}>
+              <div key={index} className="row" >
                 <div className=" cell spot">{letter}</div>
                 <div className="cell">
                     <CriteriaDisplay

@@ -532,6 +532,7 @@ class App extends React.Component {
                 {this.state.page === idPage["P_HIST"] ? (
                     <PageHistorical
                         currentPage={this.state.page}
+                        language={this.state.language}
                         changePage={(newPage) => this.changePage(newPage)}
                         historicalGames={historicalGames}
                         loadHistoricalGame={(value) => this.loadHistoricalGame(value)}
