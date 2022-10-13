@@ -26,9 +26,6 @@ class PageInGame extends Component {
       <div className="mainTab">
 
           <h2>
-              {this.props.dailyText != "" ? (
-                  <span>{this.props.dailyText}&nbsp;</span>
-              ) : null}
               {"#" + this.props.game.hash}
               <input
                   type="button"
@@ -37,6 +34,10 @@ class PageInGame extends Component {
                   onClick={() => this.props.copyToClipboard()}
               />
           </h2>
+          {this.props.dailyText != "" ? (
+              <span>{this.props.dailyText}&nbsp;</span>
+          ) : null}
+
           {this.props.soloPlay ? (
               <p>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</p>
           ) : null}

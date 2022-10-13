@@ -219,13 +219,11 @@ class App extends React.Component {
     }
 
     goCompetitive() {
-        this.state.soloPlay = false;
-        this.changePage(idPage["P_INGAME"]);
+        this.setState({soloPlay: false});
     }
 
     goSolo() {
-        this.state.soloPlay = true;
-        this.changePage(idPage["P_INGAME"]);
+        this.setState({soloPlay: true});
     }
 
     loadHistoricalGame(url) {
@@ -388,7 +386,6 @@ class App extends React.Component {
     }
 
     setCodeDigit( digit, value){
-        console.log(digit);
         let result = this.state.codeValue.split("");
         result[digit] = value;
         this.setState({codeValue: result.join("")});
@@ -573,10 +570,12 @@ class App extends React.Component {
                 ) : null}
                 {this.state.page === idPage["P_ASKSOLO"] ? (
                     <PageAskSolo
+                        soloPlay={this.state.soloPlay}
                         currentPage={this.state.page}
                         language={this.state.language}
                         goCompetitive={() => this.goCompetitive()}
                         goSolo={() => this.goSolo()}
+                        changePage={(p) => this.changePage(p)}
                     />
                 ) : null}
                 {this.state.page === idPage["P_ASKSOLOPAGE1"] ||
