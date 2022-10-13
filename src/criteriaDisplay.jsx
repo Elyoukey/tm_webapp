@@ -5,10 +5,10 @@ import traduction from "./traduction";
 
 class CriteriaDisplay extends Component{
     render(){
-
-        switch (this.props.game.m)
+        let m = parseInt(this.props.game.m);
+        switch (m)
         {
-            case "0":
+            case 0:
                 return (
                     <div class="criteria">
                         <span
@@ -17,8 +17,7 @@ class CriteriaDisplay extends Component{
                         </span>
                     </div>
                 );
-
-            case "1":
+            case 1:
                 return (
                     <div className="criteria">
                         <span
@@ -32,14 +31,12 @@ class CriteriaDisplay extends Component{
                     </div>
                 );
                 break;
-            case "2":
+            case 2:
                 return (
                     <div class="criteria">
                     </div>
                 );
         }
-
-
     }
 }
 
