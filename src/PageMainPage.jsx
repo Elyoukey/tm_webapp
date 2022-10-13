@@ -43,8 +43,8 @@ class PageMainPage extends Component {
             <input
                 className="blue"
                 type="button"
-                value={traduction[this.props.language]["CUSTOM"]}
-                onClick={() => this.props.quickGame()}
+                value={traduction[this.props.language]["SEARCH"]}
+                onClick={() => this.props.changePage(idPage["P_SEARCH"])}
                 style={{
                   fontSize: this.props.sizeFont
                 }}

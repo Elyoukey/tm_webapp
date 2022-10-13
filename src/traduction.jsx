@@ -50,7 +50,7 @@ var traduction = {
     NO: "NON",
     CODE: "CODE",
     SHEET: "Télécharger des feuilles de notes",
-    SEARCH: "# Chercher une partie",
+    SEARCH: "Chercher une partie",
     STEP1: "Mode",
     STEP2: "Difficulté",
     STEP3: "Nombre de vérificateurs",
@@ -70,7 +70,8 @@ var traduction = {
     DOWNLOADRULES: "Télécharger les règles du jeu",
     GAMEHISTORY: "Historique des parties",
     GAMETYPE: "Type de jeu",
-    TEXT1: "Récupérer les cartes <span class='green'>critères</span> et les cartes vérifications dans la boite"
+    TEXT1: "Récupérer les cartes <span class='green'>critères</span> et les cartes vérifications dans la boite",
+    INPUTGAMECODE: "Saisir le hash de la partie"
   },
   1: {
     LANG: "English",
@@ -123,7 +124,7 @@ var traduction = {
     NO: "NO",
     CODE: "CODE",
     SHEET: "Download notes sheets",
-    SEARCH: "# Search a problem",
+    SEARCH: "Search a problem",
     STEP1: "Mode",
     STEP2: "Difficulty",
     STEP3: "Verificators",
@@ -143,7 +144,8 @@ var traduction = {
     DOWNLOADRULES: "Download rules",
     GAMEHISTORY: "Game history",
     GAMETYPE: "Game type",
-    TEXT1: "Retrieve <span class='green'>criteria</span> cards and verificators in the box"
+    TEXT1: "Retrieve <span class='green'>criteria</span> cards and verificators in the box",
+    INPUTGAMECODE: "Input game hash"
 
 
   }

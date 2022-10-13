@@ -19,6 +19,7 @@ import PageShowSolution from "./PageShowSolution";
 import PageError from "./PageError";
 import PageHistorical from "./PageHistorical";
 import PageSoloPlay from "./PageSoloPlay";
+import PageSearch from "./PageSearch";
 import clipboard from "./images/Clipboard.png";
 import clipboardOK from "./images/ClipboardOK.png";
 import shareImg from "./images/Share.jpg";
@@ -603,6 +604,16 @@ class App extends React.Component {
                         }
                         changePage={(e) => this.changePage(e)}
                         dailyText={this.state.dailyText}
+                    />
+                ) : null}
+                {this.state.page === idPage["P_SEARCH"] ? (
+                    <PageSearch
+                        currentPage={this.state.page}
+                        language={this.state.language}
+                        changePage={(p) => this.changePage(p)}
+                        hashGame={() => this.hashGame()}
+                        handleChange={(v) => this.handleChange(v)}
+                        hashValue = {this.state.hashValue}
                     />
                 ) : null}
             </div>
