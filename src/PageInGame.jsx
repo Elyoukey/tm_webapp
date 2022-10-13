@@ -17,11 +17,11 @@ const imgSymb = [symb0, symb1, symb2, symb3];
 class PageInGame extends Component {
   render() {
       let game = this.props.game;
+      let m = parseInt(this.props.game.m);
       let rows = [];
       for(let i=0;i<this.props.game.n;i++){
           rows.push(String.fromCharCode(97+i));
       }
-
     return (
       <div className="mainTab">
 
@@ -45,7 +45,7 @@ class PageInGame extends Component {
               dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>
           </p>
 
-          {game.m === "2" ? (
+          {m === 2 ? (
               <div className="mixedcriteria">
                   <p>
                       {rows.map(function(letter,index){
