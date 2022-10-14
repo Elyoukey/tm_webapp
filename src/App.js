@@ -511,8 +511,7 @@ class App extends React.Component {
                 {this.state.page === idPage["P_LOADING"] ? (
                     <PageLoading language={this.state.language}/>
                 ) : null}
-                {this.state.page === idPage["P_INGAME"] ||
-                this.state.page === idPage["P_SHOWQUESTION"] ? (
+                {this.state.page === idPage["P_INGAME"]  ? (
                     <PageInGame
                         currentPage={this.state.page}
                         landscapeMode={this.state.landscapeMode}
@@ -612,6 +611,7 @@ class App extends React.Component {
                         dailyText={this.state.dailyText}
                     />
                 ) : null}
+
                 {this.state.page === idPage["P_SEARCH"] ? (
                     <PageSearch
                         currentPage={this.state.page}
