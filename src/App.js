@@ -473,6 +473,7 @@ class App extends React.Component {
                             height="25"
                             onClick={() => this.changePage(idPage["P_MAIN"])}
                         />
+                        {this.state.page}
                         <div className="burgerMenu">
                             <span class="bar bar1"></span>
                             <span class="bar bar2"></span>
@@ -569,6 +570,7 @@ class App extends React.Component {
                         handleChangeCode={(value) => this.handleChangeCode(value)}
                         setCodeDigit={(number,digit) => this.setCodeDigit(number,digit)}
                         testCode={() => this.testCode()}
+                        soloPlay={this.state.soloPlay}
                     />
                 ) : null}
                 {this.state.page === idPage["P_ASKSOLO"] ? (

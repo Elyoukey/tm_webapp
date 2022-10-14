@@ -29,6 +29,7 @@ var traduction = {
     TESTCODE: "Vérification",
     FALSECODE: "Ce n'est pas le bon code!",
     GOODCODE: "Félicitations! Vous avez réussi!",
+    BEATTHEMACHINE: "Avez-vous battu la machine?",
     INPUTSOLOA: "Maintenant, pour savoir si vous avez battu la machine,",
     INPUTSOLOB: "Saisissez vos questions posées :",
     CLICBOXES: "Cliquez sur les cases pour les saisir",
@@ -72,7 +73,9 @@ var traduction = {
     GAMETYPE: "Type de jeu",
     TEXT1: "Récupérer les cartes <span class='green'>critères</span> et les cartes vérifications dans la boite",
     INPUTGAMECODE: "Saisir le hash de la partie",
-    CHOOSETYPE: "Choix du type de jeu"
+    CHOOSETYPE: "Choix du type de jeu",
+    TRYAGAIN: "Recommencer",
+    COMPARETOMACHINE: "Comparez-vous à la machine"
   },
   1: {
     LANG: "English",
@@ -104,8 +107,9 @@ var traduction = {
     TESTCODE: "VERIFY",
     FALSECODE: "This code is not correct",
     GOODCODE: "Felicitation! This is the correct code!",
+    BEATTHEMACHINE: "Did you beat the machine?",
     INPUTSOLOA: "Now, to know if you beat the machine,",
-    INPUTSOLOB: "input your question marks:",
+    INPUTSOLOB: "Input your question marks:",
     CLICBOXES: "Click on the boxes to fill them",
     MAX3: "3 questions maximum per round!",
     ADDROUND: "Add a round",
@@ -147,7 +151,9 @@ var traduction = {
     GAMETYPE: "Game type",
     TEXT1: "Retrieve <span class='green'>criteria</span> cards and verificators in the box",
     INPUTGAMECODE: "Input game hash",
-    CHOOSETYPE: "Choose game type"
+    CHOOSETYPE: "Choose game type",
+    TRYAGAIN: "Try again",
+    COMPARETOMACHINE: "Compare with the machine"
 
 
   }

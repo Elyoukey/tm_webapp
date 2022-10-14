@@ -8,8 +8,8 @@ import config from "./config";
 
 import home from "./images/Home.png";
 import noteBox from "./images/NoteBox.jpg";
-import noteBoxYES from "./images/NoteBoxYES.jpg";
-import noteBoxNO from "./images/NoteBoxNO.jpg";
+import noteBoxYES from "./images/NoteBoxYES.png";
+import noteBoxNO from "./images/NoteBoxNO.png";
 import CriteriaDisplay from "./criteriaDisplay";
 
 class PageShowSolution extends Component {

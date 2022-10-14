@@ -63,12 +63,33 @@ class PageInputCode extends Component {
                     {buttons}
                 </div>
 
+                { !this.props.wrongCode && !this.props.correctCode ? (
                 <input
                     className="fullgreen"
                     type="button"
                     value={traduction[this.props.language]["TESTCODE"]}
                     onClick={() => this.props.testCode()}
                 />
+                ):null}
+
+                { this.props.wrongCode ? (
+                <input
+                    className="fullgreen"
+                    type="button"
+                    value={traduction[this.props.language]["TRYAGAIN"]}
+                    onClick={() => this.props.testCode()}
+                />
+                ):null}
+
+                { this.props.correctCode && this.props.soloPlay ? (
+                <input
+                    className="fullgreen"
+                    type="button"
+                    value={traduction[this.props.language]["BEATTHEMACHINE"]}
+                    onClick={() => this.props.changePage(idPage["P_ASKSOLOPAGE1"])}
+                />
+                ):null}
+
 
                 <div className="footer">
                     <a

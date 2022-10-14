@@ -1,0 +1,26 @@
+.pageSoloPlay label.question{
+    padding-bottom: 10px;
+    display: block;
+}
+
+.pageSoloPlay .answerGrid{
+    display: table;
+    width:85%;
+    margin: auto;
+}
+
+.pageSoloPlay .answerGrid .row{
+    display: table-row;
+}
+
+.pageSoloPlay .answerGrid .row .cell{
+    display: table-cell;
+}
+
+.pageSoloPlay .answerGrid .row .cell.letter{
+    text-transform: uppercase;
+    color: #2db563;
+    font-size: 35px;
+    font-family: Benton-bold;
+}
+

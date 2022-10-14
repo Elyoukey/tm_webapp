@@ -1,301 +1,142 @@
-import { Component } from "react";
+import {Component} from "react";
 import "./styles.css";
+import "./css/PageSoloPlay.css";
 
 import traduction from "./traduction";
 import idPage from "./idPage";
 
-import noteBox from "./images/NoteBox.jpg";
-import noteBoxYES from "./images/NoteBoxYES.jpg";
-import noteBoxNO from "./images/NoteBoxNO.jpg";
+import MarkCell from "./markCell";
+import CodeButton from "./codeButton";
 
 class PageSoloPlay extends Component {
-  state = {
-    nbRounds: 1,
-    questionsTab: [[0, 0, 0, 0, 0, 0]],
-    maximumQuestionsReach: false,
-    validButton: false
-  };
-
-  testCodeSolo() {
-    this.state.validButton = false;
-    this.state.maximumQuestionsReach = false;
-    this.state.nbRounds = 1;
-    this.state.questionsTab = [[]];
-    for (var i = 0; i < this.props.game.n; i++) {
-      this.state.questionsTab[0].push(0);
-    }
-    this.props.testCodeSolo();
-  }
-
-  clickBox(idRound, idQuestion, value) {
-    let nbQuestions = 0;
-    this.state.questionsTab[idRound].forEach((v) => {
-      if (v !== 0) {
-        nbQuestions++;
-      }
-    });
-    if (
-      nbQuestions === 3 &&
-      this.state.questionsTab[idRound][idQuestion] === 0
-    ) {
-      this.setState({ maximumQuestionsReach: true });
-      return;
-    }
-    let newQuestionsTab = [...this.state.questionsTab];
-    newQuestionsTab[idRound][idQuestion] = value;
-    nbQuestions = 0;
-    newQuestionsTab[idRound].forEach((v) => {
-      if (v !== 0) {
-        nbQuestions++;
-      }
-    });
-    if (nbQuestions === 0) {
-      this.setState({
-        validButton: false,
+    state = {
+        nbRounds: 1,
+        questionsTab: [[]],
         maximumQuestionsReach: false,
-        questionsTab: newQuestionsTab
-      });
-    } else {
-      this.setState({
-        validButton: true,
-        maximumQuestionsReach: false,
-        questionsTab: newQuestionsTab
-      });
-    }
-  }
+        validButton: false
+    };
 
-  addRound() {
-    let newRoundTab = [];
-    for (var i = 0; i < this.props.game.n; i++) {
-      newRoundTab.push(0);
-    }
-    let newQuestionsTab = [...this.state.questionsTab];
-    newQuestionsTab.push(newRoundTab);
-    this.setState({
-      questionsTab: newQuestionsTab
-    });
-  }
-
-  delRound() {
-    let newQuestionsTab = [];
-    for (var i = 0; i < this.state.questionsTab.length - 1; i++) {
-      newQuestionsTab.push(this.state.questionsTab[i]);
-    }
-    this.setState({
-      questionsTab: newQuestionsTab
-    });
-  }
-
-  submit() {
-    let finalTab = [];
-    let socialTXT = "";
-    if (this.props.dailyText != "") {
-      socialTXT =
-        "🤖TURING MACHINE🤖\n\rDAILY CHALLENGE\n\r" +
-        this.props.dailyText +
-        "\n\r#" +
-        this.props.game.hash +
-        "\n\r";
-    } else {
-      socialTXT = "🤖TURING MACHINE🤖\n\r#" + this.props.game.hash + "\n\r";
-    }
-    let nbRounds = 0;
-    let nbQuestions = 0;
-    for (var r = 0; r < this.state.questionsTab.length; r++) {
-      let nbQuestionsThisRound = 0;
-      for (var q = 0; q < this.state.questionsTab[r].length; q++) {
-        if (this.state.questionsTab[r][q] === 0) {
-          socialTXT = socialTXT + "🔲";
+    constructor(props) {
+        super(props);
+        let newQuestionTab = [[]];
+        for (let i = 0; i < this.props.game.n; i++) {
+            this.state.questionsTab[0].push(0);
         }
-        if (this.state.questionsTab[r][q] === 1) {
-          socialTXT = socialTXT + "✅";
-          nbQuestionsThisRound++;
-        }
-        if (this.state.questionsTab[r][q] === 2) {
-          socialTXT = socialTXT + "❌";
-          nbQuestionsThisRound++;
-        }
-      }
-      if (nbQuestionsThisRound > 0) {
-        finalTab.push(this.state.questionsTab[r]);
-        nbRounds++;
-        nbQuestions += nbQuestionsThisRound;
-        socialTXT = socialTXT + "\n\r";
-      }
     }
 
-    this.props.testCodeSoloVictory(nbRounds, nbQuestions, socialTXT, finalTab);
-  }
+    addRound() {
+        let newQuestionsTab = this.state.questionsTab;
+        let row = [];
+        for (let i = 0; i < this.props.game.n; i++) {
+            row.push(0);
+        }
+        newQuestionsTab.push(row);
+        this.setState({questionsTab: newQuestionsTab})
+    }
+    deleteRound() {
+        let newQuestionsTab = this.state.questionsTab;
+        newQuestionsTab.splice(newQuestionsTab.length-1,1);
+        this.setState({questionsTab: newQuestionsTab})
+    }
 
-  render() {
-    return (
-      <table className="mainTab">
-        <tbody>
-          <tr>
-            {this.props.page === idPage["P_ASKSOLOPAGE1"]
-              ? this.getPage1()
-              : null}
-            {this.props.page === idPage["P_ASKSOLOPAGE2"]
-              ? this.getPage2()
-              : null}
-          </tr>
-        </tbody>
-      </table>
-    );
-  }
+    updateFunction(row, cell, value) {
+        let newQuestionsTab = this.state.questionsTab;
 
-  getPage1() {
-    return (
-      <td>
-        {this.props.wrongCode ? (
-          <span>{traduction[this.props.language]["FALSECODE"]}</span>
-        ) : (
-          <span>&nbsp;</span>
-        )}
-        <br />
-        <input
-          autoFocus
-          className="code"
-          type="text"
-          defaultValue=""
-          placeholder={traduction[this.props.language]["INPUTCODE"]}
-          size="20"
-          onChange={(e) => this.props.handleChangeCode(e.target.value)}
-        />
-        <br />
-        <input
-          className="smallButtonMain"
-          type="button"
-          value={traduction[this.props.language]["TESTCODE"]}
-          onClick={() => this.testCodeSolo()}
-        />
-        &nbsp;
-        <input
-          className="smallButtonMain"
-          type="button"
-          value={traduction[this.props.language]["CANCEL"]}
-          onClick={() => this.props.changePage(idPage["P_INGAME"])}
-        />
-      </td>
-    );
-  }
+        // check max values for row
+        let total = 0;
+        for (let i = 0; i < this.props.game.n; i++) {
+            if (this.state.questionsTab[row][i] != 0 && i != cell) {
+                total++;
+            }
+        }
+        if (total >= 3) return; // already 3 values
 
-  getPage2() {
-    return (
-      <td>
-        <table className="mainTab">
-          <tbody>
-            <tr>
-              <td colSpan={this.props.game.n}>
-                <span>{traduction[this.props.language]["GOODCODE"]}</span>
-                <br />
-                <span>{traduction[this.props.language]["INPUTSOLOA"]}</span>
-                <br />
-                <span>{traduction[this.props.language]["INPUTSOLOB"]}</span>
-                <br />
-              </td>
-            </tr>
-            <tr>
-              <td>A</td>
-              <td>B</td>
-              <td>C</td>
-              <td>D</td>
-              {this.props.game.n > 4 ? <td>E</td> : null}
-              {this.props.game.n > 5 ? <td>F</td> : null}
-            </tr>
-            {this.state.questionsTab.map((round, idRound) => (
-              <tr>
-                {round.map((question, idQuestion) => (
-                  <td>
-                    {question === 0 ? (
-                      <img
-                        src={noteBox}
-                        alt="empty"
-                        onClick={() => this.clickBox(idRound, idQuestion, 1)}
-                      />
-                    ) : null}
-                    {question === 1 ? (
-                      <img
-                        src={noteBoxYES}
-                        alt="empty"
-                        onClick={() => this.clickBox(idRound, idQuestion, 2)}
-                      />
-                    ) : null}
-                    {question === 2 ? (
-                      <img
-                        src={noteBoxNO}
-                        alt="empty"
-                        onClick={() => this.clickBox(idRound, idQuestion, 0)}
-                      />
-                    ) : null}
-                  </td>
-                ))}
-              </tr>
-            ))}
-            <tr>
-              <td colSpan={this.props.game.n}>
+        // set value and update state
+        newQuestionsTab[row][cell] = value;
+        this.setState({questionsTab: newQuestionsTab})
+    }
+
+    render() {
+        // letter listing
+        let letters = [];
+        for (let i = 0; i < this.props.game.n; i++) {
+            letters.push(String.fromCharCode(97 + i));
+        }
+
+        // build the grid
+        let grid = [];
+        for (let i = 0; i < this.state.questionsTab.length; i++) {
+            let row = [];
+            for (let j = 0; j < this.state.questionsTab[i].length; j++) {
+                row.push(
+                    <div className='cell'>
+                        <MarkCell
+                            value={this.state.questionsTab[i][j]}
+                            row={i}
+                            cell={j}
+                            updateFunction={(row, cell, value) => this.updateFunction(row, cell, value)}
+                        />
+                    </div>
+                );
+            }
+            grid.push(<div className='row'>{row}</div>);
+        }
+
+
+        return (
+            <div className="mainTab pageSoloPlay">
+                <h2>{traduction[this.props.language]["COMPARETOMACHINE"]}</h2>
+                <label class="question">{traduction[this.props.language]["INPUTSOLOB"]}</label>
+
+
+                <div className="answerGrid">
+                    <div className="row">
+                        {letters.map(function (letter, index) {
+                            return (
+                                <div key={index} className="cell letter">{letter}</div>
+                            );
+                        })}
+                    </div>
+
+
+                    {grid}
+
+                </div>
+
+                <div className="radioGroup clear">
                 <input
-                  className="smallButtonMain"
-                  type="button"
-                  value={traduction[this.props.language]["ADDROUND"]}
-                  onClick={() => this.addRound()}
+                    className="fullgreen"
+                    type="button"
+                    value={traduction[this.props.language]["ADDROUND"]}
+                    onClick={() => this.addRound()}
                 />
-                &nbsp;
-                {this.state.questionsTab.length > 1 ? (
-                  <input
-                    className="smallButtonMain"
+                <input
+                    className="fullgreen"
                     type="button"
                     value={traduction[this.props.language]["DELROUND"]}
-                    onClick={() => this.delRound()}
-                  />
-                ) : null}
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={this.props.game.n}>
-                {this.state.validButton ? (
-                  <button
-                    className="buttonMain3"
+                    onClick={() => this.deleteRound()}
+                />
+                </div>
+                <input
+                    className="fullgreen"
                     type="button"
-                    onClick={() => this.submit()}
-                    style={{ fontSize: 40 }}
-                  >
-                    <span style={{ verticalAlign: "middle" }}>
-                      {traduction[this.props.language]["SUBMITSOLOQUESTIONS"]}
-                    </span>
-                  </button>
-                ) : (
-                  <span>{traduction[this.props.language]["CLICBOXES"]}</span>
-                )}
-                {this.state.maximumQuestionsReach ? (
-                  <span>
-                    <br />
-                    {traduction[this.props.language]["MAX3"]}
-                  </span>
-                ) : null}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    );
-  }
+                    value={traduction[this.props.language]["BEATTHEMACHINE"]}
+                    onClick={() => this.props.changePage(idPage["P_ASKSOLOPAGE2"])}
+                />
+                <div className="footer">
+                    <a
+                        id="homeBut"
+                        className="backlink"
+                        type="submit"
+                        onClick={() => this.props.changePage(idPage["P_INGAME"])}
+                    >
+                        {traduction[this.props.language]["BACKTOGAME"]}
+                    </a>
+                </div>
+            </div>
+        );
+    }
 
-  getCheckBoxButton(round, zone) {
-    return (
-      <td>
-        {this.state.questionsTab[round][zone] === 0 ? (
-          <img src={noteBox} alt="empty" />
-        ) : null}
-        {this.state.questionsTab[round][zone] === 1 ? (
-          <img src={noteBoxYES} alt="yes" />
-        ) : null}
-        {this.state.questionsTab[round][zone] === 2 ? (
-          <img src={noteBoxNO} alt="no" />
-        ) : null}
-      </td>
-    );
-  }
 }
 
 export default PageSoloPlay;

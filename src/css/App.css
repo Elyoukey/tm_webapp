@@ -183,6 +183,9 @@ a{
   width: 40%;
   background: none;
 }
+.radioGroup.clear{
+  background: none;
+}
 
 .radioGroup input[type=button]{
   display: inline-block;

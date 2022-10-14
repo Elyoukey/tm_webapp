@@ -1,0 +1,60 @@
+.markCell{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index:0;
+}
+
+.markCell.active{
+    overflow: visible;
+    z-index: 1;
+}
+
+.markCell .clicker{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:0;
+    left:0;
+
+    z-index:1;
+}
+.markCell .holder{
+    position: absolute;
+    top:0;
+    border-radius: 40px;
+    padding: 20px 5px;
+    left: -5px;
+    z-index:1;
+
+}
+.markCell.active .holder{
+    background: #eaf7ef;
+
+}
+
+.markCell.state0 .holder{top: -20px;}
+.markCell.state1 .holder{top: -60px;}
+.markCell.state2 .holder{top:-100px;}
+
+.markCell .value{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+
+    background-image: url("../images/NoteBox.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 35px;
+}
+
+.markCell .val0{background-image: url("../images/NoteBox.png");}
+.markCell .val1{background-image: url("../images/NoteBoxYES.png");}
+.markCell .val2{background-image: url("../images/NoteBoxNO.png");}
