@@ -473,7 +473,6 @@ class App extends React.Component {
                             height="25"
                             onClick={() => this.changePage(idPage["P_MAIN"])}
                         />
-                        {this.state.page}
                         <div className="burgerMenu">
                             <span class="bar bar1"></span>
                             <span class="bar bar2"></span>
