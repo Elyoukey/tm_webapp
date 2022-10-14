@@ -391,6 +391,8 @@ class App extends React.Component {
         let result = this.state.codeValue.split("");
         result[digit] = value;
         this.setState({codeValue: result.join("")});
+        this.setState({wrongCode: false});
+        this.setState({correctCode: false});
     }
 
     testCode() {
