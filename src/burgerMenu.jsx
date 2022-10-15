@@ -56,7 +56,6 @@ class BurgerMenu extends Component{
                         value={traduction[this.props.language]["GAMEHISTORY"]}
                         onClick={() => this.changePage(idPage["P_HIST"])}
                     />
-                    <div className="separator"></div>
                     <a
 
                         href={config["RULESLINK"]}
