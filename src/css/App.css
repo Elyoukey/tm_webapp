@@ -44,9 +44,9 @@ body, *{
   min-height: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   #root{
-    width: 600px;
+    width: 400px;
     left: 50%;
     transform: translate(-50%);
   }
@@ -179,8 +179,8 @@ a{
 
 .radioGroup input[type=button]{
   display: inline-block;
-  margin: 4px;
-  font-size: 12px;
+  margin: 3px;
+  font-size: 11px;
 
 }
 .radioGroup input[type=button].active{

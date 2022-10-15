@@ -3,11 +3,13 @@
     width: 150px;
     text-align: right;
     margin: auto;
+    background: #ffffff;
 }
 .lang-switch #imageDropdown{
     white-space: nowrap;
     cursor: pointer;
     width: 150px;
+    background: #ffffff;
 }
 
 .lang-switch #imageDropdown:after{
@@ -22,11 +24,11 @@
 }
 .lang-list{
     display: none;
-    width: 100%;
     color: #ffffff;
     text-align: right;
     width: 150px;
     position: absolute;
+    background: #ffffff;
 }
 .lang-switch a{
     text-decoration: none;

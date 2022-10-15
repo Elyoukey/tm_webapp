@@ -3,6 +3,7 @@ import "./css/burgerMenu.css";
 import traduction from "./traduction";
 import idPage from "./idPage";
 import config from "./config";
+import LanguageMenu from "./LanguageMenu";
 
 class BurgerMenu extends Component{
     state ={
@@ -32,6 +33,10 @@ class BurgerMenu extends Component{
                     <span className="bar bar3"></span>
                 </div>
                 <div className="container">
+                    <LanguageMenu
+                        language={this.props.language}
+                        swapLanguage={(value) => this.props.swapLanguage(value)}
+                    />
                     <input
                         className="green"
                         type="button"

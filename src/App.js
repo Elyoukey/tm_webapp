@@ -463,6 +463,7 @@ class App extends React.Component {
                             language = {this.state.language}
                             changePage={(newPage) => this.changePage(newPage)}
                             gameOfTheDay={() => this.gameOfTheDay()}
+                            swapLanguage={(value) => this.swapLanguage(value)}
                         />
                     </div>
                 )
