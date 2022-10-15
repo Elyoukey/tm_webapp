@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import "./styles.css";
 import "./css/PageMainPage.css";
 
@@ -59,24 +59,25 @@ class PageMainPage extends Component {
                 }}
             />
               <div className="separator"></div>
-            <a
-                href="https://randolphca.sharepoint.com/:b:/s/Scorpion/EQVT739hm1VLlPpFw_IfeTsBpsugZ1JLWLvwTqkn5SR5JA?e=PnrGIf"
-                target="_blank"
-            >
-              {traduction[this.props.language]["DOWNLOADRULES"]}
-            </a>
-            <a
-                href={config["NOTESHEETLINK"]}
-                target="_blank"
-            >
-              {traduction[this.props.language]["SHEET"]}
-            </a>
-            <a
-                href={traduction[this.props.language]["ABOUTLINK"]}
-                target="_blank"
-            >
-              {traduction[this.props.language]["ABOUT"]}
-            </a>
+              <a
+
+                  href={config["RULESLINK"]}
+                  target="_blank"
+              >
+                  {traduction[this.props.language]["DOWNLOADRULES"]}
+              </a>
+              <a
+                  href={config["NOTESHEETLINK"]}
+                  target="_blank"
+              >
+                  {traduction[this.props.language]["SHEET"]}
+              </a>
+              <a
+                  href={traduction[this.props.language]["ABOUTLINK"]}
+                  target="_blank"
+              >
+                  {traduction[this.props.language]["ABOUT"]}
+              </a>
           </div>
         </div>
     );

@@ -29,6 +29,7 @@ import {createBrowserHistory} from 'history';
 import LanguageMenu from "./LanguageMenu";
 import logoTM from "./images/Menu.png";
 import PageResultMachine from "./PageResultMachine";
+import BurgerMenu from "./burgerMenu";
 
 export const history = createBrowserHistory({
     basename: process.env.PUBLIC_URL
@@ -458,11 +459,11 @@ class App extends React.Component {
                             height="25"
                             onClick={() => this.changePage(idPage["P_MAIN"])}
                         />
-                        <div className="burgerMenu">
-                            <span class="bar bar1"></span>
-                            <span class="bar bar2"></span>
-                            <span class="bar bar3"></span>
-                        </div>
+                        <BurgerMenu
+                            language = {this.state.language}
+                            changePage={(newPage) => this.changePage(newPage)}
+                            gameOfTheDay={() => this.gameOfTheDay()}
+                        />
                     </div>
                 )
                 }

@@ -1,0 +1,45 @@
+.burgerMenu{
+    float: right;
+    cursor: pointer;
+}
+.burgerMenu .holder{
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.burgerMenu .bar{
+    position: absolute;
+    top:0;
+    left:0;
+    height:2px;
+    width: 25px;
+    display: block;
+    background: #000000;
+}
+.burgerMenu .bar1{ top:0;}
+.burgerMenu .bar2{ top:7px;}
+.burgerMenu .bar3{ top:14px;}
+
+.burgerMenu .container{
+    position: fixed;
+    top: 55px;
+    right:0;
+    width: 100%;
+    background: white;
+    display: none;
+}
+.burgerMenu.opened .container{
+    display: block;
+}
+
+.burgerMenu.opened .bar1{
+    top: 7px;
+    transform: rotate(45deg);
+}
+.burgerMenu.opened .bar2{
+    transform: rotate(-45deg);
+    top: 7px;
+}
+.burgerMenu.opened .bar3{
+     display:none;
+ }
