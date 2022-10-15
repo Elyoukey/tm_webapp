@@ -83,8 +83,7 @@ class App extends React.Component {
 
     componentDidMount() {
         document.title = "Turing Machine";
-        window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
+
         userID = cookies.get("user");
         var hData = cookies.get("histData", {doNotParse: true});
         if (hData === undefined) {
@@ -150,26 +149,6 @@ class App extends React.Component {
     swapLanguage(langCode) {
         langCode = parseInt(langCode);
         this.setState({language: langCode});
-    }
-
-    resize() {
-        var sizex = window.innerWidth;
-        var sizey = window.innerHeight;
-        if (sizex < sizey) {
-            this.setState({
-                sizeImage: Math.min(sizex * 0.8, sizey / 2),
-                sizeFont: Math.max(sizex * 0.06, 20),
-                smallSizeFont: Math.max(sizex * 0.04, 14),
-                landscapeMode: sizex < sizey ? false : true
-            });
-        } else {
-            this.setState({
-                sizeImage: Math.min(sizex / 2, sizey - 130),
-                sizeFont: Math.max(sizex * 0.03, 20),
-                smallSizeFont: Math.max(sizex * 0.02, 14),
-                landscapeMode: sizex < sizey ? false : true
-            });
-        }
     }
 
     copyToClipboard() {
@@ -644,6 +623,8 @@ class App extends React.Component {
                         socialTXT={this.state.socialTXT}
                         game={this.game}
                         questionTab={this.state.questionTab}
+                        roundValue={this.state.roundValue}
+                        questionValue={this.state.questionValue}
                         copyToClipboard={() => this.copyToClipboard()}
                         copySocialTXTToClipboard={() => this.copySocialTXTToClipboard()}
                     />

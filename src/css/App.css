@@ -321,3 +321,12 @@ span.purpleCircle{
 span.blueTriangle{background-image: url("../images/ico_bluetriangle.jpg");}
 span.yellowSquare{background-image: url("../images/ico_yellowsquare.jpg");}
 span.purpleCircle{background-image: url("../images/ico_purplecircle.jpg");}
+
+/* succes and failure colored texts */
+span.success{
+  color: #2db563;
+}
+span.failure{
+  color: #d01b1b;
+
+}

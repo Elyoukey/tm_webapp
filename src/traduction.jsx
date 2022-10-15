@@ -75,7 +75,10 @@ var traduction = {
     INPUTGAMECODE: "Saisir le hash de la partie",
     CHOOSETYPE: "Choix du type de jeu",
     TRYAGAIN: "Recommencer",
-    COMPARETOMACHINE: "Comparez-vous à la machine"
+    COMPARETOMACHINE: "Comparez-vous à la machine",
+    VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>({$c})</span> en {$r} manches et {$q} questions",
+    VSMACHINETEXT2: "La machine a réussi en {$r} manches et {$q} questions",
+    INVITEFRIENDS: "Invitez vos amis à réaiser ce problème"
   },
   1: {
     LANG: "English",
@@ -153,7 +156,10 @@ var traduction = {
     INPUTGAMECODE: "Input game hash",
     CHOOSETYPE: "Choose game type",
     TRYAGAIN: "Try again",
-    COMPARETOMACHINE: "Compare with the machine"
+    COMPARETOMACHINE: "Compare with the machine",
+    VSMACHINETEXT1: "You found the code <span class='success'>({$c})</span> <br/>in {$r} rounds and {$q} questions",
+    VSMACHINETEXT2: "The machine found it in {$r} rounds and {$q} questions",
+    INVITEFRIENDS: "Submit this problem to your friends"
 
 
   }

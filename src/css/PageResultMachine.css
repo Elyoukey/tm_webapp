@@ -23,6 +23,7 @@
 }
 
 .pageResultMachine .separator{
+    margin: 50px auto;
     width: 100%;
     border-bottom: 1px solid #dddddd;
 }

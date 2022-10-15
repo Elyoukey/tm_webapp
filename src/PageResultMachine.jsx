@@ -11,9 +11,20 @@ import appface1 from "./images/appface1.png";
 class PageResultMachine extends Component {
 
     render() {
+
+        let vsmachinetext1 = traduction[this.props.language]["VSMACHINETEXT1"];
+        vsmachinetext1 = vsmachinetext1.replace( '{$c}', this.props.game.code );
+        vsmachinetext1 = vsmachinetext1.replace( '{$r}', this.props.roundValue );
+        vsmachinetext1 = vsmachinetext1.replace( '{$q}', this.props.questionValue );
+        let roundMachine = Math.ceil(this.props.game.par / 3);
+        let questionMachine = this.props.game.par;
+        let vsmachinetext2 = traduction[this.props.language]["VSMACHINETEXT2"];
+        vsmachinetext2 = vsmachinetext2.replace( '{$c}', this.props.game.code );
+        vsmachinetext2 = vsmachinetext2.replace( '{$r}', roundMachine );
+        vsmachinetext2 = vsmachinetext2.replace( '{$q}', questionMachine );
+
         return (
             <div className="mainTab pageResultMachine">
-
                 {this.props.winSolo === 0
                     ?
                     (
@@ -30,7 +41,7 @@ class PageResultMachine extends Component {
                             </div>
                         </div>
                     )
-                    : null}
+                : null}
                 {this.props.winSolo === 1 || this.props.winSolo === 2
                     ? (
                         <div className="">
@@ -46,14 +57,16 @@ class PageResultMachine extends Component {
                             </div>
                         </div>
                     )
-                    : null}
+                : null}
 
+                <p dangerouslySetInnerHTML={{ __html: vsmachinetext1 }}
+                ></p>
+                <p dangerouslySetInnerHTML={{ __html: vsmachinetext2 }}
+                ></p>
 
-                <pre>
-                     {this.props.socialTXT}
-                </pre>
                 <div className="separator"></div>
-<p>Invitez vous amis à réaliser ce probleme</p>
+
+                <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>
                 <h2>
                     {"#" + this.props.game.hash}
                     <input
