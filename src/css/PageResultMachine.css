@@ -1,0 +1,28 @@
+.pageResultMachine h2.failure{
+    color: #d01B1b;
+}
+
+.pageResultMachine h2.success{
+    color: #2db563;
+}
+
+.pageResultMachine .imageContainer{
+    width: 148px;
+    height: 148px;
+    border-radius: 15px;
+    padding: 8px;
+    margin:auto;
+}
+.pageResultMachine .imageContainer.success{ background: #2db563;}
+.pageResultMachine .imageContainer.failure{ background: #d01b1b;}
+
+.pageResultMachine .face{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pageResultMachine .separator{
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+}

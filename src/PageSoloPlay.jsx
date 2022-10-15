@@ -56,6 +56,49 @@ class PageSoloPlay extends Component {
         this.setState({questionsTab: newQuestionsTab})
     }
 
+
+    // check if victory VS machine + change page
+    submit() {
+        let finalTab = [];
+        let socialTXT = "";
+        if (this.props.dailyText != "") {
+            socialTXT =
+                "TURING MACHINE\n\rDAILY CHALLENGE\n\r" +
+                this.props.dailyText +
+                "\n\r#" +
+                this.props.game.hash +
+                "\n\r";
+        } else {
+            socialTXT = "TURING MACHINE\n\r#" + this.props.game.hash + "\n\r";
+        }
+        let nbRounds = 0;
+        let nbQuestions = 0;
+        for (var r = 0; r < this.state.questionsTab.length; r++) {
+            let nbQuestionsThisRound = 0;
+            for (var q = 0; q < this.state.questionsTab[r].length; q++) {
+                if (this.state.questionsTab[r][q] === 0) {
+                    socialTXT = socialTXT + "🔲";
+                }
+                if (this.state.questionsTab[r][q] === 1) {
+                    socialTXT = socialTXT + "✅";
+                    nbQuestionsThisRound++;
+                }
+                if (this.state.questionsTab[r][q] === 2) {
+                    socialTXT = socialTXT + "❌";
+                    nbQuestionsThisRound++;
+                }
+            }
+            socialTXT = socialTXT + "\n\r";
+            if (nbQuestionsThisRound > 0) {
+                finalTab.push(this.state.questionsTab[r]);
+                nbRounds++;
+                nbQuestions += nbQuestionsThisRound;
+            }
+        }
+        this.props.testCodeSoloVictory(nbRounds, nbQuestions, socialTXT, finalTab);
+        this.props.changePage(idPage["P_RESULTMACHINE"], false);
+    }
+
     render() {
         // letter listing
         let letters = [];
@@ -98,7 +141,6 @@ class PageSoloPlay extends Component {
                         })}
                     </div>
 
-
                     {grid}
 
                 </div>
@@ -121,7 +163,7 @@ class PageSoloPlay extends Component {
                     className="fullgreen"
                     type="button"
                     value={traduction[this.props.language]["BEATTHEMACHINE"]}
-                    onClick={() => this.props.changePage(idPage["P_ASKSOLOPAGE2"])}
+                    onClick={() => this.submit()}
                 />
                 <div className="footer">
                     <a

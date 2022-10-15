@@ -6,14 +6,6 @@ import CriteriaDisplay from "./criteriaDisplay";
 import traduction from "./traduction";
 import idPage from "./idPage";
 
-import home from "./images/Home.png";
-import symb0 from "./images/Symb0.png";
-import symb1 from "./images/Symb1.png";
-import symb2 from "./images/Symb2.png";
-import symb3 from "./images/Symb3.png";
-
-const imgSymb = [symb0, symb1, symb2, symb3];
-
 class PageInGame extends Component {
   render() {
       let game = this.props.game;
@@ -51,8 +43,8 @@ class PageInGame extends Component {
                       {rows.map(function(letter,index){
                           return (
                               <span key={index} className="square green">
-                            {game.sortedInd[index]}
-                          </span>
+                                {game.sortedInd[index]}
+                              </span>
                           );
                       })}
                   </p>

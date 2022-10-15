@@ -28,6 +28,7 @@ import shareImgOK from "./images/ShareOK.jpg";
 import {createBrowserHistory} from 'history';
 import LanguageMenu from "./LanguageMenu";
 import logoTM from "./images/Menu.png";
+import PageResultMachine from "./PageResultMachine";
 
 export const history = createBrowserHistory({
     basename: process.env.PUBLIC_URL
@@ -353,19 +354,23 @@ class App extends React.Component {
         );
     }
 
-    changePage(newPage) {
+    changePage(newPage, resetState = true) {
         this.setState({
-            page: newPage,
-            actualClipboard: clipboard,
-            hashValue: "",
-            codeValue: "___",
-            roundValue: "0",
-            questionValue: "0",
-            wrongCode: false,
-            correctCode: false,
-            winSolo: 0,
-            actualCopySocialImg: shareImg
+            page: newPage
         });
+        if(resetState){
+            this.setState({
+                actualClipboard: clipboard,
+                hashValue: "",
+                codeValue: "___",
+                roundValue: "0",
+                questionValue: "0",
+                wrongCode: false,
+                correctCode: false,
+                winSolo: 0,
+                actualCopySocialImg: shareImg
+            });
+        }
         if (newPage === 0) {
             this.state.advancedSettings = [0, 0, 1, 1];
             this.state.soloPlay = false;
@@ -436,7 +441,6 @@ class App extends React.Component {
             this.state.socialTXT =
                 this.state.socialTXT + traduction[this.state.language]["SOCIALLOSE"];
         }
-        this.changePage(idPage["P_SOLUTION"]);
         this.setState({correctCode: true, winSolo: win});
         this.setData(win);
     }
@@ -607,7 +611,7 @@ class App extends React.Component {
                                 finalTab
                             )
                         }
-                        changePage={(e) => this.changePage(e)}
+                        changePage={(p,r) => this.changePage(p,r)}
                         dailyText={this.state.dailyText}
                     />
                 ) : null}
@@ -628,6 +632,20 @@ class App extends React.Component {
                         language={this.state.language}
                         changePage={(p) => this.changePage(p)}
 
+                    />
+                ) : null}
+                {this.state.page === idPage["P_RESULTMACHINE"] ? (
+                    <PageResultMachine
+                        currentPage={this.state.page}
+                        language={this.state.language}
+                        changePage={(p) => this.changePage(p)}
+                        winSolo={this.state.winSolo}
+                        dailyText={this.state.dailyText}
+                        socialTXT={this.state.socialTXT}
+                        game={this.game}
+                        questionTab={this.state.questionTab}
+                        copyToClipboard={() => this.copyToClipboard()}
+                        copySocialTXTToClipboard={() => this.copySocialTXTToClipboard()}
                     />
                 ) : null}
             </div>
