@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ShareButton from "./shareButton";
 import "./styles.css";
 import "./css/PageResultMachine.css";
 
@@ -64,6 +65,9 @@ class PageResultMachine extends Component {
                 <p dangerouslySetInnerHTML={{ __html: vsmachinetext2 }}
                 ></p>
 
+                <ShareButton
+                    text={this.props.socialTXT}
+                />
                 <div className="separator"></div>
 
                 <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>
