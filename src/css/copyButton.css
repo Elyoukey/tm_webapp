@@ -1,0 +1,17 @@
+.copyButton{
+    display: inline;
+    position: relative;
+}
+.copyButton.copied:after{
+    content: ' ';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url("../images/check.png");
+    background-position: center;
+    background-size: cover;
+    left: 85%;
+}

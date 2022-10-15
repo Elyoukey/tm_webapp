@@ -5,6 +5,7 @@ import "./css/PageInGame.css";
 import CriteriaDisplay from "./criteriaDisplay";
 import traduction from "./traduction";
 import idPage from "./idPage";
+import CopyButton from "./copyButton";
 
 class PageInGame extends Component {
   render() {
@@ -19,11 +20,9 @@ class PageInGame extends Component {
 
           <h2>
               {"#" + this.props.game.hash}
-              <input
-                  type="button"
-                  value="copy"
-                  className="fullblack copy inline"
-                  onClick={() => this.props.copyToClipboard()}
+              <CopyButton
+                  text = {"#" + this.props.game.hash}
+                  language = {this.props.language}
               />
           </h2>
           {this.props.dailyText != "" ? (

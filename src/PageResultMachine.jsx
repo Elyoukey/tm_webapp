@@ -8,6 +8,7 @@ import idPage from "./idPage";
 
 import appface0 from "./images/appface0.png";
 import appface1 from "./images/appface1.png";
+import CopyButton from "./copyButton";
 
 class PageResultMachine extends Component {
 
@@ -73,11 +74,9 @@ class PageResultMachine extends Component {
                 <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>
                 <h2>
                     {"#" + this.props.game.hash}
-                    <input
-                        type="button"
-                        value="copy"
-                        className="fullblack copy inline"
-                        onClick={() => this.props.copyToClipboard()}
+                    <CopyButton
+                        text = {"#" + this.props.game.hash}
+                        language = {this.props.language}
                     />
                 </h2>
 

@@ -538,8 +538,6 @@ class App extends React.Component {
                         soloPlay={this.state.soloPlay}
                         dailyText={this.state.dailyText}
                         finalTab={this.state.finalTab}
-                        actualCopySocialImg={this.state.actualCopySocialImg}
-                        copySocialTXTToClipboard={() => this.copySocialTXTToClipboard()}
                     />
                 ) : null}
                 {this.state.page === idPage["P_TESTCODE"] ? (
@@ -610,7 +608,6 @@ class App extends React.Component {
                         currentPage={this.state.page}
                         language={this.state.language}
                         changePage={(p) => this.changePage(p)}
-
                     />
                 ) : null}
                 {this.state.page === idPage["P_RESULTMACHINE"] ? (
@@ -625,8 +622,6 @@ class App extends React.Component {
                         questionTab={this.state.questionTab}
                         roundValue={this.state.roundValue}
                         questionValue={this.state.questionValue}
-                        copyToClipboard={() => this.copyToClipboard()}
-                        copySocialTXTToClipboard={() => this.copySocialTXTToClipboard()}
                     />
                 ) : null}
             </div>
