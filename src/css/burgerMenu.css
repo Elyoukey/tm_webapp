@@ -27,6 +27,7 @@
     width: 100%;
     background: white;
     display: none;
+    z-index: 10;
 }
 .burgerMenu.opened .container{
     display: block;

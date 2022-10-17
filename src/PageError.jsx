@@ -4,8 +4,6 @@ import "./styles.css";
 import traduction from "./traduction";
 import idPage from "./idPage";
 
-import home from "./images/Home.png";
-
 class PageError extends Component {
     render() {
         return (
