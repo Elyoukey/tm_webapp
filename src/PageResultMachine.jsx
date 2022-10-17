@@ -67,13 +67,13 @@ console.log(this.props);
                 ></p>
 
                 <ShareButton
-                    text={this.props.socialTXT}
+                    socialTXT={this.props.socialTXT}
                     game={this.props.game}
                     winSolo={this.props.winSolo}
                     finalTab={this.props.finalTab}
                     dailyText={this.props.dailyText}
                 />
-                <pre>{this.props.socialTXT}</pre>
+
                 <div className="separator"></div>
 
                 <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>

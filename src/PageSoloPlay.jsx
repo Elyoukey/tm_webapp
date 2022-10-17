@@ -64,13 +64,13 @@ class PageSoloPlay extends Component {
         let questionSeq = '';
         if (this.props.dailyText != "") {
             socialTXT =
-                "TURING MACHINE\n\rDAILY CHALLENGE\n\r" +
+                "TURING MACHINE\nDAILY CHALLENGE\n" +
                 this.props.dailyText +
-                "\n\r#" +
-                this.props.game.hash +
-                "\n\r";
+                "\n#" +
+                this.props.game.hash.replace(/ /g,"") +
+                "\n";
         } else {
-            socialTXT = "TURING MACHINE\n\r#" + this.props.game.hash + "\n\r";
+            socialTXT = "TURING MACHINE\n#" + this.props.game.hash + "\n";
         }
         let nbRounds = 0;
         let nbQuestions = 0;
@@ -89,7 +89,7 @@ class PageSoloPlay extends Component {
                     nbQuestionsThisRound++;
                 }
             }
-            socialTXT = socialTXT + "\n\r";
+            socialTXT = socialTXT + "\n";
             if (nbQuestionsThisRound > 0) {
                 finalTab.push(this.state.questionsTab[r]);
                 nbRounds++;
