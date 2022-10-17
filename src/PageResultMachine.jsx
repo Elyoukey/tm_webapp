@@ -24,7 +24,7 @@ class PageResultMachine extends Component {
         vsmachinetext2 = vsmachinetext2.replace( '{$c}', this.props.game.code );
         vsmachinetext2 = vsmachinetext2.replace( '{$r}', roundMachine );
         vsmachinetext2 = vsmachinetext2.replace( '{$q}', questionMachine );
-
+console.log(this.props);
         return (
             <div className="mainTab pageResultMachine">
                 {this.props.winSolo === 0
@@ -68,7 +68,12 @@ class PageResultMachine extends Component {
 
                 <ShareButton
                     text={this.props.socialTXT}
+                    game={this.props.game}
+                    winSolo={this.props.winSolo}
+                    finalTab={this.props.finalTab}
+                    dailyText={this.props.dailyText}
                 />
+                <pre>{this.props.socialTXT}</pre>
                 <div className="separator"></div>
 
                 <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>

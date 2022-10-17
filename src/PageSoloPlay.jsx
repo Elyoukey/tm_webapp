@@ -61,6 +61,7 @@ class PageSoloPlay extends Component {
     submit() {
         let finalTab = [];
         let socialTXT = "";
+        let questionSeq = '';
         if (this.props.dailyText != "") {
             socialTXT =
                 "TURING MACHINE\n\rDAILY CHALLENGE\n\r" +

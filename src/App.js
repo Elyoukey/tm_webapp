@@ -621,7 +621,7 @@ class App extends React.Component {
                         dailyText={this.state.dailyText}
                         socialTXT={this.state.socialTXT}
                         game={this.game}
-                        questionTab={this.state.questionTab}
+                        finalTab={this.state.finalTab}
                         roundValue={this.state.roundValue}
                         questionValue={this.state.questionValue}
                     />
