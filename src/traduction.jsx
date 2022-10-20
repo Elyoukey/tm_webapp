@@ -59,7 +59,7 @@ var traduction = {
     CRITERIADOUBLE: "Cartes Critères (2 par vérificateur)",
     CRITERIAMIXED: "Cartes Critères (mélangées)",
     VERIFIER: "Cartes Vérification",
-    SOLOMODE: "(Mode solo)",
+    SOLOMODE: "Mode solo",
     CHECKCODESOLO: "MACHINE",
     INPUTROUND: "NOMBRE DE ROUNDS",
     INPUTQUESTION: "NOMBRE DE QUESTIONS",
@@ -79,7 +79,9 @@ var traduction = {
     VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>({$c})</span> en {$r} manches et {$q} questions",
     VSMACHINETEXT2: "La machine a réussi en {$r} manches et {$q} questions",
     INVITEFRIENDS: "Invitez vos amis à réaiser ce problème",
-    COPY: "Copier"
+    COPY: "Copier",
+    EXTREMEMODE: "Mode Extrême: voir règles page 3",
+    NIGHTMAREMODE: "Mode Cauchemard: voir règles page 3"
   },
   1: {
     LANG: "English",
@@ -141,7 +143,7 @@ var traduction = {
     CRITERIADOUBLE: "Criteria Cards (2 on each verifier)",
     CRITERIAMIXED: "Criteria Cards (mixed)",
     VERIFIER: "Verification Cards",
-    SOLOMODE: "(Solo mode)",
+    SOLOMODE: "Solo mode",
     CHECKCODESOLO: "MACHINE",
     INPUTROUND: "TOTAL ROUNDS PLAYED",
     INPUTQUESTION: "TOTAL QUESTIONS ASKED",
@@ -161,7 +163,10 @@ var traduction = {
     VSMACHINETEXT1: "You found the code <span class='success'>({$c})</span> <br/>in {$r} rounds and {$q} questions",
     VSMACHINETEXT2: "The machine found it in {$r} rounds and {$q} questions",
     INVITEFRIENDS: "Submit this problem to your friends",
-    COPY: "Copy"
+    COPY: "Copy",
+    EXTREMEMODE: "Mode Extreme: see rulebook page 3",
+    NIGHTMAREMODE: "Mode Nightmare: see rulebook page 3"
+
 
   }
 };

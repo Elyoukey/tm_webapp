@@ -32,6 +32,14 @@ class PageInGame extends Component {
           {this.props.soloPlay ? (
               <p>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</p>
           ) : null}
+
+          {this.props.game.m == '1' ? (
+              <p>&nbsp;{traduction[this.props.language]["EXTREMEMODE"]}</p>
+          ) : null}
+          {this.props.game.m == '2' ? (
+              <p>&nbsp;{traduction[this.props.language]["NIGHTMAREMODE"]}</p>
+          ) : null}
+
           <p
               dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>
           </p>
