@@ -28,7 +28,7 @@
     position: absolute;
     top:0;
     border-radius: 40px;
-    padding: 20px 5px;
+    padding: 10px 2px;
     left: -5px;
     z-index:1;
 
@@ -38,9 +38,9 @@
 
 }
 
-.markCell.state0 .holder{top: -20px;}
-.markCell.state1 .holder{top: -60px;}
-.markCell.state2 .holder{top:-100px;}
+.markCell.state0 .holder{top: -10px;}
+.markCell.state1 .holder{top: -50px;}
+.markCell.state2 .holder{top: -90px;}
 
 .markCell .value{
     width: 40px;
