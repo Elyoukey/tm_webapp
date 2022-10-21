@@ -11,6 +11,9 @@ class PageShowSolution extends Component {
         // config
         let folderImagesLaws = config['FOLDER_IMAGES_LAWS'];
 
+        // langcode
+        let langcode = traduction[this.props.language]["LANGCODE"];
+
         //code solution
         let codeArr = this.props.game.code.toString().split("");
         // game
@@ -31,7 +34,6 @@ class PageShowSolution extends Component {
                     <span className="bigSquare codeButtonColor1 active">{codeArr[1]}</span>
                     <span className="bigSquare codeButtonColor2 active">{codeArr[2]}</span>
 
-
                     <div className="verificatorList">
                         {rows.map(function (letter, index) {
                             return (
@@ -44,16 +46,19 @@ class PageShowSolution extends Component {
                                     <div className="cell">
                                         <img
                                             src={folderImagesLaws +
+                                            "/"+langcode+"/"+
                                             game.law[index] +
-                                            "_Mini_FR.jpg"
+                                            "_Mini_"+
+                                            langcode +
+                                            ".jpg"
                                             }
                                         />
+
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
-
                     <div className="footer">
                         <a
                             id="homeBut"

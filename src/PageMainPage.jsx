@@ -61,7 +61,7 @@ class PageMainPage extends Component {
               <div className="separator"></div>
               <a
 
-                  href={config["RULESLINK"]}
+                  href={config["RULESLINK"]+"rules_"+traduction[this.props.language]["LANGCODE"]+".pdf"}
                   target="_blank"
               >
                   {traduction[this.props.language]["DOWNLOADRULES"]}

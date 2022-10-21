@@ -1,6 +1,7 @@
 var traduction = {
   0: {
     LANG: "Français",
+    LANGCODE: "FR",
     QUICK: "JOUER",
     DAY: "Défi du jour",
     CUSTOM: "Partie personnalisée",
@@ -85,6 +86,7 @@ var traduction = {
   },
   1: {
     LANG: "English",
+    LANGCODE: "EN",
     QUICK: "PLAY",
     DAY: "DAILY CHALLENGE",
     CUSTOM: "CUSTOM GAME",
