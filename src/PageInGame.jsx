@@ -58,25 +58,27 @@ class PageInGame extends Component {
               </div>
           ):null}
 
-          {rows.map(function(letter,index){
-              return (
-              <div key={index} className="row" >
-                <div className=" cell spot">{letter}</div>
-                <div className="cell">
-                    <CriteriaDisplay
-                        game = {game}
-                        row = {index}
-                    >
-                    </CriteriaDisplay>
-                </div>
-                  <div className="cell">
-                          <span className={"crypt color"+game.color}>{game.crypt[index]}</span>
+          <div className="table">
+              {rows.map(function(letter,index){
+                  return (
+                  <div key={index} className="row" >
+                    <div className=" cell spot">{letter}</div>
+                    <div className="cell criteria">
+                        <CriteriaDisplay
+                            game = {game}
+                            row = {index}
+                        >
+                        </CriteriaDisplay>
+                    </div>
+                      <div className="cell">
+                              <span className={"crypt color"+game.color}>{game.crypt[index]}</span>
+                      </div>
+
                   </div>
+                  );
+              })}
 
-              </div>
-              );
-          })}
-
+          </div>
 
 
 

@@ -2,10 +2,11 @@
     text-align: center;
     vertical-align: center;
     width:100%;
-    padding: 5px;
-
+    padding: 6px;
     border-bottom: 1px solid #ececec;
-
+}
+.pageInGame .row:first-child{
+    border-top: 1px solid #ececec;
 }
 
 .pageInGame .row .spot{
@@ -23,7 +24,8 @@
 
 }
 .pageInGame .row .cell{width: 20%;}
-.pageInGame .row .cell.spot{ width: 60%;}
+.pageInGame .row .cell.spot{ width: 40%;}
+.pageInGame .row .cell.criteria{ width: 40%; text-align: right;}
 
 .pageInGame .mixedcriteria{
     margin: 40px 0;
