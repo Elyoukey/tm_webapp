@@ -27,21 +27,21 @@ class PageMainPage extends Component {
           />
           <div className="homePage">
             <input
-                className="green"
+                className="green homeButton"
                 type="button"
                 value={traduction[this.props.language]["QUICK"]}
                 onClick={() => this.props.changePage(idPage["P_ADV"])}
                 style={{fontSize: this.props.sizeFont}}
             />
             <input
-                className="yellow"
+                className="yellow homeButton"
                 type="button"
                 value={traduction[this.props.language]["DAY"]}
                 onClick={() => this.props.gameOfTheDay()}
                 style={{fontSize: this.props.sizeFont}}
             />
             <input
-                className="blue"
+                className="blue homeButton"
                 type="button"
                 value={traduction[this.props.language]["SEARCH"]}
                 onClick={() => this.props.changePage(idPage["P_SEARCH"])}
@@ -50,7 +50,7 @@ class PageMainPage extends Component {
                 }}
             />
             <input
-                className="purple"
+                className="purple homeButton"
                 type="button"
                 value={traduction[this.props.language]["GAMEHISTORY"]}
                 onClick={() => this.props.changePage(idPage["P_HIST"])}

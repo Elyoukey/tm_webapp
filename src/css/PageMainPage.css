@@ -6,11 +6,10 @@
 h2{
     margin-bottom: 80px;
 }
-input[type=button]{
-    display: block;
-    width: 85%;
-    margin: 10px auto;
-    text-align: center;
+
+.homePage input[type=button].homeButton{
+    font-family: Benton-medium;
+    font-size: 3.5vh;
 }
 
 a{

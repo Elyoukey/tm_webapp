@@ -92,15 +92,19 @@ input[type=text].bigInput{
 }
 
 input[type=button]{
+  display: block;
   background: none;
   border: 2px solid black;
   border-radius: 20px;
   height: 40px;
   line-height: 30px;
+  width: 85%;
   padding: 0 10px;
+  margin: 10px auto;
   color: black;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 input[type=button]:hover{
   cursor: pointer;
@@ -121,6 +125,8 @@ input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: 
 input[type=button].fullgreen:hover{ color:#ffffff; background: #1e8b49; border-color: #1e8b49;}
 
 input[type=button].fullblack{ background: #000000; color:#ffffff; border-color: #000000;}
+
+
 
 input[type=button].inline{
   display: inline-block;

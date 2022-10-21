@@ -44,17 +44,7 @@ class PageInputCode extends Component {
                     </div>
                 )}
 
-                { !this.props.wrongCode && !this.props.correctCode ? (
-                    <span className="wrongCode">&nbsp;</span>
-                ) : null}
-               {this.props.wrongCode ? (
-                    <span className="wrongCode">{traduction[this.props.language]["FALSECODE"]}</span>
-                ) : null}
-                {this.props.correctCode ? (
-                    <span className="correctCode">{traduction[this.props.language]["GOODCODE"]}</span>
-                ) : null}
-
-                <div>
+                <div className="">
                     <span className="blueTriangle"></span>
                     <span className="yellowSquare"></span>
                     <span className="purpleCircle"></span>
@@ -63,6 +53,17 @@ class PageInputCode extends Component {
                     {buttons}
                 </div>
 
+                <div className="codeMessage">
+                { !this.props.wrongCode && !this.props.correctCode ? (
+                    <span className="wrongCode">&nbsp;</span>
+                ) : null}
+                {this.props.wrongCode ? (
+                    <span className="wrongCode">{traduction[this.props.language]["FALSECODE"]}</span>
+                ) : null}
+                {this.props.correctCode ? (
+                    <span className="correctCode">{traduction[this.props.language]["GOODCODE"]}</span>
+                ) : null}
+                </div>
                 { !this.props.wrongCode && !this.props.correctCode ? (
                 <input
                     className="fullgreen"
