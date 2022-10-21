@@ -24,9 +24,9 @@ class PageInputCode extends Component {
             }
             buttons.push(<br/>);
         }
-
+        let r = this.props.codeValue.split("");
         return (
-            <div className="mainTab">
+            <div className="mainTab pageInputCode">
 
                 <h2>{traduction[this.props.language]["CHECKCODE"]}</h2>
 
@@ -40,7 +40,15 @@ class PageInputCode extends Component {
                             (this.props.correctCode ? "correctCode" : "")
                             }
                     >
-                        {this.props.codeValue}
+                        <span className="digit">
+                            {r[0]}
+                        </span>
+                        <span className="digit">
+                        {r[1]}
+                             </span>
+                        <span className="digit">
+                        {r[2]}
+                        </span>
                     </div>
                 )}
 

@@ -5,19 +5,22 @@
 .showSolution .verificatorList{
     margin: 20px auto;
     display: table;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #ececec;
+
+    width: 85%;
 
 }
 
 .showSolution .verificatorList .row{
     height: 50px;
-    text-align: center;
+    text-align: right;
     display: table-row;
 
 }
 
 .showSolution .verificatorList .row .cell.first{
     width: 40px;
+    text-align: left;
 }
 .showSolution .verificatorList .row .cell{
     display: table-cell;
@@ -25,7 +28,7 @@
     height: 50px;
     width: 150px;
     padding:5px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ececec;
 
 }
 

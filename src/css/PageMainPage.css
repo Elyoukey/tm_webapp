@@ -7,9 +7,9 @@ h2{
     margin-bottom: 80px;
 }
 
-.homePage input[type=button].homeButton{
+input[type=button].homeButton{
     font-family: Benton-medium;
-    font-size: 3.5vh;
+    font-size: 4vh;
 }
 
 a{

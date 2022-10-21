@@ -38,25 +38,25 @@ class BurgerMenu extends Component{
                         swapLanguage={(value) => this.props.swapLanguage(value)}
                     />
                     <input
-                        className="green"
+                        className="green homeButton"
                         type="button"
                         value={traduction[this.props.language]["QUICK"]}
                         onClick={() => this.changePage(idPage["P_ADV"])}
                     />
                     <input
-                        className="yellow"
+                        className="yellow homeButton"
                         type="button"
                         value={traduction[this.props.language]["DAY"]}
                         onClick={() => this.gameOfTheDay()}
                     />
                     <input
-                        className="blue"
+                        className="blue homeButton"
                         type="button"
                         value={traduction[this.props.language]["SEARCH"]}
                         onClick={() => this.changePage(idPage["P_SEARCH"])}
                     />
                     <input
-                        className="purple"
+                        className="purple homeButton"
                         type="button"
                         value={traduction[this.props.language]["GAMEHISTORY"]}
                         onClick={() => this.changePage(idPage["P_HIST"])}

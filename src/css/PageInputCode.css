@@ -10,9 +10,11 @@ h2{
     height: 40px;
 }
 
-.codeDisplayer.code{
+.pageInputCode .codeDisplayer.code .digit{
+    display: inline-block;
+    text-align: center;
+    width: 50px;
     font-size: 30px;
-    letter-spacing: 20px;
 }
 
 .codeInserter{
