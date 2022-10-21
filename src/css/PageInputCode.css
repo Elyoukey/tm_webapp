@@ -17,12 +17,16 @@ h2{
 
 .codeInserter{
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     display: inline-block;
 }
 
+.codeMessage{
+    margin-bottom: 15px;
+}
 .wrongCode{
     color: #d01B1b;
+    margin-bottom: 5px;
 }
 .correctCode{
     color: #2db563;
