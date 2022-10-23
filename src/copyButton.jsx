@@ -1,5 +1,6 @@
 import {Component} from "react";
 import "./css/copyButton.css";
+import "./css/icofonts/icofont.min.css";
 import traduction from "./traduction";
 
 class CopyButton extends Component{
@@ -19,15 +20,17 @@ class CopyButton extends Component{
 
     render(){
         let className = "copyButton " + ((this.state.copied)?"copied":" ");
+        let classNameIcon = "icon " + ((this.state.copied)?"icofont-copy-invert":"icofont-copy");
         return (
-            <span className={className}>
-                <input
-                    type="button"
-                    value={traduction[this.props.language]["COPY"]}
-                    className="fullblack copy inline"
-                    onClick={() => this.copyToClipboard()}
-                />
-            </span>
+            <div
+                className={className}
+                onClick={() => this.copyToClipboard()}
+            >
+                <span className={classNameIcon}></span>
+                <span className="text">
+                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["COPY"]}
+                </span>
+            </div>
         );
     }
 }

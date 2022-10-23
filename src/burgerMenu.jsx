@@ -61,25 +61,6 @@ class BurgerMenu extends Component{
                         value={traduction[this.props.language]["GAMEHISTORY"]}
                         onClick={() => this.changePage(idPage["P_HIST"])}
                     />
-                    <a
-
-                        href={config["RULESLINK"]}
-                        target="_blank"
-                    >
-                        {traduction[this.props.language]["DOWNLOADRULES"]}
-                    </a>
-                    <a
-                        href={config["NOTESHEETLINK"]}
-                        target="_blank"
-                    >
-                        {traduction[this.props.language]["SHEET"]}
-                    </a>
-                    <a
-                        href={traduction[this.props.language]["ABOUTLINK"]}
-                        target="_blank"
-                    >
-                        {traduction[this.props.language]["ABOUT"]}
-                    </a>
                 </div>
             </div>
 

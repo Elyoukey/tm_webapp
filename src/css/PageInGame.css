@@ -1,12 +1,11 @@
 .pageInGame .row{
     text-align: center;
     vertical-align: center;
-    width:100%;
+
     padding: 6px;
-    border-bottom: 1px solid #ececec;
+    margin: auto;
 }
 .pageInGame .row:first-child{
-    border-top: 1px solid #ececec;
 }
 
 .pageInGame .row .spot{
@@ -15,17 +14,15 @@
     text-align: left;
     display: inline-block;
     font-size: 35px;
+    font-weight: bolder;
     transform: translateY(3px);
+    margin-right: 25px;
 
 }
 .pageInGame .row .cell{
     display: inline-block;
-    font-family: Benton-bold;
 
 }
-.pageInGame .row .cell{width: 20%;}
-.pageInGame .row .cell.spot{ width: 40%;}
-.pageInGame .row .cell.criteria{ width: 40%; text-align: right;}
 
 .pageInGame .mixedcriteria{
     margin: 40px 0;

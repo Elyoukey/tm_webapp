@@ -8,8 +8,8 @@ h2{
 }
 
 input[type=button].homeButton{
-    font-family: Benton-medium;
-    font-size: 2.5vh;
+    font-size: 3vh;
+    font-weight: bolder;
 }
 
 a{

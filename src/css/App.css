@@ -6,29 +6,9 @@ mauve:7f66ad
 gris: efeff0
 */
 
-@font-face {
-  font-family: Benton;
-  src: url("./fonts/Benton Sans Book.otf");
-}
-@font-face {
-  font-family: Benton-black;
-  src: url("./fonts/Benton Sans Condensed Black.otf");
-}
-@font-face {
-  font-family: Benton-bold;
-  src: url("./fonts/Benton Sans Condensed Bold.otf");
-}
-@font-face {
-  font-family: Benton-medium;
-  src: url("./fonts/Benton Sans Condensed Medium.otf");
-}
-
-
-
 body, *{
   box-sizing: border-box;
-  font-family: Benton;
-
+  font-family: Arial;
   font-weight: bold;
 }
 
@@ -56,7 +36,6 @@ h2{
   text-align: center;
   margin-bottom: 20px;
   font-size: 37px;
-  font-family: Benton-medium;
 }
 
 p{
@@ -103,7 +82,7 @@ input[type=button]{
   padding: 0 10px;
   margin: 10px auto;
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
 }
@@ -138,13 +117,6 @@ input[type=button].inline{
 }
 h2 input[type=button].inline{
   transform: translateY(-7px);
-}
-
-input[type=button].copy{
-  padding-left: 30px;
-  background-image: url("../images/ico_copy.png");
-  background-position: 7px -2px;
-  background-repeat: no-repeat;
 }
 
 .header{

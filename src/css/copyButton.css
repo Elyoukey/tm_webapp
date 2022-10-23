@@ -1,17 +1,19 @@
-.copyButton{
-    display: inline;
-    position: relative;
+.copyButton {
+    background: black;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -10px;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
 }
-.copyButton.copied:after{
-    content: ' ';
-    position: absolute;
-    left:0;
-    top: 0;
-    width: 15px;
-    height: 15px;
-    display: block;
-    background-image: url("../images/check.png");
-    background-position: center;
-    background-size: cover;
-    left: 85%;
+
+.copyButton .icon{
+    padding-right: 4px;
 }

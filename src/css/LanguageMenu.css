@@ -33,7 +33,7 @@
 .lang-switch a{
     text-decoration: none;
     margin:0;
-    padding:0;
+    padding: 3px;
     width:100%;
     cursor: pointer;
 }
