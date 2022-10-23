@@ -1,37 +1,13 @@
-
-.shareButton .copyButton{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    background-image: url("../images/Share.jpg");
-    background-size: cover;
-    background-position: center;
-    margin: 3px;
-}
-
-.shareButton .fbButton{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-image: url("../images/fb.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin:3px;
+.shareButton a{
     cursor: pointer;
-}
-
-.shareButton .twitterButton{
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-image: url("../images/twitter.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin:3px;
-    cursor: pointer;
+    margin: 2px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: #ececec;
+    border-radius: 17px;
+    text-align: center;
+    font-size:20px;
+    text-decoration: none;
 }

@@ -59,7 +59,7 @@ class ShareButton extends Component{
         let url = 'https://twitter.com/intent/tweet?o=0';
 
         // text
-        let text = this.props.socialTXT+"\n\r";
+        let text = this.props.socialTXT+"\n#turingmachinegame\n";
         text = encodeURIComponent(text);
         url += '&text='+text;
 
@@ -93,6 +93,17 @@ class ShareButton extends Component{
         let pop= window.open(url , 'shareFB', 'height=400,menubar=no,width,400');
     }
 
+    copyToClipboard() {
+        const el = document.createElement("textarea");
+        el.value = this.props.socialTXT+"\n#turingmachinegame\n";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+        this.setState({copied: true});
+    }
+
+
     render(){
         let href ="mailto:?subject=turingmachine&body=";
         let text = this.props.socialTXT;
@@ -121,6 +132,13 @@ class ShareButton extends Component{
                 >
                     <span className="icofont-email"></span>
                 </a>
+                <a
+                    className=""
+                    onClick={()=>this.copyToClipboard()}
+                >
+                    <span className="icofont-copy"></span>
+                </a>
+
             </div>
 
         );

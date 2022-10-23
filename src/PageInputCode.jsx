@@ -45,7 +45,7 @@ class PageInputCode extends Component {
                         </span>
                         <span className="digit">
                         {r[1]}
-                             </span>
+                        </span>
                         <span className="digit">
                         {r[2]}
                         </span>
