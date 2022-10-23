@@ -285,13 +285,13 @@ span.purpleCircle{
   text-align: center;
   vertical-align: middle;
   margin: 5px;
-  background-image: url("../images/ico_bluetriangle.jpg");
+  background-image: url("../images/ico_bluetriangle.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
-span.blueTriangle{background-image: url("../images/ico_bluetriangle.jpg");}
-span.yellowSquare{background-image: url("../images/ico_yellowsquare.jpg");}
-span.purpleCircle{background-image: url("../images/ico_purplecircle.jpg");}
+span.blueTriangle{background-image: url("../images/ico_bluetriangle.svg");}
+span.yellowSquare{background-image: url("../images/ico_yellowsquare.svg");}
+span.purpleCircle{background-image: url("../images/ico_purplecircle.svg");}
 
 /* succes and failure colored texts */
 span.success{
