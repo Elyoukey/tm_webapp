@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./css/shareButton.css";
+import "./css/icofonts/icofont.min.css";
 import clipboardOK from "./images/ClipboardOK.png";
 
 class ShareButton extends Component{
@@ -58,7 +59,7 @@ class ShareButton extends Component{
         let url = 'https://twitter.com/intent/tweet?o=0';
 
         // text
-        let text = this.props.socialTXT;
+        let text = this.props.socialTXT+"\n\r";
         text = encodeURIComponent(text);
         url += '&text='+text;
 
@@ -91,24 +92,35 @@ class ShareButton extends Component{
         url += '&url='+encodeURIComponent(dynUrl);
         let pop= window.open(url , 'shareFB', 'height=400,menubar=no,width,400');
     }
+
     render(){
-        let className = "copyButton " + ((this.state.copied)?"copied":" ");
+        let href ="mailto:?subject=turingmachine&body=";
+        let text = this.props.socialTXT;
+        text = encodeURIComponent(text);
+        href += text;
+
         return(
             <div className="shareButton">
 
-                <div
+                <a
                 className="fbButton"
                 onClick={()=>this.shareToFb()}
 
-                ></div>
-                <div
+                >
+                    <span class="icofont-facebook"></span>
+                </a>
+                <a
                     className="twitterButton"
                     onClick={()=>this.sharetoTwitter()}
-                />
-                <div
-                    className={className}
-                    onClick={()=>this.copyToClipboard()}>
-                </div>
+                >
+                    <span className="icofont-twitter"></span>
+                </a>
+                <a
+                    className="mailButton"
+                    href={href}
+                >
+                    <span className="icofont-email"></span>
+                </a>
             </div>
 
         );
