@@ -23,7 +23,11 @@
 }
 
 .pageResultMachine .separator{
-    margin: 50px auto;
+    margin: 35px auto;
     width: 100%;
     border-bottom: 1px solid #dddddd;
+}
+
+.pageResultMachine .shareLabel{
+    padding-bottom: 15px;
 }

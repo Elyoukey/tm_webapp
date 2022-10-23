@@ -70,6 +70,7 @@ class PageResultMachine extends Component {
                     {traduction[this.props.language]["SHARERESULTS"]}
                 </div>
                 <ShareButton
+                    language={this.props.language}
                     socialTXT={this.props.socialTXT}
                     game={this.props.game}
                     winSolo={this.props.winSolo}

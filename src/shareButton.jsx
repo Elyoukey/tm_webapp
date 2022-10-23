@@ -1,27 +1,12 @@
 import React, {Component} from "react";
 import "./css/shareButton.css";
 import "./css/icofonts/icofont.min.css";
-import clipboardOK from "./images/ClipboardOK.png";
+import traduction from "./traduction";
 
 class ShareButton extends Component{
     state = {
-        copied: false,
-        opened: false
+        copied: false
     };
-
-    copyToClipboard(){
-
-
-        const el = document.createElement("textarea");
-        el.value = this.props.text;
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand("copy");
-        document.body.removeChild(el);
-        this.setState({copied: true});
-
-    }
-
 
     shareToFb(){
 
@@ -133,10 +118,12 @@ class ShareButton extends Component{
                     <span className="icofont-email"></span>
                 </a>
                 <a
-                    className=""
+                    className="copyButton2"
                     onClick={()=>this.copyToClipboard()}
                 >
-                    <span className="icofont-copy"></span>
+                    <span className="icofont-copy"></span>&nbsp;
+                    {this.state.copied?(traduction[this.props.language]["copied"]):(traduction[this.props.language]["copy"])}
+                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["COPY"]}
                 </a>
 
             </div>
