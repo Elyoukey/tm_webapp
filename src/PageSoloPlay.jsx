@@ -146,27 +146,26 @@ class PageSoloPlay extends Component {
 
                 </div>
 
-                <div className="radioGroup clear">
-                <input
-                    className="fullgreen"
-                    type="button"
-                    value={traduction[this.props.language]["ADDROUND"]}
+
+                <a
+                    className="button fit white plus"
                     onClick={() => this.addRound()}
-                />
-                <input
-                    className="fullgreen"
-                    type="button"
-                    value={traduction[this.props.language]["DELROUND"]}
+                >{traduction[this.props.language]["ADDROUND"]}
+                </a>
+                <a
+                    className="button fit white minus"
                     onClick={() => this.deleteRound()}
-                />
-                </div>
-                <input
-                    className="fullgreen"
-                    type="button"
-                    value={traduction[this.props.language]["BEATTHEMACHINE"]}
-                    onClick={() => this.submit()}
-                />
+                >
+                    {traduction[this.props.language]["DELROUND"]}
+                </a>
+
                 <div className="footer">
+                    <input
+                        className="fullgreen"
+                        type="button"
+                        value={traduction[this.props.language]["BEATTHEMACHINE"]}
+                        onClick={() => this.submit()}
+                    />
                     <a
                         id="homeBut"
                         className="backlink"
