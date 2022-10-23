@@ -95,10 +95,7 @@ class ShareButton extends Component{
         let className = "copyButton " + ((this.state.copied)?"copied":" ");
         return(
             <div className="shareButton">
-                <div
-                    className={className}
-                    onClick={()=>this.copyToClipboard()}>
-                </div>
+
                 <div
                 className="fbButton"
                 onClick={()=>this.shareToFb()}
@@ -108,6 +105,10 @@ class ShareButton extends Component{
                     className="twitterButton"
                     onClick={()=>this.sharetoTwitter()}
                 />
+                <div
+                    className={className}
+                    onClick={()=>this.copyToClipboard()}>
+                </div>
             </div>
 
         );

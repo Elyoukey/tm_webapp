@@ -65,6 +65,9 @@ class PageResultMachine extends Component {
                 <p dangerouslySetInnerHTML={{ __html: vsmachinetext2 }}
                 ></p>
 
+                <div className="shareLabel">
+                    {traduction[this.props.language]["SHARERESULTS"]}
+                </div>
                 <ShareButton
                     socialTXT={this.props.socialTXT}
                     game={this.props.game}

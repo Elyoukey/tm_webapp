@@ -299,5 +299,9 @@ span.success{
 }
 span.failure{
   color: #d01b1b;
+}
 
+/* bolder text */
+span.bolder{
+  font-weight: 1000;
 }

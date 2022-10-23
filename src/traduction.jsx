@@ -77,13 +77,14 @@ var traduction = {
     CHOOSETYPE: "Choix du type de jeu",
     TRYAGAIN: "Recommencer",
     COMPARETOMACHINE: "Comparez-vous à la machine",
-    VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>{$c}</span> en {$r} manches et {$q} questions",
-    VSMACHINETEXT2: "La machine a réussi en {$r} manches et {$q} questions",
+    VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>{$c}</span> en <span class='bolder'>{$r}</span> manches et <span class='bolder'>{$q}</span> questions",
+    VSMACHINETEXT2: "La machine a réussi en <span class='bolder'>{$r}</span> manches et <span class='bolder'>{$q}</span> questions",
     INVITEFRIENDS: "Invitez vos amis à réaiser ce problème",
     COPY: "Copier",
     COPIED: "Copié!",
     EXTREMEMODE: "Mode Extrême: voir règles page 3",
-    NIGHTMAREMODE: "Mode Cauchemard: voir règles page 3"
+    NIGHTMAREMODE: "Mode Cauchemard: voir règles page 3",
+    SHARERESULTS: "Partagez votre résultat"
   },
   1: {
     LANG: "English",
@@ -164,14 +165,14 @@ var traduction = {
     CHOOSETYPE: "Choose game type",
     TRYAGAIN: "Try again",
     COMPARETOMACHINE: "Compare with the machine",
-    VSMACHINETEXT1: "You found the code <span class='success'>{$c}</span> <br/>in {$r} rounds and {$q} questions",
-    VSMACHINETEXT2: "The machine found it in {$r} rounds and {$q} questions",
+    VSMACHINETEXT1: "You found the code <span class='success'>{$c}</span> <br/>in <span class='bolder'>{$r}</span> rounds and <span class='bolder'>{$q}</span> questions",
+    VSMACHINETEXT2: "The machine found it in <span class='bolder'>{$r}</span> rounds and <span class='bolder'>{$q}</span> questions",
     INVITEFRIENDS: "Submit this problem to your friends",
     COPY: "Copy",
     COPIED: "Copied!",
     EXTREMEMODE: "Mode Extreme: see rulebook page 3",
-    NIGHTMAREMODE: "Mode Nightmare: see rulebook page 3"
-
+    NIGHTMAREMODE: "Mode Nightmare: see rulebook page 3",
+    SHARERESULTS: "Share your result with the hashtag #turingmachinegame"
 
   }
 };
