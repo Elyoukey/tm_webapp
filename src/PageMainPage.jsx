@@ -36,7 +36,7 @@ class PageMainPage extends Component {
             <input
                 className="yellow homeButton"
                 type="button"
-                value={traduction[this.props.language]["DAY"]}
+                value={traduction[this.props.language]["DAiLYCHALLENGE"]}
                 onClick={() => this.props.gameOfTheDay()}
                 style={{fontSize: this.props.sizeFont}}
             />

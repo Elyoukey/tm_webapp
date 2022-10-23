@@ -46,7 +46,7 @@ class BurgerMenu extends Component{
                     <input
                         className="yellow homeButton"
                         type="button"
-                        value={traduction[this.props.language]["DAY"]}
+                        value={traduction[this.props.language]["DAiLYCHALLENGE"]}
                         onClick={() => this.gameOfTheDay()}
                     />
                     <input

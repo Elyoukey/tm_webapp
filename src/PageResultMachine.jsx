@@ -24,7 +24,6 @@ class PageResultMachine extends Component {
         vsmachinetext2 = vsmachinetext2.replace( '{$c}', this.props.game.code );
         vsmachinetext2 = vsmachinetext2.replace( '{$r}', roundMachine );
         vsmachinetext2 = vsmachinetext2.replace( '{$q}', questionMachine );
-console.log(this.props);
         return (
             <div className="mainTab pageResultMachine">
                 {this.props.winSolo === 0

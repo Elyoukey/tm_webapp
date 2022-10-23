@@ -1,3 +1,14 @@
+.pageInGame h2{
+    margin: 10px;
+    font-size: 25px;
+}
+
+.pageInGame .solomode,
+.pageInGame .solomode span,
+.pageInGame .difficulty,
+.pageInGame .difficulty span{
+    font-size: small;
+}
 .pageInGame .row{
     text-align: center;
     vertical-align: center;

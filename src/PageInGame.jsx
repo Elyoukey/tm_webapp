@@ -18,6 +18,28 @@ class PageInGame extends Component {
     return (
       <div className="mainTab pageInGame">
 
+          <div className="solomode">
+              {this.props.soloPlay ?
+                  (<span>{traduction[this.props.language]["SOLOMODE"]}</span>)
+                  :
+                  (<span>{traduction[this.props.language]["COMPETITIVE"]}</span>)
+              }
+          </div>
+          <div className="difficulty">
+              {this.props.game.m == '1' ? (
+                  <span>{traduction[this.props.language]["EXTREMEMODE"]}</span>
+              ) : null}
+              {this.props.game.m == '2' ? (
+                  <span>{traduction[this.props.language]["NIGHTMAREMODE"]}</span>
+              ) : null}
+              {this.props.dailyText != "" ? (
+                  <span>{traduction[this.props.language]["DAiLYCHALLENGE"]} {this.props.dailyText}</span>
+              ) : null}
+
+
+          </div>
+
+
           <h2>
               {"#" + this.props.game.hash}
               <CopyButton
@@ -25,20 +47,7 @@ class PageInGame extends Component {
                   language = {this.props.language}
               />
           </h2>
-          {this.props.dailyText != "" ? (
-              <span>{this.props.dailyText}&nbsp;</span>
-          ) : null}
 
-          {this.props.soloPlay ? (
-              <p>&nbsp;{traduction[this.props.language]["SOLOMODE"]}</p>
-          ) : null}
-
-          {this.props.game.m == '1' ? (
-              <p>&nbsp;{traduction[this.props.language]["EXTREMEMODE"]}</p>
-          ) : null}
-          {this.props.game.m == '2' ? (
-              <p>&nbsp;{traduction[this.props.language]["NIGHTMAREMODE"]}</p>
-          ) : null}
 
           <p
               dangerouslySetInnerHTML={{ __html: traduction[this.props.language]["TEXT1"] }}>

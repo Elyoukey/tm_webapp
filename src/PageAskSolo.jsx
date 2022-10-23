@@ -10,7 +10,7 @@ class PageAskSolo extends Component {
         return (
             <div className="mainTab pageAskSolo">
                 {this.props.dailyText!=="" ?
-                    (<h2>{traduction[this.props.language]["DAY"]}</h2>):
+                    (<h2>{traduction[this.props.language]["DAiLYCHALLENGE"]}</h2>):
                     (<h2>{traduction[this.props.language]["CHOOSETYPE"]}</h2>)
                 }
 
