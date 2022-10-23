@@ -12,6 +12,7 @@ import logoTM from "./images/Menu.png";
 
 import boxFR from "./images/BOX_FR.png";
 import boxEN from "./images/BOX_EN.png";
+import logoSM from "./images/logo_sm.png";
 import home from "./images/Home.png";
 import config from "./config";
 
@@ -78,6 +79,26 @@ class PageMainPage extends Component {
               >
                   {traduction[this.props.language]["ABOUT"]}
               </a>
+              <div className="separator"></div>
+
+              <div className="clearfix"></div>
+              <div className="socialLinks">
+                  <a href="https://www.scorpionmasque.com" target="_blank">
+                      <img className="logo_SM"
+                           src={logoSM}
+                           alt="Scorpion masqué"/>
+                  </a>
+                  <div className="social">
+                      <a href="https://www.instagram.com/scorpionmasque/" target="_blank" className="icofont-instagram"></a>
+                      <a href="https://twitter.com/Scorpionmasque" target="_blank" className="icofont-twitter"></a>
+                      <a href="https://www.facebook.com/scorpionmasque" target="_blank" className="icofont-facebook"></a>
+                      <a href="https://www.youtube.com/scorpionmasque" target="_blank" className="icofont-youtube"></a>
+                  </div>
+
+                 Copyright &copy; 2022 - Le Scorpion Masqué
+              </div>
+
+
           </div>
         </div>
     );

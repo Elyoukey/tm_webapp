@@ -348,3 +348,24 @@ span.failure{
 span.bolder{
   font-weight: 1000;
 }
+
+/* social links on mainpage */
+.socialLinks{
+  width: 85%;
+  margin: auto;
+  font-size: 12px;
+}
+
+.socialLinks .logo_SM{
+  width: 40%;
+  margin: auto;
+}
+.socialLinks .social{
+  margin: 10px;
+}
+.socialLinks a{
+  text-decoration: none;
+  display: inline;
+  margin: 15px;
+  font-size: 40px;
+}
