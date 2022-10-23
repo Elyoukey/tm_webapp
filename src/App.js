@@ -211,6 +211,7 @@ class App extends React.Component {
 
     loadHistoricalGame(url) {
         this.state.askSolo = true;
+        this.state.dailyText = "";
         this.loadGame(url);
     }
 
@@ -323,6 +324,8 @@ class App extends React.Component {
     }
 
     playAdvanced() {
+        this.state.askSolo = false;
+        this.state.dailyText = "";
         this.state.soloPlay = this.state.advancedSettings[0] === 1;
         this.loadGame(
             "m=" +

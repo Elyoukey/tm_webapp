@@ -16,7 +16,7 @@ class PageAskSolo extends Component {
 
 
                 <div class="content">
-                    <p>{traduction[this.props.language]["GAMETYPE"]}</p>
+                    <label className="label">{traduction[this.props.language]["GAMETYPE"]}</label>
 
                     <div className="radioGroup">
                         <input
