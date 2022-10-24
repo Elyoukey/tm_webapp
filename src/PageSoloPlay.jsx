@@ -102,7 +102,8 @@ class PageSoloPlay extends Component {
                 nbQuestions += nbQuestionsThisRound;
             }
         }
-        socialTXT += "\n";
+        socialTXT += "\n\n";
+        socialTXT += "https://www.turingmachine.info";
         this.props.testCodeSoloVictory(nbRounds, nbQuestions, socialTXT, finalTab);
         this.props.changePage(idPage["P_RESULTMACHINE"], false);
     }
