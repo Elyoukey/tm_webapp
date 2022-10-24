@@ -99,8 +99,8 @@ class PageResultMachine extends Component {
                                 <div key={index} className="cell letter">{letter}</div>
                             );
                         })}
-                    </div>                    {grid}
-
+                    </div>
+                    {grid}
                 </div>
 
                 <div className="separator"></div>

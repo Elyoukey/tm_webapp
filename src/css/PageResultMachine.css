@@ -37,7 +37,6 @@
 
 .pageResultMachine .answerGrid{
     display: table;
-    width:350px;
     margin: auto;
 }
 
@@ -47,6 +46,7 @@
 
 .pageResultMachine .answerGrid .row .cell{
     display: table-cell;
+    width:10px;
 }
 
 .pageResultMachine .answerGrid .row .cell.letter{
