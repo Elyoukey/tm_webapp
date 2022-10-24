@@ -9,6 +9,7 @@ import idPage from "./idPage";
 import appface0 from "./images/appface0.png";
 import appface1 from "./images/appface1.png";
 import CopyButton from "./copyButton";
+import MarkCell from "./markCell";
 
 class PageResultMachine extends Component {
 
@@ -24,6 +25,31 @@ class PageResultMachine extends Component {
         vsmachinetext2 = vsmachinetext2.replace( '{$c}', this.props.game.code );
         vsmachinetext2 = vsmachinetext2.replace( '{$r}', roundMachine );
         vsmachinetext2 = vsmachinetext2.replace( '{$q}', questionMachine );
+
+        let letters = [];
+        for (let i = 0; i < this.props.game.n; i++) {
+            letters.push(String.fromCharCode(97 + i));
+        }
+        console.log(this.props.finalTab);
+        let grid = [];
+        for (let i = 0; i < this.props.finalTab.length ; i++) {
+            let row = [];
+            for (let j = 0; j < this.props.finalTab[i].length ; j++) {
+                row.push(
+                    <div className='cell'>
+                        <MarkCell
+                            value={this.props.finalTab[i][j]}
+                            row={i}
+                            cell={j}
+                            disabled={true}
+                        />
+                    </div>
+                );
+            }
+            grid.push(<div className='row'>{row}</div>);
+        }
+
+
         return (
             <div className="mainTab pageResultMachine">
                 {this.props.winSolo === 0
@@ -59,11 +85,24 @@ class PageResultMachine extends Component {
                         </div>
                     )
                 : null}
-
+                <div className="hash">
+                    #{this.props.game.hash}
+                </div>
                 <p dangerouslySetInnerHTML={{ __html: vsmachinetext1 }}
                 ></p>
                 <p dangerouslySetInnerHTML={{ __html: vsmachinetext2 }}
                 ></p>
+
+                <div className="answerGrid">
+                    <div className="row">
+                        {letters.map(function (letter, index) {
+                            return (
+                                <div key={index} className="cell letter">{letter}</div>
+                            );
+                        })}
+                    </div>                    {grid}
+
+                </div>
 
                 <div className="separator"></div>
                 <div className="shareLabel">

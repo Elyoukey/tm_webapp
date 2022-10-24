@@ -25,6 +25,7 @@ class MarkCell extends Component{
     };
 
     display(){
+        if(this.props.disabled)return;
         this.setState({displayed:true});
     }
 
