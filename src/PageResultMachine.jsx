@@ -107,7 +107,6 @@ class PageResultMachine extends Component {
                 <div className="shareLabel">
                     {traduction[this.props.language]["SHARERESULTS"]}
                 </div>
-                <pre>{this.props.socialTXT}</pre>
                 <ShareButton
                     language={this.props.language}
                     socialTXT={this.props.socialTXT}
@@ -116,7 +115,6 @@ class PageResultMachine extends Component {
                     finalTab={this.props.finalTab}
                     dailyText={this.props.dailyText}
                 />
-
                 <div className="footer">
                     <a
                         id="homeBut"

@@ -66,7 +66,7 @@ class PageSoloPlay extends Component {
             socialTXT =
                 "TURING MACHINE" +
                 "\n"+
-                "DAILY CHALLENGE - " + this.props.dailyText +
+                traduction[this.props.language]["DAiLYCHALLENGE"]+" - " + this.props.dailyText +
                 "\n" +
                 "#" + this.props.game.hash.replace(/ /g,"") +
                 "\n";
