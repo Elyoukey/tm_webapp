@@ -64,14 +64,20 @@ class PageSoloPlay extends Component {
         let questionSeq = '';
         if (this.props.dailyText != "") {
             socialTXT =
-                "TURING MACHINE\nDAILY CHALLENGE\n" +
-                this.props.dailyText +
-                "\n#" +
-                this.props.game.hash.replace(/ /g,"") +
+                "TURING MACHINE" +
+                "\n"+
+                "DAILY CHALLENGE - " + this.props.dailyText +
+                "\n" +
+                "#" + this.props.game.hash.replace(/ /g,"") +
                 "\n";
         } else {
-            socialTXT = "TURING MACHINE\n#" + this.props.game.hash + "\n";
+            socialTXT =
+                "TURING MACHINE"+
+                "\n"+
+                "#" + this.props.game.hash.replace(/ /g,"") +
+                "\n";
         }
+        socialTXT += "\n";
         let nbRounds = 0;
         let nbQuestions = 0;
         for (var r = 0; r < this.state.questionsTab.length; r++) {
@@ -89,13 +95,14 @@ class PageSoloPlay extends Component {
                     nbQuestionsThisRound++;
                 }
             }
-            socialTXT = socialTXT + "\n";
+            socialTXT += "\n";
             if (nbQuestionsThisRound > 0) {
                 finalTab.push(this.state.questionsTab[r]);
                 nbRounds++;
                 nbQuestions += nbQuestionsThisRound;
             }
         }
+        socialTXT += "\n";
         this.props.testCodeSoloVictory(nbRounds, nbQuestions, socialTXT, finalTab);
         this.props.changePage(idPage["P_RESULTMACHINE"], false);
     }
