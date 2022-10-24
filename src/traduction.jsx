@@ -84,7 +84,7 @@ var traduction = {
     COPIED: "Copié!",
     EXTREMEMODE: "Mode Extrême: voir règles page 3",
     NIGHTMAREMODE: "Mode Cauchemard: voir règles page 3",
-    SHARERESULTS: "Partagez votre résultat"
+    SHARERESULTS: "Partagez votre résultat avec le hashtag #turingmachinegame"
   },
   1: {
     LANG: "English",
