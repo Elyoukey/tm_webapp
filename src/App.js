@@ -269,7 +269,7 @@ class App extends React.Component {
         });
         xhr.open(
             "GET",
-            "https://www.pcspace.com/tl/api.php?uuid=" + userID + "&" + url
+            config.API+"api.php?uuid=" + userID + "&" + url
         );
         xhr.send();
     }
@@ -284,7 +284,7 @@ class App extends React.Component {
         });
         xhr.open(
             "GET",
-            "https://www.pcspace.com/tl/recordSolo.php?i=" +
+            config.API+"recordSolo.php?i=" +
             this.game.idPartie +
             "&m=" +
             this.game.m +
