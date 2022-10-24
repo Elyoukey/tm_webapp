@@ -6,6 +6,7 @@
     width: 20px;
     height: 20px;
     position: relative;
+    z-index:10;
 }
 .burgerMenu .bar{
     position: absolute;
@@ -44,3 +45,18 @@
 .burgerMenu.opened .bar3{
      display:none;
  }
+
+.burgerMenu .overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    background: #cecece;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display:none;
+}
+.burgerMenu.opened .overlay{
+    display: block;
+}
