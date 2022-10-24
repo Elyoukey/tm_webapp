@@ -62,7 +62,7 @@ class BurgerMenu extends Component{
                         onClick={() => this.changePage(idPage["P_HIST"])}
                     />
                 </div>
-                <div className="overlay"></div>
+                <div className="overlay" onClick={()=>this.toggleState()}></div>
             </div>
 
         );
