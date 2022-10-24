@@ -30,7 +30,6 @@ class PageResultMachine extends Component {
         for (let i = 0; i < this.props.game.n; i++) {
             letters.push(String.fromCharCode(97 + i));
         }
-        console.log(this.props.finalTab);
         let grid = [];
         for (let i = 0; i < this.props.finalTab.length ; i++) {
             let row = [];
@@ -116,17 +115,6 @@ class PageResultMachine extends Component {
                     finalTab={this.props.finalTab}
                     dailyText={this.props.dailyText}
                 />
-
-                <div className="separator"></div>
-
-                <p>{traduction[this.props.language]["INVITEFRIENDS"]}</p>
-                <h2>
-                    {"#" + this.props.game.hash}
-                    <CopyButton
-                        text = {"#" + this.props.game.hash}
-                        language = {this.props.language}
-                    />
-                </h2>
 
                 <div className="footer">
                     <a

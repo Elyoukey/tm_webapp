@@ -97,32 +97,11 @@ class ShareButton extends Component{
 
         return(
             <div className="shareButton">
-
                 <a
-                className="fbButton"
-                onClick={()=>this.shareToFb()}
-
-                >
-                    <span class="icofont-facebook"></span>
-                </a>
-                <a
-                    className="twitterButton"
-                    onClick={()=>this.sharetoTwitter()}
-                >
-                    <span className="icofont-twitter"></span>
-                </a>
-                <a
-                    className="mailButton"
-                    href={href}
-                >
-                    <span className="icofont-email"></span>
-                </a>
-                <a
-                    className="copyButton2"
+                    className="button fullgreen"
                     onClick={()=>this.copyToClipboard()}
                 >
                     <span className="icofont-copy"></span>&nbsp;
-                    {this.state.copied?(traduction[this.props.language]["copied"]):(traduction[this.props.language]["copy"])}
                     {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["COPY"]}
                 </a>
 

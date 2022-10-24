@@ -97,7 +97,9 @@ input[type=button]:hover{
 a.button{
   line-height: 38px;
 }
+a.button.green,
 input[type=button].green{ color: #2db563; border-color: #2db563;}
+a.button.green:hover,
 input[type=button].green:hover{ color:#ffffff; background: #2db563; border-color: #2db563;}
 input[type=button].blue{ color: #58b3da; border-color: #58b3da;}
 input[type=button].blue:hover{ color: #ffffff; background: #58b3da; border-color: #58b3da;}
@@ -107,7 +109,9 @@ input[type=button].purple{ color: #7f66ad; border-color: #7f66ad;}
 input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-color: #7f66ad;}
 input[type=button].grey{ color: #000000; background: #ececec; border-color: #ececec;}
 input[type=button].grey:hover{ background: #cccccc; border-color: #cccccc;}
+a.button.fullgreen,
 input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: #2db563;}
+a.button.fullgreen:hover,
 input[type=button].fullgreen:hover{ color:#ffffff; background: #1e8b49; border-color: #1e8b49;}
 input[type=button].fullblack{ background: #000000; color:#ffffff; border-color: #000000;}
 input[type=button].white{ background: #ffffff; color:#000000; border-color: #cecece; border-width: 1px}
