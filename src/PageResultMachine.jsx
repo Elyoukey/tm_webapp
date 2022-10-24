@@ -124,7 +124,7 @@ class PageResultMachine extends Component {
                         type="submit"
                         onClick={() => this.props.changePage(idPage["P_ASKSOLOPAGE1"])}
                     >
-                        {traduction[this.props.language]["BACKTOGAME"]}
+                        {traduction[this.props.language]["BACK"]}
                     </a>
                 </div>
             </div>

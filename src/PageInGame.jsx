@@ -38,12 +38,10 @@ class PageInGame extends Component {
 
 
           </div>
-
-
           <h2>
               {"#" + this.props.game.hash}
               <CopyButton
-                  text = {"#" + this.props.game.hash}
+                  text = {"#" + this.props.game.hash.replace(/ /g,"")}
                   language = {this.props.language}
               />
           </h2>
