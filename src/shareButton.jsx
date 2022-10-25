@@ -80,7 +80,7 @@ class ShareButton extends Component{
 
     copyToClipboard() {
         const el = document.createElement("textarea");
-        el.value = this.props.socialTXT+"\n#turingmachinegame\n\nhttps://www.turingmachine.info\n";
+        el.value = this.props.socialTXT.toUpperCase()+"\n#turingmachinegame\n\nhttps://www.turingmachine.info\n";
         document.body.appendChild(el);
         el.select();
         document.execCommand("copy");
@@ -102,9 +102,9 @@ class ShareButton extends Component{
                     onClick={()=>this.copyToClipboard()}
                 >
                     <span className="icofont-copy"></span>&nbsp;
-                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["COPY"]}
+                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["SHARE"]}
                 </a>
-
+                {(this.state.copied)?traduction[this.props.language]["PASTEYOURRESULT"]:null}
             </div>
 
         );
