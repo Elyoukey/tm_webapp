@@ -26,9 +26,9 @@ body, *{
 
 @media only screen and (min-width: 400px) {
   #root{
+    position: relative;
     width: 400px;
-    left: 50%;
-    transform: translate(-50%);
+    margin: auto;
   }
 }
 
@@ -179,6 +179,7 @@ a{
   font-weight: bold;
 }
 
+
 .label{
   text-align: center;
   width: 100%;
@@ -226,10 +227,12 @@ a{
 .footer{
   margin: 0;
   width:100%;
+  max-width: 400px;
   text-align: center;
   position: fixed;
   bottom: 0;
-  left:0;
+  left: 50%;
+  transform: translate(-50%);
   padding: 10px;
   background: #ffffff;
 }

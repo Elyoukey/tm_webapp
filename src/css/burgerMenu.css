@@ -22,12 +22,13 @@
 .burgerMenu .bar3{ top:14px;}
 
 .burgerMenu .container{
-    position: fixed;
+    position: absolute;
     top: 55px;
     right:0;
     width: 100%;
     background: white;
     display: none;
+    max-width: 400px;
     z-index: 10;
 }
 .burgerMenu.opened .container{
