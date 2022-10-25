@@ -80,7 +80,7 @@ class ShareButton extends Component{
 
     copyToClipboard() {
         const el = document.createElement("textarea");
-        el.value = this.props.socialTXT+"\n#turingmachinegame\nhttps://www.turingmachine.info\n";
+        el.value = this.props.socialTXT+"\n#turingmachinegame\n\nhttps://www.turingmachine.info\n";
         document.body.appendChild(el);
         el.select();
         document.execCommand("copy");

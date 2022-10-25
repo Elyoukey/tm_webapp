@@ -167,6 +167,7 @@ h2 input[type=button].inline{
 }
 
 .header{
+  padding: 5px;
 }
 
 .header .home{

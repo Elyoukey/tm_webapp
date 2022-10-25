@@ -59,7 +59,6 @@ class PageMainPage extends Component {
                   fontSize: this.props.sizeFont
                 }}
             />
-              <div className="separator"></div>
               <a
 
                   href={config["RULESLINK"]+"rules_"+traduction[this.props.language]["LANGCODE"]+".pdf"}
