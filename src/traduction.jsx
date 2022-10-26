@@ -82,7 +82,7 @@ var traduction = {
     INVITEFRIENDS: "Invitez vos amis à réaiser ce problème",
     COPY: "Copier",
     SHARE: "Partager",
-    COPIED: "Copié!",
+    COPIED: "Copié !",
     EXTREMEMODE: "Mode Extrême : voir livret de règles page 3",
     NIGHTMAREMODE: "Mode Cauchemar : voir livret de règles page 3",
     SHARERESULTS: "Copiez et Partagez vos résultats sur vos réseaux sociaux et affrontez vos amis dans une compétition quotidienne.",
