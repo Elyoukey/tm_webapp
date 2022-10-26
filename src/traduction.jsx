@@ -72,21 +72,21 @@ var traduction = {
     DOWNLOADRULES: "Télécharger les règles du jeu",
     GAMEHISTORY: "Historique des parties",
     GAMETYPE: "Type de jeu",
-    TEXT1: "Récupérer les cartes <span class='green'>Critères</span> et Vérification dans la boîte",
+    TEXT1: "Récupérer les cartes <span class='green'>Critères</span> et Vérification dans la boîte.",
     INPUTGAMECODE: "Saisissez l'identifiant du problème",
     CHOOSETYPE: "Choix du type de jeu",
     TRYAGAIN: "Réessayer",
     COMPARETOMACHINE: "Comparez-vous avec la machine",
-    VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>{$c}</span> en <span class='bolder'>{$r}</span> manches et <span class='bolder'>{$q}</span> questions.",
-    VSMACHINETEXT2: "La machine a réussi en <span class='bolder'>{$r}</span> manches et <span class='bolder'>{$q}</span> questions.",
+    VSMACHINETEXT1: "Vous avez trouvé le code <span class='success'>{$c}</span> en <span class='bolder'>{$r}</span> manche(s) et <span class='bolder'>{$q}</span> question(s).",
+    VSMACHINETEXT2: "La machine a réussi en <span class='bolder'>{$r}</span> manche(s) et <span class='bolder'>{$q}</span> question(s).",
     INVITEFRIENDS: "Invitez vos amis à réaiser ce problème",
     COPY: "Copier",
     SHARE: "Partager",
     COPIED: "Copié !",
     EXTREMEMODE: "Mode Extrême : voir livret de règles page 3",
     NIGHTMAREMODE: "Mode Cauchemar : voir livret de règles page 3",
-    SHARERESULTS: "Copiez et Partagez vos résultats sur vos réseaux sociaux et affrontez vos amis dans une compétition quotidienne.",
-    PASTEYOURRESULT: "Vous pouvez maintenant coller vos résultats sur vos plateformes de médias sociaux."
+    SHARERESULTS: "Copiez et Partagez vos résultats à vos amis ou sur vos réseaux sociaux !",
+    PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !"
 
   },
   1: {
@@ -163,20 +163,21 @@ var traduction = {
     DOWNLOADRULES: "Download Game Rules",
     GAMEHISTORY: "Game history",
     GAMETYPE: "Game Type",
-    TEXT1: "Get <span class='green'>Criteria</span> and Verification cards in the box",
+    TEXT1: "Get <span class='green'>Criteria</span> and Verification cards in the box.",
     INPUTGAMECODE: "Input Game ID",
     CHOOSETYPE: "Choose game type",
+    TRYAGAIN: "Try again",
     COMPARETOMACHINE: "Compare with the machine",
-    VSMACHINETEXT1: "You found the code <span class='success'>{$c}</span> <br/>in <span class='bolder'>{$r}</span> rounds and <span class='bolder'>{$q}</span> questions.",
-    VSMACHINETEXT2: "The machine found it in <span class='bolder'>{$r}</span> rounds and <span class='bolder'>{$q}</span> questions.",
+    VSMACHINETEXT1: "You found the code <span class='success'>{$c}</span> <br/>in <span class='bolder'>{$r}</span> round(s) and <span class='bolder'>{$q}</span> question(s).",
+    VSMACHINETEXT2: "The machine found it in <span class='bolder'>{$r}</span> round(s) and <span class='bolder'>{$q}</span> question(s).",
     INVITEFRIENDS: "Submit this problem to your friends",
     COPY: "Copy",
     SHARE: "Share",
     COPIED: "Copied!",
     EXTREMEMODE: "Extreme Mode: see rulebook page 3\n",
     NIGHTMAREMODE: "Nightmare Mode: see rulebook page 3",
-    SHARERESULTS: "Copy and Share your results on your social media and take on your friends in a daily competition!",
-    PASTEYOURRESULT: "You can now paste your results on your social media platforms."
+    SHARERESULTS: "Copy and share your results with your friends or on your social media!",
+    PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! "
 
   }
 };
