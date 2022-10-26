@@ -8,6 +8,10 @@ import codeButton from "./codeButton";
 import CodeButton from "./codeButton";
 
 class PageInputCode extends Component {
+
+    reset(){
+        this.props.handleChangeCode('___');
+    }
     render() {
 
         // initialize buttons
@@ -86,7 +90,7 @@ class PageInputCode extends Component {
                     className="fullgreen"
                     type="button"
                     value={traduction[this.props.language]["TRYAGAIN"]}
-                    onClick={() => this.props.testCode()}
+                    onClick={() => this.reset()}
                 />
                 ):null}
 
