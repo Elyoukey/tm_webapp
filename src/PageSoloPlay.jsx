@@ -103,6 +103,9 @@ class PageSoloPlay extends Component {
             }
         }
         socialTXT += "\n";
+
+        if(nbQuestions <1)return; // no question asked
+
         this.props.testCodeSoloVictory(nbRounds, nbQuestions, socialTXT, finalTab);
         this.props.changePage(idPage["P_RESULTMACHINE"], false);
     }
