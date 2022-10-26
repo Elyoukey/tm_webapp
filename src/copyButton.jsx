@@ -28,7 +28,7 @@ class CopyButton extends Component{
             >
                 <span className={classNameIcon}></span>
                 <span className="text">
-                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["COPY"]}
+                    {(this.state.copied)?traduction[this.props.language]["COPIED"]:traduction[this.props.language]["SHARE"]}
                 </span>
             </div>
         );
