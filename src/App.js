@@ -319,6 +319,7 @@ class App extends React.Component {
     }
 
     hashGame() {
+        if(this.state.hashValue == '')return;
         this.state.askSolo = true;
         this.loadGame("h=" + this.state.hashValue.toUpperCase());
     }
