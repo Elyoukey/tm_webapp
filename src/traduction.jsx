@@ -51,7 +51,7 @@ var traduction = {
     YES: "OUI",
     NO: "NON",
     CODE: "CODE",
-    SHEET: "Télécharger les feuilles de note",
+    SHEET: "Télécharger les feuilles de notes",
     SEARCH: "Chercher un problème",
     STEP1: "Mode",
     STEP2: "Difficulté",
