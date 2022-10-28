@@ -91,7 +91,7 @@ class PageMainPage extends Component {
                       <a href="https://www.instagram.com/scorpionmasque/" target="_blank" className="icofont-instagram"></a>
                       <a href="https://twitter.com/Scorpionmasque" target="_blank" className="icofont-twitter"></a>
                       <a href="https://www.facebook.com/scorpionmasque" target="_blank" className="icofont-facebook"></a>
-                      <a href="https://www.youtube.com/scorpionmasque" target="_blank" className="icofont-youtube"></a>
+                      <a href="https://www.youtube.com/user/LeScorpionmasque" target="_blank" className="icofont-youtube"></a>
                   </div>
 
                  Copyright &copy; 2022 - Le Scorpion Masqué
