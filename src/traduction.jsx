@@ -142,7 +142,7 @@ var traduction = {
     YES: "YES",
     NO: "NO",
     CODE: "CODE",
-    SHEET: "Download Notes Sheets",
+    SHEET: "Download Note Sheets",
     SEARCH: "Problem search",
     STEP1: "Mode",
     STEP2: "Difficulty",
