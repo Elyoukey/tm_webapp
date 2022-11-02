@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import Layout from "./pages/Layout";
+
+import "./css/App.css";
+import History from "./pages/History";
+
+import traduction from "./traduction";
+class App extends React.Component {
+    state = {
+        language: 1,
+        traduction: traduction
+    }
+    render(){
+        return (
+            <BrowserRouter>
+                <Routes path="/" element={<Layout />}>
+                    <Route index element={(<MainPage
+                        i18n={traduction[this.state.language]}/>)} />
+                    <Route path="history" element={
+                        (<History
+                        i18n={traduction[this.state.language]}
+                        />)
+                    } />
+                    <Route path="*" element={<MainPage />} />
+                </Routes>
+
+            </BrowserRouter>
+        );
+    }
+
+}
+
+export default App;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

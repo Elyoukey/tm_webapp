@@ -85,7 +85,7 @@ var traduction = {
     COPIED: "Copié !",
     EXTREMEMODE: "Mode Extrême : voir livret de règles page 3",
     NIGHTMAREMODE: "Mode Cauchemar : voir livret de règles page 3",
-    SHARERESULTS: "Copiez et Partagez vos résultats à vos amis ou sur vos réseaux sociaux !",
+    SHARERESULTS: "Copiez et partagez vos résultats à vos amis ou sur vos réseaux sociaux !",
     PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !"
 
   },
