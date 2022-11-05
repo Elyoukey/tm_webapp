@@ -17,7 +17,7 @@ var traduction = {
     EXTREMESUB: "(Voir la règle)",
     NIGHTMARESUB: "(Voir la règle)",
     EASY: "Facile",
-    MEDIUM: "Moyen",
+    MEDIUM: "Standard",
     HARD: "Difficile",
     V4: "4",
     V5: "5",
