@@ -102,11 +102,9 @@ class PageResultMachine extends Component {
                     </div>
                     {grid}
                 </div>
-
-                <div className="separator"></div>
-                <div className="shareLabel">
+                <p className="shareLabel">
                     {traduction[this.props.language]["SHARERESULTS"]}
-                </div>
+                </p>
                 <ShareButton
                     language={this.props.language}
                     socialTXT={this.props.socialTXT}
