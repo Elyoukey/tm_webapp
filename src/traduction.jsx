@@ -181,7 +181,7 @@ var traduction = {
     SHARERESULTS: "Copy and share your results with your friends or on your social media!",
     PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! ",
 
-    XPARADOX: "Think that the machine is wrong?",
+    XPARADOX: "Think That the Machine is Wrong?",
     XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf"
 
   }
