@@ -86,7 +86,9 @@ var traduction = {
     EXTREMEMODE: "Mode Extrême : voir livret de règles page 3",
     NIGHTMAREMODE: "Mode Cauchemar : voir livret de règles page 3",
     SHARERESULTS: "Copiez et partagez vos résultats à vos amis ou sur vos réseaux sociaux !",
-    PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !"
+    PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !",
+    XPARADOX: "Vous pensez que la machine se trompe ?",
+    XPARADOX_FILENAME: "TuringMachine_ParadoxeFaux_FR.pdf"
 
   },
   1: {
@@ -177,7 +179,10 @@ var traduction = {
     EXTREMEMODE: "Extreme Mode: see rulebook page 3\n",
     NIGHTMAREMODE: "Nightmare Mode: see rulebook page 3",
     SHARERESULTS: "Copy and share your results with your friends or on your social media!",
-    PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! "
+    PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! ",
+
+    XPARADOX: "Think that the machine is wrong?",
+    XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf"
 
   }
 };

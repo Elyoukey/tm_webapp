@@ -60,11 +60,16 @@ class PageMainPage extends Component {
                 }}
             />
               <a
-
                   href={config["RULESLINK"]+"rules_"+traduction[this.props.language]["LANGCODE"]+".pdf"}
                   target="_blank"
               >
                   {traduction[this.props.language]["DOWNLOADRULES"]}
+              </a>
+              <a
+                  href={config["RULESLINK"]+traduction[this.props.language]["XPARADOX_FILENAME"]}
+                  target="_blank"
+              >
+                  {traduction[this.props.language]["XPARADOX"]}
               </a>
               <a
                   href={config["NOTESHEETLINK"]}
