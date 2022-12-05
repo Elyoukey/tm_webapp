@@ -17,8 +17,10 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <Routes path="/" element={<Layout />}>
-                    <Route index element={(<MainPage
-                        i18n={traduction[this.state.language]}/>)} />
+                    <Route index
+                           element={(<MainPage
+                                    i18n={traduction[this.state.language]}
+                           />)} />
                     <Route path="history" element={
                         (<History
                         i18n={traduction[this.state.language]}

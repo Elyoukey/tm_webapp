@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 
-import traduction from "../traduction";
-
 import boxFR from "../images/BOX_FR.png";
 import boxEN from "../images/BOX_EN.png";
 import logoSM from "../images/logo_sm.png";
-import home from "../images/Home.png";
 import config from "../config";
-import idPage from "../idPage";
 
-const imgBox = [boxFR, boxEN];
+const imgBox = {
+    'FR':boxFR,
+    'EN':boxEN
+};
 
 class MainPage extends Component {
     render() {
         return (
             <div className="mainTab">
-
+                <img
+                    className="mainPageImage"
+                    src={imgBox[this.props.i18n["LANGCODE"]]}
+                />
                 <div className="homePage">
                     <input
                         className="green homeButton"
@@ -30,39 +32,31 @@ class MainPage extends Component {
                     <input
                         className="blue homeButton"
                         type="button"
-                        value={traduction[this.props.language]["SEARCH"]}
-                        onClick={() => this.props.changePage(idPage["P_SEARCH"])}
-                        style={{
-                            fontSize: this.props.sizeFont
-                        }}
+                        value={this.props.i18n["SEARCH"]}
                     />
                     <input
                         className="purple homeButton"
                         type="button"
-                        value={traduction[this.props.language]["GAMEHISTORY"]}
-                        onClick={() => this.props.changePage(idPage["P_HIST"])}
-                        style={{
-                            fontSize: this.props.sizeFont
-                        }}
+                        value={this.props.i18n["GAMEHISTORY"]}
                     />
                     <a
 
-                        href={config["RULESLINK"]+"rules_"+traduction[this.props.language]["LANGCODE"]+".pdf"}
+                        href={config["RULESLINK"]+"rules_"+this.props.i18n["LANGCODE"]+".pdf"}
                         target="_blank"
                     >
-                        {traduction[this.props.language]["DOWNLOADRULES"]}
+                        {this.props.i18n["DOWNLOADRULES"]}
                     </a>
                     <a
                         href={config["NOTESHEETLINK"]}
                         target="_blank"
                     >
-                        {traduction[this.props.language]["SHEET"]}
+                        {this.props.i18n["SHEET"]}
                     </a>
                     <a
-                        href={traduction[this.props.language]["ABOUTLINK"]}
+                        href={this.props.i18n["ABOUTLINK"]}
                         target="_blank"
                     >
-                        {traduction[this.props.language]["ABOUT"]}
+                        {this.props.i18n["ABOUT"]}
                     </a>
                     <div className="separator"></div>
 
