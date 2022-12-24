@@ -248,7 +248,8 @@ var traduction = {
         V4: "4",
         V5: "5",
         V6: "6",
-        ABOUTLINK: "http://www.scorpionmasque.com/fr/turingmachine",
+        ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
+        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -314,7 +315,8 @@ var traduction = {
         V4: "4",
         V5: "5",
         V6: "6",
-        ABOUTLINK: "http://www.scorpionmasque.com/fr/turingmachine",
+        ABOUTLINK: "https://www.gokids.com.tw/product/detail1787",
+        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf"
     }
 };
 
