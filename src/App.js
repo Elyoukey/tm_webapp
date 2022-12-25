@@ -6,6 +6,7 @@ import "./styles.css";
 import "./css/App.css";
 
 import traduction from "./traduction";
+
 import config from "./config";
 import idPage from "./idPage";
 
@@ -40,7 +41,10 @@ const cookies = new Cookies();
 var userID = "";
 var historicalGames;
 
+
+
 class App extends React.Component {
+
     state = {
         landscapeMode: true,
         sizeImage: 1,
@@ -107,6 +111,20 @@ class App extends React.Component {
             maxAge: 60 * 60 * 24 * 400,
             expires: d
         });
+
+        // set language index
+        var brwserLng = navigator.language;
+        var aTraduction = Object.values(traduction);
+        for(let i=0;i<aTraduction.length;i++){
+            if(brwserLng.toLowerCase() == traduction[i]["LANGCODE"].toLowerCase()){
+                this.setState({language: i});
+            }
+        }
+        // get language from cookie
+        var langCode = cookies.get("langCode");
+        if( langCode !== undefined){
+            this.setState({language: langCode});
+        }
     }
 
     updateHistoricalData() {
@@ -150,6 +168,13 @@ class App extends React.Component {
     swapLanguage(langCode) {
         langCode = parseInt(langCode);
         this.setState({language: langCode});
+        var d = new Date();
+        d.setTime(d.getTime() + 60 * 60 * 24 * 400 * 1000);
+        cookies.set("langCode", langCode, {
+            path: "/",
+            maxAge: 60 * 60 * 24 * 400,
+            expires: d
+        });
     }
 
     copyToClipboard() {
