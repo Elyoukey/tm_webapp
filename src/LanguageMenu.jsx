@@ -17,6 +17,7 @@ class LanguageMenu extends Component {
     swapLanguage(langCode){
         this.props.swapLanguage(langCode);
         this.setState({isToggle: false});
+
     }
 
     render() {

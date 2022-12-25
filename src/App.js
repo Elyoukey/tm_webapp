@@ -41,17 +41,6 @@ const cookies = new Cookies();
 var userID = "";
 var historicalGames;
 
-// set lagnuage index
-var brwserLng = navigator.language;
-var languageIndex = 1;
-console.log(traduction.length);
-for(let i=0;i<traduction.length;i++){
-    console.log(brwserLng);
-    console.log(traduction[i]["LANGCODE"]);
-    if(brwserLng.toLowerCase() == traduction[i]["LANGCODE"].toLowerCase()){
-        languageIndex = i;
-    }
-}
 
 
 class App extends React.Component {
@@ -63,7 +52,7 @@ class App extends React.Component {
         smallSizeFont: 15,
         page: 0,
         historicalData: false,
-        language: languageIndex,
+        language: 1,
         hashValue: "",
         codeValue: "___",
         roundValue: "0",
@@ -122,6 +111,20 @@ class App extends React.Component {
             maxAge: 60 * 60 * 24 * 400,
             expires: d
         });
+
+        // set language index
+        var brwserLng = navigator.language;
+        var aTraduction = Object.values(traduction);
+        for(let i=0;i<aTraduction.length;i++){
+            if(brwserLng.toLowerCase() == traduction[i]["LANGCODE"].toLowerCase()){
+                this.setState({language: i});
+            }
+        }
+        // get language from cookie
+        var langCode = cookies.get("langCode");
+        if( langCode !== undefined){
+            this.setState({language: langCode});
+        }
     }
 
     updateHistoricalData() {
@@ -165,6 +168,13 @@ class App extends React.Component {
     swapLanguage(langCode) {
         langCode = parseInt(langCode);
         this.setState({language: langCode});
+        var d = new Date();
+        d.setTime(d.getTime() + 60 * 60 * 24 * 400 * 1000);
+        cookies.set("langCode", langCode, {
+            path: "/",
+            maxAge: 60 * 60 * 24 * 400,
+            expires: d
+        });
     }
 
     copyToClipboard() {
