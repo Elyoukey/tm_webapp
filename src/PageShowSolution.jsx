@@ -13,9 +13,6 @@ class PageShowSolution extends Component {
 
         // langcode
         let langcode = traduction[this.props.language]["LANGCODE"];
-        if(this.props.language > 1){//force english until we have the images
-            langcode = 'EN';
-        }
 
         //code solution
         let codeArr = this.props.game.code.toString().split("");
