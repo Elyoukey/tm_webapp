@@ -6,6 +6,7 @@ import "./styles.css";
 import "./css/App.css";
 
 import traduction from "./traduction";
+
 import config from "./config";
 import idPage from "./idPage";
 
@@ -40,7 +41,21 @@ const cookies = new Cookies();
 var userID = "";
 var historicalGames;
 
+// set lagnuage index
+var brwserLng = navigator.language;
+var languageIndex = 1;
+console.log(traduction.length);
+for(let i=0;i<traduction.length;i++){
+    console.log(brwserLng);
+    console.log(traduction[i]["LANGCODE"]);
+    if(brwserLng.toLowerCase() == traduction[i]["LANGCODE"].toLowerCase()){
+        languageIndex = i;
+    }
+}
+
+
 class App extends React.Component {
+
     state = {
         landscapeMode: true,
         sizeImage: 1,
@@ -48,7 +63,7 @@ class App extends React.Component {
         smallSizeFont: 15,
         page: 0,
         historicalData: false,
-        language: 1,
+        language: languageIndex,
         hashValue: "",
         codeValue: "___",
         roundValue: "0",
