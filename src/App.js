@@ -31,6 +31,7 @@ import LanguageMenu from "./LanguageMenu";
 import logoTM from "./images/Menu.png";
 import PageResultMachine from "./PageResultMachine";
 import BurgerMenu from "./burgerMenu";
+import PageCreateChallenge from "./PageCreateChallenge";
 
 export const history = createBrowserHistory({
     basename: process.env.PUBLIC_URL
@@ -515,7 +516,6 @@ class App extends React.Component {
                         currentPage={this.state.page}
                         landscapeMode={this.state.landscapeMode}
                         language={this.state.language}
-                        smallSizeFont={this.state.smallSizeFont}
                         changePage={(page) => this.changePage(page)}
                         advancedSettings={this.state.advancedSettings}
                         clickAdvanced={(column, row) => this.clickAdvanced(column, row)}
@@ -653,6 +653,19 @@ class App extends React.Component {
                         finalTab={this.state.finalTab}
                         roundValue={this.state.roundValue}
                         questionValue={this.state.questionValue}
+                    />
+                ) : null}
+                {this.state.page === idPage["P_CREATECHALLENGE"] ? (
+                    <PageCreateChallenge
+                        currentPage={this.state.page}
+                        language={this.state.language}
+                        changePage={(p) => this.changePage(p)}
+                        soloPlay={this.state.soloPlay}
+                        game={this.game}
+                        advancedSettings={this.state.advancedSettings}
+                        clickAdvanced={(column, row) => this.clickAdvanced(column, row)}
+                        goCompetitive={() => this.goCompetitive()}
+                        goSolo={() => this.goSolo()}
                     />
                 ) : null}
             </div>
