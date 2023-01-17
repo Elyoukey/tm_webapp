@@ -88,7 +88,9 @@ var traduction = {
         SHARERESULTS: "Copiez et partagez vos résultats à vos amis ou sur vos réseaux sociaux !",
         PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !",
         XPARADOX: "Vous pensez que la machine se trompe ?",
-        XPARADOX_FILENAME: "TuringMachine_ParadoxeFaux_FR.pdf"
+        XPARADOX_FILENAME: "TuringMachine_ParadoxeFaux_FR.pdf",
+        CREATECHALLENGE: "Créer un défi",
+        NEW: "nouveau"
 
     },
     1: {
@@ -179,9 +181,10 @@ var traduction = {
         NIGHTMAREMODE: "Nightmare Mode: see rulebook page 3",
         SHARERESULTS: "Copy and share your results with your friends or on your social media!",
         PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! ",
-
         XPARADOX: "Think That the Machine is Wrong?",
-        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf"
+        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
+        CREATECHALLENGE: "Create a challenge",
+        NEW: "new"
 
     },
     2: {
@@ -249,7 +252,9 @@ var traduction = {
         V5: "5",
         V6: "6",
         ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
-        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf"
+        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf",
+        CREATECHALLENGE: "Create a challenge",
+        NEW: "new"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -316,7 +321,9 @@ var traduction = {
         V5: "5",
         V6: "6",
         ABOUTLINK: "https://www.gokids.com.tw/product/detail1787",
-        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf"
+        XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
+        CREATECHALLENGE: "Create a challenge",
+        NEW: "new"
     }
 };
 
