@@ -1,9 +1,9 @@
 import {Component} from "react";
 import "./styles.css";
-import "./css/PageAskSolo.css";
 
 import traduction from "./traduction";
 import idPage from "./idPage";
+import CardPicker from "./cardPicker";
 
 class PageCreateChallenge extends Component {
     state = {
@@ -71,7 +71,20 @@ class PageCreateChallenge extends Component {
                         onClick={() => this.props.clickAdvanced(3, 2)}
                     />
                 </div>
-
+                <label className="label">
+                    {traduction[this.props.language]["CRITERIACARDS"]}
+                </label>
+                <CardPicker
+                    language = {this.props.language}
+                    cardList = {[]}
+                >
+                </CardPicker>
+                <input
+                    className="fullgreen"
+                    type="button"
+                    value={traduction[this.props.language]["PLAY"]}
+                    onClick={() => this.props.playAdvanced()}
+                />
             </div>
         );
     }

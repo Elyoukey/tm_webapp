@@ -90,7 +90,9 @@ var traduction = {
         XPARADOX: "Vous pensez que la machine se trompe ?",
         XPARADOX_FILENAME: "TuringMachine_ParadoxeFaux_FR.pdf",
         CREATECHALLENGE: "Créer un défi",
-        NEW: "nouveau"
+        NEW: "nouveau",
+        CRITERIACARDS: "Cartes Critères",
+        CHOOSECARDS: "Choisissez les cartes critères avec lesquelles vous voulez jouer"
 
     },
     1: {
@@ -184,7 +186,9 @@ var traduction = {
         XPARADOX: "Think That the Machine is Wrong?",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
         CREATECHALLENGE: "Create a challenge",
-        NEW: "new"
+        NEW: "new",
+        CRITERIACARDS: "Criteria Cards",
+        CHOOSECARDS: "Choose the criteria cards you want to use"
 
     },
     2: {
@@ -254,7 +258,9 @@ var traduction = {
         ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf",
         CREATECHALLENGE: "Create a challenge",
-        NEW: "new"
+        NEW: "new",
+        CRITERIACARDS: "Criteria Cards",
+        CHOOSECARDS: "Choose the criteria cards you want to use"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -323,7 +329,9 @@ var traduction = {
         ABOUTLINK: "https://www.gokids.com.tw/product/detail1787",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
         CREATECHALLENGE: "Create a challenge",
-        NEW: "new"
+        NEW: "new",
+        CRITERIACARDS: "Criteria Cards",
+        CHOOSECARDS: "Choose the criteria cards you want to use"
     }
 };
 
