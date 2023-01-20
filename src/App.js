@@ -58,7 +58,7 @@ class App extends React.Component {
         codeValue: "___",
         roundValue: "0",
         questionValue: "0",
-        advancedSettings: [0, 0, 1, 1],
+        advancedSettings: [1, 0, 1, 1],
         actualClipboard: clipboard,
         wrongCode: false,
         correctCode: false,
@@ -383,7 +383,7 @@ class App extends React.Component {
         }
         if (newPage === 0) {
             this.state.advancedSettings = [0, 0, 1, 1];
-            this.state.soloPlay = false;
+            this.state.soloPlay = true;
             this.state.askSolo = false;
             this.state.dailyText = "";
             this.state.socialTXT = "";

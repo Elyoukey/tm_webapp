@@ -89,6 +89,7 @@ var traduction = {
         PASTEYOURRESULT: " Vous pouvez maintenant coller vos résultats sur vos réseaux sociaux et affronter vos amis dans une compétition quotidienne !",
         XPARADOX: "Vous pensez que la machine se trompe ?",
         XPARADOX_FILENAME: "TuringMachine_ParadoxeFaux_FR.pdf",
+        PRINTABLECHALLENGES: "Compilation de défis à imprimer",
         CREATECHALLENGE: "Créer un défi",
         NEW: "nouveau",
         CRITERIACARDS: "Cartes Critères",
@@ -189,6 +190,7 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the criteria cards you want to use"
+        PRINTABLECHALLENGES: "Printable Challenge Bank"
 
     },
     2: {
@@ -261,6 +263,7 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the criteria cards you want to use"
+        PRINTABLECHALLENGES: "Printable Challenge Bank"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -331,7 +334,8 @@ var traduction = {
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use"
+        CHOOSECARDS: "Choose the criteria cards you want to use",
+        PRINTABLECHALLENGES: "Printable Challenge Bank"
     }
 };
 

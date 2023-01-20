@@ -71,6 +71,13 @@ class PageMainPage extends Component {
                     </a>
                     <a
                         href={config["RULESLINK"] + traduction[this.props.language]["XPARADOX_FILENAME"]}
+                  href={config["CHALLENGEBANKLINK"]}
+                  target="_blank"
+              >
+                  {traduction[this.props.language]["PRINTABLECHALLENGES"]}
+              </a>
+              <a
+                  href={config["RULESLINK"]+traduction[this.props.language]["XPARADOX_FILENAME"]}
                         target="_blank"
                     >
                         {traduction[this.props.language]["XPARADOX"]}
