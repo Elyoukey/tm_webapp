@@ -12,7 +12,9 @@ class CardPicker extends Component{
     open(){ this.setState({open:true});}
     close(){ this.setState({open:false});}
 
+    pick(){}
     submit(){}
+
     render(){
         return(
             <div class="cardpicker">
@@ -32,7 +34,7 @@ class CardPicker extends Component{
                             className="fullgreen"
                             type="button"
                             value={traduction[this.props.language]["CONFIRM"]}
-                            onClick={() => this.submit()}
+                            onClick={() => this.close()}
                         />
                     </div>
                 </div>

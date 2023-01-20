@@ -85,6 +85,18 @@ class PageCreateChallenge extends Component {
                     value={traduction[this.props.language]["PLAY"]}
                     onClick={() => this.props.playAdvanced()}
                 />
+
+                <div className="footer">
+                    <a
+                        id="homeBut"
+                        className="backlink"
+                        type="submit"
+                        onClick={() => this.props.changePage(idPage["P_MAIN"])}
+                    >
+                        {traduction[this.props.language]["BACKHOME"]}
+                    </a>
+                </div>
+
             </div>
         );
     }
