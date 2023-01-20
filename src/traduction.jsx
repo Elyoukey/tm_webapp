@@ -93,7 +93,8 @@ var traduction = {
         CREATECHALLENGE: "Créer un défi",
         NEW: "nouveau",
         CRITERIACARDS: "Cartes Critères",
-        CHOOSECARDS: "Choisissez les cartes critères avec lesquelles vous voulez jouer"
+        CHOOSECARDS: "Choisissez les cartes critères avec lesquelles vous voulez jouer",
+        SELECTCARDS: "Sélectionner les cartes Critères"
 
     },
     1: {
@@ -190,6 +191,8 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the criteria cards you want to use",
+        SELECTCARDS: "Select Criteria cards",
+
         PRINTABLECHALLENGES: "Printable Challenge Bank"
 
     },
@@ -263,6 +266,8 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the criteria cards you want to use",
+        SELECTCARDS: "Select Criteria cards",
+
         PRINTABLECHALLENGES: "Printable Challenge Bank"
     },
     3:{
@@ -335,6 +340,8 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the criteria cards you want to use",
+        SELECTCARDS: "Select Criteria cards",
+
         PRINTABLECHALLENGES: "Printable Challenge Bank"
     }
 };

@@ -9,8 +9,55 @@
     border-radius: 20px;
     background: #ececec;
 
-    padding: 20px;
+    padding: 2px;
 
+}
+
+.cardList .card{
+    position: relative;
+    width: 46%;
+    height: 90px;
+    border: 2px solid #000000;
+    border-radius: 17px;
+
+    float:left;
+    margin: 5px;
+}
+.cardList .card .imgCard{
+    width: 90%;
+}
+
+.cardList .card .cardRemove{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 2px 0;
+    color: white;
+    font-weight: normal;
+}
+.cardList .card .cardRemove .barX1,
+.cardList .card .cardRemove .barX2{
+    border-bottom:1px solid #ffffff;
+    width: 10px;
+}
+.cardList .card .cardRemove .barX1{  transform: rotate(45deg); }
+.cardList .card .cardRemove .barX2{  transform: rotate(-45deg);}
+
+.cardListing{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.cardListing .imgCard
+{
+    width: 50%;
+    border: 2px solid #000000;
+    border-radius: 15px;
 }
 
 .placeholder{
