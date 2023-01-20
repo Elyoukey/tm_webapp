@@ -189,7 +189,7 @@ var traduction = {
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use"
+        CHOOSECARDS: "Choose the criteria cards you want to use",
         PRINTABLECHALLENGES: "Printable Challenge Bank"
 
     },
@@ -262,7 +262,7 @@ var traduction = {
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use"
+        CHOOSECARDS: "Choose the criteria cards you want to use",
         PRINTABLECHALLENGES: "Printable Challenge Bank"
     },
     3:{
