@@ -7,8 +7,8 @@ import config from "./config";
 class CardPicker extends Component{
 
     state = {
-        open: "false",
-        selectedCards: [12,23,8],
+        open: false,
+        selectedCards: [],
         availableCards: []
     }
 
@@ -60,14 +60,19 @@ class CardPicker extends Component{
         var availableCardsListing = [];
         for(let i=0;i<this.state.availableCards.length;i++){
             let cardNb = this.state.availableCards[i].toString().padStart(2,'0');
-
             availableCardsListing.push(
-                <div class="card" id="card">
-                    <img
-                        className="imgCard"
-                        src={config.FOLDER_IMAGES_CARDS+langcode + '/TM_GameCards_'+langcode+'-'+ cardNb +'.png'}
-                    />
-                    <div  class="cardCheckbox" onClick={()=>this.pick(this.state.availableCards[i])}>{cardNb}</div>
+                <div class="card" onClick={()=>this.pick(this.state.availableCards[i])}>
+                    <div className="holder">
+                        <img
+                            className="imgCard"
+                            src={config.FOLDER_IMAGES_CARDS+langcode + '/TM_GameCards_'+langcode+'-'+ cardNb +'.png'}
+                        />
+                    </div>
+
+                    <div  class="cardCheckbox" >
+                        <label>&nbsp;
+                        </label>
+                    </div>
                 </div>
             );
         }
@@ -82,12 +87,18 @@ class CardPicker extends Component{
                         <div >
                             {selectedCardsListing}
                             <div
-                                className="card"
+                                className="card openListing"
                                 onClick={() =>this.open()}
-                            >{traduction[this.props.language]["CHOOSECARDS"]}</div>
+                            >
+                                <label>{traduction[this.props.language]["CHOOSECARDS"]}</label>
+                            </div>
                         </div>
                     ):(
-                        <a className="placeholder" onClick={() =>this.open()}>{traduction[this.props.language]["CHOOSECARDS"]}</a>
+                        <a className="placeholder" onClick={() =>this.open()}>
+                            <label>
+                                {traduction[this.props.language]["CHOOSECARDS"]}
+                            </label>
+                        </a>
                     )}
                 </a>
                 {this.state.open === true ? (
@@ -99,7 +110,7 @@ class CardPicker extends Component{
                             Nombre de cartes selectionnées
                             1 2 3 4
                             <input
-                                className="fullgreen"
+                                className="fullgreen small"
                                 type="button"
                                 value={traduction[this.props.language]["CONFIRM"]}
                                 onClick={() => this.close()}
