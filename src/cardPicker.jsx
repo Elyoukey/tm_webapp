@@ -3,13 +3,15 @@ import "./css/cardPicker.css";
 
 import traduction from "./traduction";
 import config from "./config";
+import idPage from "./idPage";
 
 class CardPicker extends Component{
 
     state = {
         open: false,
         selectedCards: [],
-        availableCards: []
+        availableCards: [],
+        loading: false
     }
 
     constructor(props){
@@ -24,17 +26,44 @@ class CardPicker extends Component{
     close(){ this.setState({open:false});}
 
     pick( cardIndex ){
+        this.setState({loading:true});
         this.state.selectedCards.push(cardIndex);
-        this.close();
+        this.call();
     }
 
     remove( cardIndex ){
+        this.setState({loading:true});
         let index = this.state.selectedCards.indexOf(cardIndex);
-        console.log(index);
         this.state.selectedCards.splice(index, 1);
         this.setState(this.state.selectedCards);
+        this.call();
     }
-    submit(){}
+
+    call(){
+        var xhr = new XMLHttpRequest();
+        var nbCards = this.props.advancedSettings[3]+4;
+
+        xhr.addEventListener("load", () => {
+            var data = xhr.responseText;
+            var jsonResponse = JSON.parse(data);
+
+            this.setState({availableCards:jsonResponse['c']});
+            this.setState({loading:false});
+            this.close();
+
+        });
+        xhr.addEventListener("error", () => {
+
+        });
+        xhr.addEventListener("abort", () => {
+
+        });
+        xhr.open(
+            "GET",
+            config.API+"wizard.php?n=" + nbCards + "&cards=[" + this.state.selectedCards.join(',') + ']'
+        );
+        xhr.send();
+    }
 
     render(){
         var langcode = traduction[this.props.language]["LANGCODE"];
@@ -68,11 +97,6 @@ class CardPicker extends Component{
                             src={config.FOLDER_IMAGES_CARDS+langcode + '/TM_GameCards_'+langcode+'-'+ cardNb +'.png'}
                         />
                     </div>
-
-                    <div  class="cardCheckbox" >
-                        <label>&nbsp;
-                        </label>
-                    </div>
                 </div>
             );
         }
@@ -86,12 +110,14 @@ class CardPicker extends Component{
                     {this.state.selectedCards.length > 0 ? (
                         <div >
                             {selectedCardsListing}
+                            {this.state.selectedCards.length < this.props.advancedSettings[3]+4 ? (
                             <div
                                 className="card openListing"
                                 onClick={() =>this.open()}
                             >
                                 <label>{traduction[this.props.language]["CHOOSECARDS"]}</label>
                             </div>
+                            ):null}
                         </div>
                     ):(
                         <a className="placeholder" onClick={() =>this.open()}>
@@ -106,17 +132,10 @@ class CardPicker extends Component{
                         <h1>{traduction[this.props.language]["SELECTCARDS"]}</h1>
                         {availableCardsListing}
 
-                        <div class="cardpickerFooter">
-                            Nombre de cartes selectionnées
-                            1 2 3 4
-                            <input
-                                className="fullgreen small"
-                                type="button"
-                                value={traduction[this.props.language]["CONFIRM"]}
-                                onClick={() => this.close()}
-                            />
-                        </div>
                     </div>
+                ):null}
+                {this.state.loading === true ? (
+                    <div class="loader"><h2>{traduction[this.props.language]["LOADING"]}</h2></div>
                 ):null}
             </div>
         );
