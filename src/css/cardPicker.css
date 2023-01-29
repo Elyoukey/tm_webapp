@@ -7,6 +7,9 @@
     width: 46%;
     float:left;
     margin: 5px;
+
+    cursor: pointer;
+
 }
 .cardList .card .imgCard{
     width: 100%;
@@ -35,19 +38,18 @@
 
 .cardList .card.openListing{
     cursor: pointer;
-    border: none;
     background: #ececec;
-    border: 2px solid #000000;
-    border-radius: 17px;
-    height: 100px;
     overflow: hidden;
+
+    border-radius: 20px;
+    height: 96px;
 }
 .cardList .card.openListing label{
     cursor: pointer;
     width: 100%;
     display: table-cell;
     vertical-align: middle;
-    height: 100px;
+    height: 96px;
 }
 
 .cardList .placeholder{
@@ -74,7 +76,7 @@
 }
 
 .cardListing{
-    height: 90vh;
+    height: 100vh;
     padding-bottom: 30px;
     overflow-y: scroll;
     position: absolute;
@@ -87,6 +89,7 @@
 
 .cardListing .card{
     display: table-row;
+    cursor: pointer;
 }
 .cardListing .holder
 {
@@ -101,38 +104,4 @@
     border-radius: 15px;
 
 }
-.cardListing .cardCheckbox {
-
-    display: table-cell;
-    width: 15%;
-
-    vertical-align: middle;
-    text-align: left;
-}
-
-
-.cardListing .cardCheckbox label{
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 10px;
-    display: inline-block;
-    background: #ececec;
-    text-align: center;
-
-
-}
-
-.cardListing .cardpickerFooter{
-    position: fixed;
-    height: 10vh;
-    width: 100%;
-    bottom:0;
-    left:0;
-    background: white;
-
-    box-shadow: 0px -15px 15px 0px rgba(0, 0, 0, 0.2)
-}
-
 

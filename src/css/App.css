@@ -390,3 +390,16 @@ span.bolder{
   margin: 15px;
   font-size: 40px;
 }
+
+/* Loader */
+.loader{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: #ffffff;
+  opacity: 0.8;
+  padding-top: 30%;
+}

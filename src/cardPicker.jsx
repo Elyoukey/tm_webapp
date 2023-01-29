@@ -9,7 +9,7 @@ class CardPicker extends Component{
 
     state = {
         open: false,
-        selectedCards: [],
+        selectedCards: [1],
         availableCards: [],
         loading: false
     }
@@ -115,7 +115,7 @@ class CardPicker extends Component{
                                 className="card openListing"
                                 onClick={() =>this.open()}
                             >
-                                <label>{traduction[this.props.language]["CHOOSECARDS"]}</label>
+                                <label>{traduction[this.props.language]["CLICKTOSELECT"]}</label>
                             </div>
                             ):null}
                         </div>
@@ -131,7 +131,6 @@ class CardPicker extends Component{
                     <div class="cardListing">
                         <h1>{traduction[this.props.language]["SELECTCARDS"]}</h1>
                         {availableCardsListing}
-
                     </div>
                 ):null}
                 {this.state.loading === true ? (

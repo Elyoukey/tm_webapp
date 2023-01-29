@@ -7,7 +7,15 @@ import CardPicker from "./cardPicker";
 
 class PageCreateChallenge extends Component {
     state = {
-        gametype:1
+        gameType: 'solo',
+        nbCards: 4,
+        render: true
+    }
+
+    changeVerificator( x ){
+        this.props.clickAdvanced(3, x);
+        this.setState({render:!this.state.render})
+
     }
     render(){
         return(
@@ -21,7 +29,7 @@ class PageCreateChallenge extends Component {
                 <div className="radioGroup">
                     <input
                         type="button"
-                        className={!this.props.soloPlay
+                        className={!this.state.gameType !== 'solo'
                             ? "active"
                             : "inactive"
                         }
@@ -50,7 +58,7 @@ class PageCreateChallenge extends Component {
                             : "inactive"
                         }
                         value={traduction[this.props.language]["V4"]}
-                        onClick={() => this.props.clickAdvanced(3, 0)}
+                        onClick={() => this.changeVerificator(0)}
                     />
                     <input
                         type="button"
@@ -59,7 +67,7 @@ class PageCreateChallenge extends Component {
                             : "inactive"
                         }
                         value={traduction[this.props.language]["V5"]}
-                        onClick={() => this.props.clickAdvanced(3, 1)}
+                        onClick={() => this.changeVerificator(1)}
                     />
                     <input
                         type="button"
@@ -68,7 +76,7 @@ class PageCreateChallenge extends Component {
                             : "inactive"
                         }
                         value={traduction[this.props.language]["V6"]}
-                        onClick={() => this.props.clickAdvanced(3, 2)}
+                        onClick={() => this.changeVerificator(2)}
                     />
                 </div>
                 <label className="label">
@@ -77,6 +85,8 @@ class PageCreateChallenge extends Component {
                 <CardPicker
                     language = {this.props.language}
                     cardList = {[]}
+                    advancedSettings = {this.props.advancedSettings}
+                    key={this.state.render}
                 >
                 </CardPicker>
                 <input
