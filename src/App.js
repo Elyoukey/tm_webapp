@@ -666,6 +666,7 @@ class App extends React.Component {
                         clickAdvanced={(column, row) => this.clickAdvanced(column, row)}
                         goCompetitive={() => this.goCompetitive()}
                         goSolo={() => this.goSolo()}
+                        loadGame = {( url )=> this.loadGame( url )}
                     />
                 ) : null}
             </div>

@@ -9,7 +9,7 @@ class CardPicker extends Component{
 
     state = {
         open: false,
-        selectedCards: [1],
+        selectedCards: [],
         availableCards: [],
         loading: false
     }
@@ -28,6 +28,7 @@ class CardPicker extends Component{
     pick( cardIndex ){
         this.setState({loading:true});
         this.state.selectedCards.push(cardIndex);
+        this.props.setSelectedCards(this.state.selectedCards); //update parent module
         this.call();
     }
 

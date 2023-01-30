@@ -4,20 +4,49 @@ import "./styles.css";
 import traduction from "./traduction";
 import idPage from "./idPage";
 import CardPicker from "./cardPicker";
+import config from "./config";
 
 class PageCreateChallenge extends Component {
     state = {
         gameType: 'solo',
         nbCards: 4,
+        selectedCards: [],
         render: true
     }
 
     changeVerificator( x ){
         this.props.clickAdvanced(3, x);
         this.setState({render:!this.state.render})
-
     }
+
+    setSelectedCards( cardList ){
+        this.setState({selectedCards:cardList });
+    }
+    generate(){
+        var xhr = new XMLHttpRequest();
+        var nbCards = this.props.advancedSettings[3]+4;
+
+        xhr.addEventListener("load", () => {
+            var data = xhr.responseText;
+            var jsonResponse = JSON.parse(data);
+            this.props.loadGame("h=" + jsonResponse['h'] );
+        });
+        xhr.addEventListener("error", () => {
+
+        });
+        xhr.addEventListener("abort", () => {
+
+        });
+        xhr.open(
+            "GET",
+            config.API+"wizard.php?n=" + nbCards + "&cards=[" + this.state.selectedCards.join(',') + ']' + '&mode=' + 'normal'
+        );
+        xhr.send();
+    }
+
+
     render(){
+        this.selectedCardList = [1];
         return(
             <div className="mainTab pageCreateChallenge">
                 <h2>{traduction[this.props.language]["CREATECHALLENGE"]}</h2>
@@ -29,7 +58,7 @@ class PageCreateChallenge extends Component {
                 <div className="radioGroup">
                     <input
                         type="button"
-                        className={!this.state.gameType !== 'solo'
+                        className={!this.props.soloPlay
                             ? "active"
                             : "inactive"
                         }
@@ -84,19 +113,21 @@ class PageCreateChallenge extends Component {
                 </label>
                 <CardPicker
                     language = {this.props.language}
-                    cardList = {[]}
+                    setSelectedCards = {(selectedCards)=>this.setSelectedCards(selectedCards)}
                     advancedSettings = {this.props.advancedSettings}
                     key={this.state.render}
                 >
                 </CardPicker>
-                <input
-                    className="fullgreen"
-                    type="button"
-                    value={traduction[this.props.language]["PLAY"]}
-                    onClick={() => this.props.playAdvanced()}
-                />
+
+
 
                 <div className="footer">
+                    <input
+                        className="fullgreen"
+                        type="button"
+                        value={traduction[this.props.language]["PLAY"]}
+                        onClick={() => this.generate()}
+                    />
                     <a
                         id="homeBut"
                         className="backlink"
