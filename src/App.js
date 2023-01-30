@@ -63,7 +63,7 @@ class App extends React.Component {
         wrongCode: false,
         correctCode: false,
         winSolo: 0,
-        soloPlay: false,
+        soloPlay: true,
         askSolo: false,
         dailyText: "",
         socialTXT: "",

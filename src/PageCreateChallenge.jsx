@@ -14,6 +14,11 @@ class PageCreateChallenge extends Component {
         render: true
     }
 
+    constructor(props) {
+        super(props);
+        this.props.clickAdvanced(3, 0);
+    }
+
     changeVerificator( x ){
         this.props.clickAdvanced(3, x);
         this.setState({render:!this.state.render})
