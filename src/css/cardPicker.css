@@ -43,13 +43,14 @@
 
     border-radius: 20px;
     height: 96px;
+    text-align: center;
+    padding-top: 35px;
 }
 .cardList .card.openListing label{
     cursor: pointer;
     width: 100%;
-    display: table-cell;
+    display: table;
     vertical-align: middle;
-    height: 96px;
 }
 
 .cardList .placeholder{
