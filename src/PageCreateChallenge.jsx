@@ -119,15 +119,25 @@ class PageCreateChallenge extends Component {
                 >
                 </CardPicker>
 
-
-
                 <div className="footer">
+                    { (this.state.selectedCards.length != this.props.advancedSettings[3]+4 ) ?
+                        (
                     <input
-                        className="fullgreen"
+                        className="grey"
                         type="button"
                         value={traduction[this.props.language]["PLAY"]}
-                        onClick={() => this.generate()}
+                        disabled="disabled"
                     />
+                        ):(
+                            <input
+                                className="fullgreen"
+                                type="button"
+                                value={traduction[this.props.language]["PLAY"]}
+                                onClick={() => this.generate()}
+
+                            />
+                        )}
+
                     <a
                         id="homeBut"
                         className="backlink"
