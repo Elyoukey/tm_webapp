@@ -392,14 +392,26 @@ span.bolder{
 }
 
 /* Loader */
-.loader{
+.loader {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background: #ffffff;
-  opacity: 0.8;
-  padding-top: 30%;
+
+  padding-top: 40vh;
+background: #ffffff;
+}
+.loader h2{
+  background-image:
+          linear-gradient(to right, black, #2db563, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-animation 35s linear infinite;
+}
+@keyframes rainbow-animation {
+  to {
+    background-position: 4500vh;
+  }
 }
