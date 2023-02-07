@@ -11,7 +11,7 @@ class CardPicker extends Component{
         open: false,
         selectedCards: [],
         availableCards: [],
-        loading: true
+        loading: false
     }
 
     constructor(props){
