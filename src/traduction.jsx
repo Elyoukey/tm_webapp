@@ -251,7 +251,7 @@ var traduction = {
         V6: "6",
         ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf",
-        PRINTABLECHALLENGES: "Printable Challenge Bank"
+        PRINTABLECHALLENGES: "可打印的挑战集合"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -319,7 +319,7 @@ var traduction = {
         V6: "6",
         ABOUTLINK: "https://www.gokids.com.tw/product/detail1787",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
-        PRINTABLECHALLENGES: "Printable Challenge Bank"
+        PRINTABLECHALLENGES: "可印製的挑戰集合"
     }
 };
 
