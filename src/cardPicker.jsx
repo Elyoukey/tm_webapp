@@ -11,7 +11,7 @@ class CardPicker extends Component{
         open: false,
         selectedCards: [],
         availableCards: [],
-        loading: false
+        loading: true
     }
 
     constructor(props){
@@ -135,7 +135,7 @@ class CardPicker extends Component{
                     </div>
                 ):null}
                 {this.state.loading === true ? (
-                    <div class="loader"><h2>{traduction[this.props.language]["LOADING"]}</h2></div>
+                    <div class="loader"><h2>{traduction[this.props.language]["LOADING"]}<span>...</span></h2></div>
                 ):null}
             </div>
         );
