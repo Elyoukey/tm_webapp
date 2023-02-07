@@ -186,6 +186,7 @@ var traduction = {
         NIGHTMAREMODE: "Nightmare Mode: see rulebook page 3",
         SHARERESULTS: "Copy and share your results with your friends or on your social media!",
         PASTEYOURRESULT: " You can now paste your results on your social media platforms and take on your friends in a daily competition! ",
+
         XPARADOX: "Think That the Machine is Wrong?",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
         CREATECHALLENGE: "Create a Challenge",
@@ -263,13 +264,13 @@ var traduction = {
         V6: "6",
         ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf",
+        PRINTABLECHALLENGES: "可打印的挑战集合",
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the Criteria cards you want to use",
         SELECTCARDS: "Select Criteria cards",
-        CLICKTOSELECT: "Click to select a card",
-        PRINTABLECHALLENGES: "Printable Challenge Bank"
+        CLICKTOSELECT: "Click to select a card"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -344,7 +345,7 @@ var traduction = {
         SELECTCARDS: "Select Criteria cards",
         CLICKTOSELECT: "Click to select a card",
 
-        PRINTABLECHALLENGES: "Printable Challenge Bank"
+        PRINTABLECHALLENGES: "可印製的挑戰集合"
     }
 };
 
