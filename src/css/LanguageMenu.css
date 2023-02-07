@@ -29,6 +29,7 @@
     width: 150px;
     position: absolute;
     background: #ffffff;
+    z-index: 1;
 }
 .lang-switch a{
     text-decoration: none;
