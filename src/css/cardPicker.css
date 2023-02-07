@@ -14,7 +14,7 @@
 .cardList .card .imgCard{
     width: 100%;
     border: 2px solid #000000;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 
@@ -41,7 +41,7 @@
     background: #ececec;
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 10px;
     height: 96px;
     text-align: center;
     padding-top: 35px;

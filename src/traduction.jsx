@@ -93,7 +93,7 @@ var traduction = {
         CREATECHALLENGE: "Créer un défi",
         NEW: "nouveau",
         CRITERIACARDS: "Cartes Critères",
-        CHOOSECARDS: "Choisissez les cartes critères avec lesquelles vous voulez jouer",
+        CHOOSECARDS: "Choisissez les cartes Critères avec lesquelles vous voulez jouer",
         CLICKTOSELECT: "Cliquez pour sélectionner",
         SELECTCARDS: "Sélectionner les cartes Critères"
 
@@ -191,9 +191,9 @@ var traduction = {
         CREATECHALLENGE: "Create a Challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use",
-        SELECTCARDS: "Select Criteria cards",
-        CLICKTOSELECT: "Click to select",
+        CHOOSECARDS: "Choose the Criteria cards you want to use",
+        SELECTCARDS: "Select a Criteria cards",
+        CLICKTOSELECT: "Click to select a card",
         PRINTABLECHALLENGES: "Printable Challenge Bank"
 
     },
@@ -266,9 +266,9 @@ var traduction = {
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use",
+        CHOOSECARDS: "Choose the Criteria cards you want to use",
         SELECTCARDS: "Select Criteria cards",
-        CLICKTOSELECT: "Click to select",
+        CLICKTOSELECT: "Click to select a card",
         PRINTABLECHALLENGES: "Printable Challenge Bank"
     },
     3:{
@@ -340,9 +340,9 @@ var traduction = {
         CREATECHALLENGE: "Create a challenge",
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the criteria cards you want to use",
+        CHOOSECARDS: "Choose the Criteria cards you want to use",
         SELECTCARDS: "Select Criteria cards",
-        CLICKTOSELECT: "Click to select",
+        CLICKTOSELECT: "Click to select a card",
 
         PRINTABLECHALLENGES: "Printable Challenge Bank"
     }

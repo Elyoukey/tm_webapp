@@ -1,5 +1,6 @@
 import {Component} from "react";
 import "./styles.css";
+import "./css/PageCreateChallenge.css";
 
 import traduction from "./traduction";
 import idPage from "./idPage";
