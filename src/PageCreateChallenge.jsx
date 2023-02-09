@@ -126,8 +126,6 @@ class PageCreateChallenge extends Component {
                 </CardPicker>
 
                 <div className="footer">
-                    {this.state.selectedCards.length}
-                    {this.selectedCardList.length }
                     { ( this.state.selectedCards.length != this.props.advancedSettings[3]+4 ) ?
                         (
                     <input
