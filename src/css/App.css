@@ -123,7 +123,8 @@ a.button.purple:hover,
 input[type=button].purple:hover{ color: #ffffff; background: #7f66ad; border-color: #7f66ad;}
 input[type=button].grey{ color: #000000; background: #ececec; border-color: #ececec;}
 input[type=button].grey:hover{ background: #cccccc; border-color: #cccccc;}
-input[type=button][disabled].grey:hover{background: #ececec; border-color: #ececec;}
+input[type=button][disabled].grey{background: #ececec; border-color: #ececec; color: #777777}
+input[type=button][disabled].grey:hover{background: #ececec; border-color: #ececec; color: #656565}
 a.button.fullgreen,
 input[type=button].fullgreen{ background: #2db563; color:#ffffff; border-color: #2db563;}
 a.button.fullgreen:hover,
