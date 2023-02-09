@@ -52,7 +52,7 @@ class PageCreateChallenge extends Component {
 
 
     render(){
-        this.selectedCardList = [1];
+        this.selectedCardList = this.state.selectedCards;
         return(
             <div className="mainTab pageCreateChallenge">
                 <h2>{traduction[this.props.language]["CREATECHALLENGE"]}</h2>
@@ -126,7 +126,9 @@ class PageCreateChallenge extends Component {
                 </CardPicker>
 
                 <div className="footer">
-                    { (this.state.selectedCards.length != this.props.advancedSettings[3]+4 ) ?
+                    {this.state.selectedCards.length}
+                    {this.selectedCardList.length }
+                    { ( this.state.selectedCards.length != this.props.advancedSettings[3]+4 ) ?
                         (
                     <input
                         className="grey"

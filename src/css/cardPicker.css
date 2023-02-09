@@ -42,10 +42,12 @@
     overflow: hidden;
 
     border-radius: 10px;
-    height: 96px;
+    min-height: 110px;
+    max-height: 110px;
     text-align: center;
-    padding-top: 35px;
+    padding: 20px 5px;
 }
+
 .cardList .card.openListing label{
     cursor: pointer;
     width: 100%;
@@ -104,5 +106,21 @@
     border: 2px solid #000000;
     border-radius: 15px;
 
+}
+
+.cardListing h1{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.cardListing .close{
+    font-weight: lighter;
+    font-size: 5vh;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 

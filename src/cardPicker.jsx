@@ -36,6 +36,7 @@ class CardPicker extends Component{
         this.setState({loading:true});
         let index = this.state.selectedCards.indexOf(cardIndex);
         this.state.selectedCards.splice(index, 1);
+        this.props.setSelectedCards(this.state.selectedCards); //update parent module
         this.setState(this.state.selectedCards);
         this.call();
     }
@@ -105,7 +106,7 @@ class CardPicker extends Component{
         return(
             <div class="cardpicker">
 
-                <a
+                <div
                     class="cardList"
                 >
                     {this.state.selectedCards.length > 0 ? (
@@ -127,10 +128,11 @@ class CardPicker extends Component{
                             </label>
                         </a>
                     )}
-                </a>
+                </div>
                 {this.state.open === true ? (
                     <div class="cardListing">
                         <h1>{traduction[this.props.language]["SELECTCARDS"]}</h1>
+                        <a className="close" onClick={() =>this.close()}>&times;</a>
                         {availableCardsListing}
                     </div>
                 ):null}

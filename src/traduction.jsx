@@ -94,8 +94,8 @@ var traduction = {
         NEW: "nouveau",
         CRITERIACARDS: "Cartes Critères",
         CHOOSECARDS: "Choisissez les cartes Critères avec lesquelles vous voulez jouer",
-        CLICKTOSELECT: "Cliquez pour sélectionner",
-        SELECTCARDS: "Sélectionner les cartes Critères"
+        CLICKTOSELECT: "Cliquez pour sélectionner une carte",
+        SELECTCARDS: "Sélectionnez une carte Critère"
 
     },
     1: {
@@ -193,7 +193,7 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the Criteria cards you want to use",
-        SELECTCARDS: "Select a Criteria cards",
+        SELECTCARDS: "Select a Criteria card",
         CLICKTOSELECT: "Click to select a card",
         PRINTABLECHALLENGES: "Printable Challenge Bank"
 
@@ -269,7 +269,7 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the Criteria cards you want to use",
-        SELECTCARDS: "Select Criteria cards",
+        SELECTCARDS: "Select Criteria card",
         CLICKTOSELECT: "Click to select a card"
     },
     3:{
@@ -342,7 +342,7 @@ var traduction = {
         NEW: "new",
         CRITERIACARDS: "Criteria Cards",
         CHOOSECARDS: "Choose the Criteria cards you want to use",
-        SELECTCARDS: "Select Criteria cards",
+        SELECTCARDS: "Select Criteria card",
         CLICKTOSELECT: "Click to select a card",
 
         PRINTABLECHALLENGES: "可印製的挑戰集合"
