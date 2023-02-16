@@ -37,30 +37,39 @@ class BurgerMenu extends Component{
                         language={this.props.language}
                         swapLanguage={(value) => this.props.swapLanguage(value)}
                     />
-                    <input
-                        className="green homeButton"
-                        type="button"
-                        value={traduction[this.props.language]["QUICK"]}
-                        onClick={() => this.changePage(idPage["P_ADV"])}
-                    />
-                    <input
-                        className="yellow homeButton"
-                        type="button"
-                        value={traduction[this.props.language]["DAiLYCHALLENGE"]}
-                        onClick={() => this.gameOfTheDay()}
-                    />
-                    <input
-                        className="blue homeButton"
-                        type="button"
-                        value={traduction[this.props.language]["SEARCH"]}
-                        onClick={() => this.changePage(idPage["P_SEARCH"])}
-                    />
-                    <input
-                        className="purple homeButton"
-                        type="button"
-                        value={traduction[this.props.language]["GAMEHISTORY"]}
-                        onClick={() => this.changePage(idPage["P_HIST"])}
-                    />
+                    <a
+                        className="green button homeButton"
+                        onClick={() => this.props.changePage(idPage["P_ADV"])}
+                    >
+                        {traduction[this.props.language]["QUICK"]}
+                    </a>
+                    <a
+                        className="orange button homeButton"
+                        onClick={() => this.props.changePage(idPage["P_CREATECHALLENGE"])}
+                    >
+                        {traduction[this.props.language]["CREATECHALLENGE"]}
+                        <span className="new">{traduction[this.props.language]["NEW"]}</span>
+                    </a>
+                    <a
+                        className="yellow button homeButton"
+                        onClick={() => this.props.gameOfTheDay()}
+
+                    >
+                        {traduction[this.props.language]["DAiLYCHALLENGE"]}
+                    </a>
+                    <a
+                        className="blue button homeButton"
+                        onClick={() => this.props.changePage(idPage["P_SEARCH"])}
+
+                    >
+                        {traduction[this.props.language]["SEARCH"]}
+                    </a>
+                    <a
+                        className="purple button homeButton"
+                        onClick={() => this.props.changePage(idPage["P_HIST"])}
+                    >
+                        {traduction[this.props.language]["GAMEHISTORY"]}
+                    </a>
                 </div>
                 <div className="overlay" onClick={()=>this.toggleState()}></div>
             </div>
