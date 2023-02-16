@@ -14,7 +14,9 @@ body, *{
 
 .mainTab{
   margin-bottom: 100px;
+  padding-bottom: 100px;
 }
+
 #root{
   position: absolute;
   top: 0;
