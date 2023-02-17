@@ -265,12 +265,12 @@ var traduction = {
         ABOUTLINK: "http://www.scorpionmasque.com/en/turingmachine",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_cns.pdf",
         PRINTABLECHALLENGES: "可打印的挑战集合",
-        CREATECHALLENGE: "Create a challenge",
-        NEW: "new",
-        CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the Criteria cards you want to use",
-        SELECTCARDS: "Select Criteria card",
-        CLICKTOSELECT: "Click to select a card"
+        CREATECHALLENGE: "生成挑战",
+        NEW: "新",
+        CRITERIACARDS: "标准卡牌",
+        CHOOSECARDS: "选择你想使用的标准卡牌",
+        SELECTCARDS: "选择一张标准卡牌",
+        CLICKTOSELECT: "点击选择卡牌"
     },
     3:{
         LANGCODE	:	"CNT"	,
@@ -338,12 +338,12 @@ var traduction = {
         V6: "6",
         ABOUTLINK: "https://www.gokids.com.tw/product/detail1787",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_EN.pdf",
-        CREATECHALLENGE: "Create a challenge",
-        NEW: "new",
-        CRITERIACARDS: "Criteria Cards",
-        CHOOSECARDS: "Choose the Criteria cards you want to use",
-        SELECTCARDS: "Select Criteria card",
-        CLICKTOSELECT: "Click to select a card",
+        CREATECHALLENGE: "建立挑戰",
+        NEW: "新",
+        CRITERIACARDS: "準則卡",
+        CHOOSECARDS: "選擇你想要使用的準則卡",
+        SELECTCARDS: "選擇準則卡",
+        CLICKTOSELECT: "點擊以選擇",
 
         PRINTABLECHALLENGES: "可印製的挑戰集合"
     }
