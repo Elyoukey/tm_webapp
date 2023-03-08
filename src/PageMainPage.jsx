@@ -14,11 +14,12 @@ import boxFR from "./images/BOX_FR.png";
 import boxEN from "./images/BOX_EN.png";
 import boxCNS from "./images/BOX_CNS.png";
 import boxCNT from "./images/BOX_CNT.png";
+import boxKR from "./images/BOX_KR.png";
 import logoSM from "./images/logo_sm.png";
 import home from "./images/Home.png";
 import config from "./config";
 
-const imgBox = [boxFR, boxEN, boxCNS, boxCNT];
+const imgBox = [boxFR, boxEN, boxCNS, boxCNT, boxKR];
 
 class PageMainPage extends Component {
     render() {
