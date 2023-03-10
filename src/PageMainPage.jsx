@@ -114,7 +114,7 @@ class PageMainPage extends Component {
                                className="icofont-youtube"></a>
                         </div>
 
-                        Copyright &copy; 2022 - Le Scorpion Masqué
+                        Copyright &copy; 2023 - Le Scorpion Masqué
                     </div>
 
 
