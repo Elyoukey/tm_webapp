@@ -71,7 +71,7 @@ class PageMainPage extends Component {
                         {traduction[this.props.language]["DOWNLOADRULES"]}
                     </a>
                     <a
-                        href={config["CHALLENGEBANKLINK"]}
+                        href={config["CHALLENGEBANKLINK"] + "_" + traduction[this.props.language]["LANGCODE"] + ".pdf"}
                         target="_blank"
                     >
                         {traduction[this.props.language]["PRINTABLECHALLENGES"]}
@@ -114,7 +114,7 @@ class PageMainPage extends Component {
                                className="icofont-youtube"></a>
                         </div>
 
-                        Copyright &copy; 2022 - Le Scorpion Masqué
+                        Copyright &copy; 2023 - Le Scorpion Masqué
                     </div>
 
 
