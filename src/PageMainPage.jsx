@@ -14,11 +14,12 @@ import boxFR from "./images/BOX_FR.png";
 import boxEN from "./images/BOX_EN.png";
 import boxCNS from "./images/BOX_CNS.png";
 import boxCNT from "./images/BOX_CNT.png";
+import boxKR from "./images/BOX_KR.png";
 import logoSM from "./images/logo_sm.png";
 import home from "./images/Home.png";
 import config from "./config";
 
-const imgBox = [boxFR, boxEN, boxCNS, boxCNT];
+const imgBox = [boxFR, boxEN, boxCNS, boxCNT, boxKR];
 
 class PageMainPage extends Component {
     render() {
@@ -70,7 +71,7 @@ class PageMainPage extends Component {
                         {traduction[this.props.language]["DOWNLOADRULES"]}
                     </a>
                     <a
-                        href={config["CHALLENGEBANKLINK"]}
+                        href={config["CHALLENGEBANKLINK"] + "_" + traduction[this.props.language]["LANGCODE"] + ".pdf"}
                         target="_blank"
                     >
                         {traduction[this.props.language]["PRINTABLECHALLENGES"]}
@@ -113,7 +114,7 @@ class PageMainPage extends Component {
                                className="icofont-youtube"></a>
                         </div>
 
-                        Copyright &copy; 2022 - Le Scorpion Masqué
+                        Copyright &copy; 2023 - Le Scorpion Masqué
                     </div>
 
 
