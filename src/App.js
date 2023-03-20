@@ -382,7 +382,7 @@ class App extends React.Component {
             });
         }
         if (newPage === 0) {
-            this.state.advancedSettings = [0, 0, 1, 1];
+            this.state.advancedSettings = [1, 0, 1, 1];
             this.state.soloPlay = true;
             this.state.askSolo = false;
             this.state.dailyText = "";
