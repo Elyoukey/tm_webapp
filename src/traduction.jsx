@@ -411,7 +411,7 @@ var traduction = {
         V4: "4",
         V5: "5",
         V6: "6",
-        ABOUTLINK: "https://www.happybaobab.com/",
+        ABOUTLINK: "http://turingmachine.midnightjunglegames.com/",
         XPARADOX_FILENAME: "TuringMachine_The_X_Paradox_KR.pdf",
         CREATECHALLENGE: "문제 생성하기",
         NEW: "NEW",
