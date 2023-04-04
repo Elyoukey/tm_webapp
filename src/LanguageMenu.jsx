@@ -27,11 +27,11 @@ class LanguageMenu extends Component {
                     { traduction[this.props.language]["LANG"] }
                 </a>
                 <div id="lang-list" className="lang-list" style={{display: this.state.isToggle ? 'block' : 'none'}}>
-                    {this.props.language!=0?(<a onClick={() => this.swapLanguage(0)}>{traduction[0]["LANG"]}</a>):null}
-                    {this.props.language!=1?(<a onClick={() => this.swapLanguage(1)}>{traduction[1]["LANG"]}</a>):null}
-                    {this.props.language!=2?(<a onClick={() => this.swapLanguage(2)}>{traduction[2]["LANG"]}</a>):null}
-                    {this.props.language!=3?(<a onClick={() => this.swapLanguage(3)}>{traduction[3]["LANG"]}</a>):null}
-                    {this.props.language!=4?(<a onClick={() => this.swapLanguage(4)}>{traduction[4]["LANG"]}</a>):null}
+                    {this.props.language!==0?(<a onClick={() => this.swapLanguage(0)}>{traduction[0]["LANG"]}</a>):null}
+                    {this.props.language!==1?(<a onClick={() => this.swapLanguage(1)}>{traduction[1]["LANG"]}</a>):null}
+                    {this.props.language!==2?(<a onClick={() => this.swapLanguage(2)}>{traduction[2]["LANG"]}</a>):null}
+                    {this.props.language!==3?(<a onClick={() => this.swapLanguage(3)}>{traduction[3]["LANG"]}</a>):null}
+                    {/*{this.props.language!=4?(<a onClick={() => this.swapLanguage(4)}>{traduction[4]["LANG"]}</a>):null}*/}
                 </div>
             </div>
         );
