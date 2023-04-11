@@ -41,7 +41,6 @@ class PageMainPage extends Component {
                         onClick={() => this.props.changePage(idPage["P_CREATECHALLENGE"])}
                     >
                         {traduction[this.props.language]["CREATECHALLENGE"]}
-                        <span class="new">{traduction[this.props.language]["NEW"]}</span>
                     </a>
                     <a
                         className="yellow button homeButton"
