@@ -15,11 +15,12 @@ import boxEN from "./images/BOX_EN.png";
 import boxCNS from "./images/BOX_CNS.png";
 import boxCNT from "./images/BOX_CNT.png";
 import boxKR from "./images/BOX_KR.png";
+import boxDE from "./images/BOX_DE.png";
 import logoSM from "./images/logo_sm.png";
 import home from "./images/Home.png";
 import config from "./config";
 
-const imgBox = [boxFR, boxEN, boxCNS, boxCNT, boxKR];
+const imgBox = [boxFR, boxEN, boxCNS, boxCNT, boxKR, boxDE];
 
 class PageMainPage extends Component {
     render() {

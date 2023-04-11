@@ -32,6 +32,7 @@ class LanguageMenu extends Component {
                     {this.props.language!==2?(<a onClick={() => this.swapLanguage(2)}>{traduction[2]["LANG"]}</a>):null}
                     {this.props.language!==3?(<a onClick={() => this.swapLanguage(3)}>{traduction[3]["LANG"]}</a>):null}
                     {this.props.language!==4?(<a onClick={() => this.swapLanguage(4)}>{traduction[4]["LANG"]}</a>):null}
+                    {this.props.language!==5?(<a onClick={() => this.swapLanguage(5)}>{traduction[5]["LANG"]}</a>):null}
                 </div>
             </div>
         );

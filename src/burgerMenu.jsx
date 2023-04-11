@@ -48,7 +48,6 @@ class BurgerMenu extends Component{
                         onClick={() => this.props.changePage(idPage["P_CREATECHALLENGE"])}
                     >
                         {traduction[this.props.language]["CREATECHALLENGE"]}
-                        <span className="new">{traduction[this.props.language]["NEW"]}</span>
                     </a>
                     <a
                         className="yellow button homeButton"
